@@ -23,18 +23,6 @@ Table of Contents
   - [ ] Experiment 4: Build a portfolio site
 - [ ] Learn by example
 
-- [ ] HTML and CSS Basics
-  - [ ] [HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-  - [ ] [CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-- [ ] Practicing HTML and CSS Basics
-  - [ ] Experiment 1: Dribble Example
-  - [ ] Experiment 2: Clone sections from popular sites
-- [ ] HTML and CSS best practices
-- [ ] Grid Systems and Responsiveness
-- [ ] Practicing HTML and CSS Basics
-  - [ ] Experiment 3: Refactor previous project
-  - [ ] Experiment 4: Build a portfolio site
-- [ ] Learn by Example
 
 ### Part Two
 - [ ] JavaScript Basics
