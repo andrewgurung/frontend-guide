@@ -11,8 +11,8 @@ Table of Contents
 ### Part One
 
 - [ ] HTML and CSS Basics
-  - [ ] [HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-  - [ ] [CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
+  - [ ] [HTML Basics](html-basics/README.md)
+  - [ ] [CSS Basics](css-basics/README.md)
 - [ ] Practice Session
   - [ ] Experiment 1: Dribble Example
   - [ ] Experiment 2: Clone sections from popular sites
