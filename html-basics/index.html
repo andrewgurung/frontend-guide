@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <meta name="author" content="Andrew Gurung">
+    <meta name="description" content="HTML Basics">
+    <link rel="shortcut icon" href="favicon.png">
     <title>HTML Basics</title>
   </head>
   <body>
@@ -33,7 +36,7 @@
 
     <div class="">
       <h3>Empty elements</h3>
-      <p>Elements without closing tags. Eg: <strong>img</strong> tag</p>
+      <p>Elements without closing tags. Eg: <code>img</code> tag</p>
       <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox logo">
       <hr>
     </div>
@@ -47,10 +50,49 @@
     </div>
 
     <div class="">
-      <h3></h3>
-      <p></p>
+      <h3>HTML Head</h3>
+      <p><code>head</code> element is not displayed but is used to store metadata about the document</p>
+      <p><code>title</code> element is also used in search result page and bookmark title</p>
+      <p><code>meta charset="utf-8"</code> is a universal character set</p>
+      <p>Nepalese example: नेपाली</p>
+      <p><code>meta name="author" content="Andrew Gurung"</code></p>
+      <p><code>meta name="description" content="HTML Basics"</code>: helps in Search Engine Optimization</p>
+      <h4>Other types of metadata</h4>
+      <p>Facebook and Twitter has their own proprietary creations</p>
+      <p><code>meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"
+</code>: will display an image when you link to MDN on facebook</p>
       <hr>
     </div>
 
+    <div class="">
+      <h3>Adding custom icons to your site</h3>
+      <p><code>link rel="shortcut icon" href="favicon.png"</code>: add png or jpg as favicon</p>
+      <p><code>link rel="shortcut icon" href="favicon.ico" type="image/x-icon"</code>: add .ico as favicon</p>
+      <p><code>link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon.png"</code>: favicon for specific devices. Eg: High-resolution Iphone</p>
+      <hr>
+    </div>
+
+    <div class="">
+      <h3>Adding CSS and JavaScript</h3>
+      <p>1. Adding CSS: <code>link rel="stylesheet" href="my-css-file.css"</code></p>
+      <p>2. Adding JavaScript: <code>&lt;script src="my-js-file.js"&gt;&lt;/script&gt;</code>. It is often better to put 'script' element is better at the end of the document before closing 'body' tag</p>
+      <hr>
+    </div>
+
+    <div class="">
+      <h3>Setting the primary language of the document CSS and JavaScript</h3>
+      <p><code>html lang="en-US"</code></p>
+      <p>- Helps page to be indexed effectively by search engines</p>
+      <p>- Useful for visal impairments using screen readers</p>
+      <hr>
+    </div>
+
+    <div class="">
+      <h3>HTML text fundamentals</h3>
+      <p><code>h1</code> element: Gives both appearance and semantic value. Used by search engines and screen readers</p>
+      <p><code>span style="font-size: 32px; margin: 21px 0;"</code> may be used to achieve the same appearance as 'h1' element but doesn't provide any semantic value</p>
+      <p><code>em</code> element: Used to emphasis words putting them in italics. Spoken in different tone of voice by screen readers</p>
+      <hr>
+    </div>
   </body>
 </html>
