@@ -49,7 +49,7 @@
       <hr>
     </div>
 
-    <div class="">
+    <div id="html_head">
       <h3>HTML Head</h3>
       <p><code>head</code> element is not displayed but is used to store metadata about the document</p>
       <p><code>title</code> element is also used in search result page and bookmark title</p>
@@ -87,13 +87,33 @@
       <hr>
     </div>
 
-    <div class="">
+    <div>
       <h3>HTML text fundamentals</h3>
       <p><code>h1</code> element: Gives both appearance and semantic value. Used by search engines and screen readers</p>
       <p><code>span style="font-size: 32px; margin: 21px 0;"</code> may be used to achieve the same appearance as 'h1' element but doesn't provide any semantic value</p>
       <p><code>em</code> element: Used to emphasis words putting them in italics. Spoken in different tone of voice by screen readers</p>
       <p>Presentational elements: <code>i, b, u</code> elements should no longer be used. Opt for semantic elements like <code>em, strong</code></p>
       <p><strong>Warning about underline: </strong>People strongly associate underlining with hyperlinks</p> 
+      <hr>
+    </div>
+
+    <div class="">
+      <h3>Hyperlinks</h3>
+      <a href="http://www.andrewgurung.com" title="Hover over tooltip text">AndrewGurung.com</a>
+      <p>Moving down into subdirectories: <code>children/index.html</code></p>
+      <p>Moving back into parent directory: <code>../home/index.html</code></p>
+      <p>Document fragments: <code>index.html#html_head</code>. Eg: <a href="index.html#html_head">HTML Head</a></p>
+
+      <ul> Best Practice:
+        <li>Don't repeat the link text</li>
+        <li>Don't say 'link' or 'link to'. It's just noise</li>
+        <li>Keep link text short for screen readers</li>
+        <li>Multiple copies of same text like 'click here' which points to different places is confusing for screenreader users</li>
+        <li>Use relative paths as absolute paths are less efficient. Browser will query domain with DNS</li>
+        <li>Leave clear signpost for non-HTML resources. Eg: Download sales report (PDF, 10MB), Play car game (requires Flash)</li>
+      </ul>
+      <p>Use <code>download="firefox-39-installer.exe"</code> attribute to provide a default save filename</p>
+      <p>Email links: <code>href="mailto:nowhere@gmail.com?cc=no@gmail.com&bcc=name3@rapidtables.com&amp;subject=The%20subject&amp;body=The%20body"</code> Eg. <a href="mailto:nowhere@gmail.com?cc=no@gmail.com&bcc=name3@rapidtables.com&subject=The%20subject&body=The%20body">Send email with cc, bcc, subject and body</a></p>
       <hr>
     </div>
   </body>
