@@ -10,3 +10,30 @@ Context
 -----------------
 HTML Basics from Mozilla Developer Network <br/>
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+Notes
+-----
+### Document and website structure
+
+#### Basics of a document
+ HTML code can be marked up as sections of content based on their functionality to remove ambiguity. It also helps screen readers recognize those elements.
+
+```js
+header: <header>
+navigation bar: <nav>
+main content: <main> with various subsection as <article>, <section> and <div> elements
+sidebar: <aside> often placed inside of <main>
+footer: <footer>
+```
+
+#### Sidenotes
+- `<main>`: Use only once per page
+- `<article>`: Independent block of content. Eg. a single blog post
+- `<section>`: A generic document or application section generally with a heading
+- `<aside>`: Additional information indirectly related to main content
+
+
+#### Non-semantic wrappers
+Non-semantic wrappers like `<div>` and `<span>` should only be used if you can't find a better semantic element
+
+-----------------------------------------
