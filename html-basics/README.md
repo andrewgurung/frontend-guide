@@ -35,5 +35,17 @@ footer: <footer>
 
 #### Non-semantic wrappers
 Non-semantic wrappers like `<div>` and `<span>` should only be used if you can't find a better semantic element
+-----------------------------------------
+### Debugging HTML
+
+#### HTML and Debugging
+HTML is not as complicated as other languages as HTML is not compiled into a different form before the browser parses it and shows the result (it is interpreted, not compiled).
+
+##### Permissive code
+Browser lets HTML code to run it permissively even if there are syntax errors. Browsers have built-in rules to interpret incorrectly written markups too.
+
+#### HTML validation
+The best strategy to check if your HTML is well-formed is by running it through a Validation Service.
+- [Markup Validation Service](https://validator.w3.org)
 
 -----------------------------------------
