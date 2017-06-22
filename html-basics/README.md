@@ -11,6 +11,8 @@ Context
 HTML Basics from Mozilla Developer Network <br/>
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
 
+[Assessment 1](/assessment1)
+
 Notes
 -----
 ### Document and website structure
@@ -35,7 +37,9 @@ footer: <footer>
 
 #### Non-semantic wrappers
 Non-semantic wrappers like `<div>` and `<span>` should only be used if you can't find a better semantic element
+
 -----------------------------------------
+
 ### Debugging HTML
 
 #### HTML and Debugging
