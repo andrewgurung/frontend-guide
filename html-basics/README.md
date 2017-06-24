@@ -53,3 +53,39 @@ The best strategy to check if your HTML is well-formed is by running it through 
 - [Markup Validation Service](https://validator.w3.org)
 
 -----------------------------------------
+
+### Images in HTML
+
+#### Adding Images
+- Image: `<img src="images/bird.jpg">`
+- Alternative text: `<img src="images/bird.jpg" alt="A green bird on a tree branch">`
+- Dimensions: `width="400" height="200"`
+- Title: Used to display as tooltip -- `title="Canary"`
+- SEO Tip 1: Filenames are counted towards SEO
+- SEO Tip 2: Google recommends image to be in the same directory as the HTML page
+- Warning: Never point your `src` to someone else's website without permission. Also known as `hotlinking` stealing someone's bandwidth is illegal
+
+#### Annotating an image with figure and figure caption
+- Semantically links an image to its caption
+- `figure` can be used for code snippet, audio, video or something else
+```
+<figure>
+  <img src="images/bird.jpg"
+        alt="A green bird on a tree branch"
+        title="Canary">
+  <figcaption>A Canary on tree</figcaption>
+</figure>
+```
+
+#### CSS background images
+- CSS images are used for decoration without any semantic meaning
+- HTML images have meaning
+```
+p {
+  background-image: url("images/bird.jpg");
+}
+```
+
+
+
+-----------------------------------------
