@@ -80,12 +80,26 @@ The best strategy to check if your HTML is well-formed is by running it through 
 #### CSS background images
 - CSS images are used for decoration without any semantic meaning
 - HTML images have meaning
+
 ```
 p {
   background-image: url("images/bird.jpg");
 }
 ```
 
+-----------------------------------------
+
+### Video and audio content
+
+#### Video element
+- `video` element with `src` that points to video source and `controls` boolean attribute to show or hide controls
+- Best Practice: Provide a fallback content if browser doesn't support HTML5 video
+
+```
+<video src="resources/rabbit320.webm" controls>
+  <p>Here is the link to the <a href="resources/rabbit320.webm">video</a> if it doesn't play.</p>
+</video>
+```
 
 
 -----------------------------------------
