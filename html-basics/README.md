@@ -101,5 +101,22 @@ p {
 </video>
 ```
 
+#### Supporting multiple formats
+- Not all browser support every video format so list multiple video sources
+- `source` element with `src` and `type` attributes
+- Best practice: Include `type` attribute so that browser skips an unknown format
+- Eg: Safari doesn't support `webm` but supports `mp4` format
 
+```
+<video controls>
+  <source src="resources/rabbit320.mp4" type="video/mp4">
+  <source src="resources/rabbit320.webm" type="video/webm">
+  <p>Here is the link to the <a href="resources/rabbit320.webm">video</a> if it doesn't play.</p>
+</video>
+```
+
+#### Other <video> features
+```
+<video controls width="400" height="400" muted autoplay loop poster="images/bird.jpg">
+```
 -----------------------------------------
