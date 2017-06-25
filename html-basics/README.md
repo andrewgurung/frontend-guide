@@ -119,4 +119,14 @@ p {
 ```
 <video controls width="400" height="400" muted autoplay loop poster="images/bird.jpg">
 ```
+
+### Audio element
+- `audio` element similar to `video` but doesn't support width, height and poster properties
+```
+<audio controls>
+  <source src="resources/viper.mp3" type="audio/mp3">
+  <source src="resources/viper.ogg" type="audio/ogg">
+  <p>Here is the link to the <a href="resources/viper.mp3">audio</a> if it doesn't play.</p>
+</audio>
+```
 -----------------------------------------
