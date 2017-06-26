@@ -271,5 +271,22 @@
        </object>
        <hr>
     </div>
+
+    <div class="">
+      <h3>SVG</h3>
+      <svg width="300" height="200">
+        <rect width="100%" height="100%" fill="black"/>
+        <circle cx="150" cy="100" r="90" fill="blue"/>
+      </svg>
+
+      <h3>Embed SVG via img</h3>
+      <img src="resources/sample.svg" alt="SVG sample" width="300" height="300">
+
+      <h3>Embed SVG via iframe</h3>
+      <iframe src="resources/sample.svg" width="300" height="400" frameborder="0" sandbox>
+        <img src="fallback.png" alt="Pen" />
+      </iframe>
+      <hr>
+    </div>
   </body>
 </html>

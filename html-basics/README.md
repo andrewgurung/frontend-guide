@@ -178,3 +178,47 @@ p {
 - Use SVG for vector graphics
 - Use Canvas for complex image and animations
 -----------------------------------------
+
+### Vector graphics
+- On the web, we work with two types of images
+1. Raster images: Defined using a grid of pixels. jpg, png, gif
+2. Vector images: Defined using algorithms. SVG
+
+- Vector images doesn't pixellate when zoomed in
+- Vector images are much lighter in size
+
+#### SVG
+- SVG is an XML based language for describing vector images
+- Most people use a vector graphic editor like Inkscape or Illustrator
+
+#### How to include SVG code inside your HTML
+- Use <svg></svg> element
+```
+<svg width="300" height="200">
+  <rect width="100%" height="100%" fill="black"/>
+  <circle cx="150" cy="100" r="90" fill="blue"/>
+</svg>
+```
+
+#### Drawbacks of SVG
+- Complex SVG can take significant processing time in browser
+- Harder to create than raster images
+- Not supported in older browser
+
+#### Adding SVG to your pages
+- Embed SVG via an `<img>` element
+- Drawback 1: Cannot manipulate the image with JavaScript
+- Drawback 2: Must use include inline CSS styles in your SVG code to control styling
+```
+<img src="resources/sample.svg" alt="SVG sample" width="300" height="300">
+<hr>
+```
+
+#### Supporting older browser
+- Use `src` for fallback content and use `srcset` to list svg content
+```
+<img alt="triangle with equal sides" srcset="equilateral.svg" src="equilateral.png">
+
+```
+
+-----------------------------------------
