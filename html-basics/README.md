@@ -137,3 +137,44 @@ p {
 <track label="English" kind="subtitles" src="resources/subtitle.vtt" srclang="en">
 ```
 -----------------------------------------
+
+### Embedding Technologies
+
+#### <iframe> element
+- `iframe` element allows user to embed other web documents into the current document such as youtube, google maps, discuss etc.
+- Always use the `sandbox` attribute
+- `iframe` is a common target for hackers
+- Only embed when necessary
+- Never embed third-party content with HTTP
+- HTTPS prevents embedded content from accessing content in your parent document, and vice versa
+```
+<iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="100%" height="500" frameborder="0" allowfullscreen sandbox>
+  <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+      </a>
+  </p>
+</iframe>
+```
+
+#### <embed> and <object> element
+- General purpose embedding tools
+- Not popular these days
+
+```
+<object data="mypdf.pdf" type="application/pdf"
+        width="800" height="1200" typemustmatch>
+  <p>You don't have a PDF plugin, but you can <a href="myfile.pdf">download the PDF file.</a></p>
+</object>
+
+<embed src="whoosh.swf" quality="medium"
+  bgcolor="#ffffff" width="550" height="400"
+  name="whoosh" align="middle" allowScriptAccess="sameDomain"
+  allowFullScreen="false" type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer">
+```
+
+#### Best Practice
+- Use HTML5 video element for media
+- Use SVG for vector graphics
+- Use Canvas for complex image and animations
+-----------------------------------------

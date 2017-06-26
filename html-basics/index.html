@@ -246,6 +246,30 @@
         <track label="English" kind="subtitles" src="resources/subtitle.vtt" srclang="en">
         <p>Here is the link to the <a href="resources/sintel-short.webm">video</a> if it doesn't play.</p>
       </video>
+      <hr>
+    </div>
+
+    <div class="">
+      <h3>Embedding Technologies</h3>
+      <iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="100%" height="500" frameborder="0" allowfullscreen sandbox>
+        <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+            Fallback link for browsers that don't support iframes
+            </a>
+        </p>
+      </iframe>
+
+      <h3>Embed element: flash</h3>
+      <embed src="resources/whoosh.swf" quality="medium"
+       bgcolor="#ffffff" width="550" height="400"
+       name="whoosh" align="middle" allowScriptAccess="sameDomain"
+       allowFullScreen="false" type="application/x-shockwave-flash"
+       pluginspage="http://www.macromedia.com/go/getflashplayer">
+
+       <h3>Object element: PDF</h3>
+       <object data="resources/mypdf.pdf" type="application/pdf" width="800" height="1200" typemustmatch>
+          <p>You don't have a PDF plugin, but you can <a href="myfile.pdf">download the PDF file.</a></p>
+       </object>
+       <hr>
     </div>
   </body>
 </html>
