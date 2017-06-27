@@ -193,6 +193,10 @@ p {
 
 #### How to include SVG code inside your HTML
 - Use <svg></svg> element
+- Pros: Can assign `classes` and `ids` to SVG elements for styling
+- Drawback 1: Hard for reuse
+- Drawback 2: Browsers cannot cache inline SVG
+
 ```
 <svg width="300" height="200">
   <rect width="100%" height="100%" fill="black"/>
@@ -218,7 +222,13 @@ p {
 - Use `src` for fallback content and use `srcset` to list svg content
 ```
 <img alt="triangle with equal sides" srcset="equilateral.svg" src="equilateral.png">
+```
 
+#### Embed an SVG with an <iframe>
+```
+<iframe src="resources/sample.svg" width="300" height="400" frameborder="0" sandbox>
+  <img src="fallback.png" alt="Pen" />
+</iframe>
 ```
 
 -----------------------------------------
