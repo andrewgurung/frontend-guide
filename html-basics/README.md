@@ -115,7 +115,7 @@ p {
 </video>
 ```
 
-#### Other <video> features
+#### Other `<video>` features
 ```
 <video controls width="400" height="400" muted autoplay loop poster="images/bird.jpg">
 ```
@@ -140,7 +140,7 @@ p {
 
 ### Embedding Technologies
 
-#### <iframe> element
+#### `<iframe>` element
 - `iframe` element allows user to embed other web documents into the current document such as youtube, google maps, discuss etc.
 - Always use the `sandbox` attribute
 - `iframe` is a common target for hackers
@@ -156,7 +156,7 @@ p {
 </iframe>
 ```
 
-#### <embed> and <object> element
+#### `<embed>` and `<object>` element
 - General purpose embedding tools
 - Not popular these days
 
@@ -224,11 +224,10 @@ p {
 <img alt="triangle with equal sides" srcset="equilateral.svg" src="equilateral.png">
 ```
 
-#### Embed an SVG with an <iframe>
+#### Embed an SVG with an `<iframe>`
 ```
 <iframe src="resources/sample.svg" width="300" height="400" frameborder="0" sandbox>
   <img src="fallback.png" alt="Pen" />
 </iframe>
 ```
-
 -----------------------------------------
