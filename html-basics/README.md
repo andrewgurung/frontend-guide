@@ -236,5 +236,44 @@ p {
 - Responsive image technologies are implemented in two ways
 a. Resolution switching: Having same image with different number of pixels
 b. Art direction: Different images that may be cropped for different devices
+- Responsive image cannot be implemented with CSS or JavaScript as images are preloaded by browser
 
+#### Resolution switching
+- Serve smaller image files to narrow screen devices
+- Serve different resolution images to high density/low density screens
+- Solved using vector graphics (SVG images), and the `srcset` and `sizes` attributes
+- srcset: set of images
+- sizes: media condition
+
+```
+<img srcset="elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+```
+
+A simpler syntax using `srcset` with x-descriptors and without `sizes`
+```
+<img srcset="elva-fairy-320w.jpg,
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x"
+     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+```
+
+#### Art direction
+- Serve cropped images for different layouts
+- Serve full landscape image in desktop mode and a cropped portrait image in mobile mode
+- Solved using `<picture>` element
+- `<source>` elements include `source` attribute
+- Do not use the media attribute, unless you also need art direction
+```
+<picture>
+  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+</picture>
+```
 -----------------------------------------
