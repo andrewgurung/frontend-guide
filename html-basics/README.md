@@ -230,5 +230,11 @@ p {
   <img src="fallback.png" alt="Pen" />
 </iframe>
 ```
+-----------------------------------------
+
+### Responsive Images
+- Responsive image technologies are implemented in two ways
+a. Resolution switching: Having same image with different number of pixels
+b. Art direction: Different images that may be cropped for different devices
 
 -----------------------------------------
