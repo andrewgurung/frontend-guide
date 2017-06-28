@@ -8,27 +8,37 @@ URL: http://www.andrewgurung.com/
 
 Table of Contents
 -----------------
-### Front-End Web Developer Nanodegree
+### Part One
 
-- [ ] [Intro to HTML and CSS](https://www.udacity.com/course/intro-to-html-and-css--ud304)
-- [ ] [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)
-- [ ] [Responsive Images](https://www.udacity.com/course/responsive-images--ud882)
-- [ ] [JavaScript Basics](https://www.udacity.com/course/javascript-basics--ud804)
-- [ ] [Intro to jQuery](https://www.udacity.com/course/intro-to-jquery--ud245)
-- [ ] [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
-- [ ] [HTML5 Canvas](https://www.udacity.com/course/html5-canvas--ud292)
-- [ ] [Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884)
-- [ ] [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860)
-- [ ] [Intro to AJAX](https://www.udacity.com/course/intro-to-ajax--ud110)
-- [ ] [JavaScript Design Patterns](https://www.udacity.com/course/javascript-design-patterns--ud989)
-- [ ] [JavaScript Testing](https://www.udacity.com/course/javascript-testing--ud549)
+- [ ] HTML and CSS Basics
+  - [ ] [HTML Basics](html-basics/README.md)
+  - [ ] [CSS Basics](css-basics/README.md)
+- [ ] Practice Session
+  - [ ] Experiment 1: Dribble Example
+  - [ ] Experiment 2: Clone sections from popular sites
+- [ ] HTML and CSS best practices
+- [ ] Grid Systems and Responsiveness
+- [ ] Practice Session
+  - [ ] Experiment 3: Refactor previous project
+  - [ ] Experiment 4: Build a portfolio site
+- [ ] Learn by example
 
 
-### Senior Web Developer Nanodegree
-- [ ] [Building High Conversion Web Forms](https://www.udacity.com/course/building-high-conversion-web-forms--ud890)
-- [ ] [Web Tooling & Automation](https://www.udacity.com/course/web-tooling-automation--ud892)
-- [ ] [JavaScript Promises](https://www.udacity.com/course/javascript-promises--ud898)
-- [ ] [Offline Web Applications](https://www.udacity.com/course/offline-web-applications--ud899)
-- [ ] [Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891)
-- [ ] [Front-End Frameworks](https://www.udacity.com/course/front-end-frameworks--ud894)
-- [ ] [Client-Server Communications](https://www.udacity.com/course/client-server-communication--ud897)
+### Part Two
+- [ ] JavaScript Basics
+- [ ] Interactivity + Inspector
+- [ ] Practice Session
+  - [ ] Experiment 1: Manipulate AirBnB live page
+  - [ ] Experiment 2: Heavy DOM manipulation
+- [ ] Advanced JS Concepts
+- [ ] ES5 vs ES6
+- [ ] Practice Session
+  - [ ] Experiment 3: Clone Flipboard Homepage
+  - [ ] Experiment 4: Create JS Clock
+- [ ] JS Design Patterns
+- [ ] JS Frameworks
+- [ ] Practice Session
+  - [ ] Experiment 5: ToDo App using vanilla JS
+  - [ ] Experiment 6: Etsy Clone using AngularJS
+  - [ ] Experiment 7: ToDo App using ReactJS + Flux
+- [ ] Learn by example
