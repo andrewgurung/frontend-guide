@@ -12,6 +12,8 @@ HTML Basics from Mozilla Developer Network <br/>
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
 
 [Assessment 1](assessment1)
+[Assessment 2](assessment2)
+[Assessment 3](assessment3)
 
 Notes
 -----
