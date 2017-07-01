@@ -293,6 +293,27 @@ A simpler syntax using `srcset` with x-descriptors and without `sizes`
 - `<th>`: table headers which comes with default styling -- they are bold
 - `colspan="2"`: Spans across two columns. Used with `th` and `td` elements
 - `rowspan="2"`: Spans across two rows. Used with `th` and `td` elements
+
+#### Styling table using col and colgroup
+- Without using `<col>` and `<colgroup>` elements, we have to repeat our CSS in every `td` or `th` element or use complex CSS
+- HTML provides `<col>` and `<colgroup>` elements to easily style individual columns
+
+Eg:
+First column: No CSS
+Second column: Yellow background-color
+```
+<table>
+  <colgroup>
+    <col>
+    <col style="background-color: yellow !important">
+  </colgroup>
+  <tr>
+    <td>Calcutta</td>
+    <td>Orange</td>
+  </tr>
+</table>
+```
+
 ```
 ```
 
