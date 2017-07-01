@@ -244,8 +244,8 @@ b. Art direction: Different images that may be cropped for different devices
 - Serve smaller image files to narrow screen devices
 - Serve different resolution images to high density/low density screens
 - Solved using vector graphics (SVG images), and the `srcset` and `sizes` attributes
-- srcset: set of images
-- sizes: media condition
+- srcset: Which image to display? Base on browser window. Eg: If browser window is less than 320px, display elva-fairy-320w.jpg.
+- sizes: After deciding which image to display from `srcset`, use `sizes` attribute to determine how big you want to render the image as?
 
 ```
 <img srcset="elva-fairy-320w.jpg 320w,
