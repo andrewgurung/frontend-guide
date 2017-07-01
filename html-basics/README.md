@@ -279,3 +279,22 @@ A simpler syntax using `srcset` with x-descriptors and without `sizes`
 </picture>
 ```
 -----------------------------------------
+
+### HTML table basics
+
+#### Tables
+- HTML tables should be used for tabular data
+- **Warning:** Do not use tables to layout webpages
+
+#### Syntax
+- `<table>`: Start and end element
+- `<td>`: table data or cell
+- `<tr>`: table row
+- `<th>`: table headers which comes with default styling -- they are bold
+- `colspan="2"`: Spans across two columns. Used with `th` and `td` elements
+- `rowspan="2"`: Spans across two rows. Used with `th` and `td` elements
+```
+```
+
+
+-----------------------------------------
