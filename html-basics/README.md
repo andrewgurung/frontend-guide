@@ -328,4 +328,20 @@ Second column: Yellow background-color
 #### Nesting tables
 - Achieved by including a complete `<table>` structure
 
+#### Tables for visually impaired users
+- Visually impaired people often use a screenreader that reads out information on web pages to them
+- Using `<th>`: Combination of column and row headers will identify and interpret the data in each cell
+- Using `scope` attribute: Screenreader will allow their users to read out the entire column or row at once
+  - scope="row": If `<th>` is used for row header
+  - scope="col": If `<th>` is used for column header
+  - scope="colgroup": If `<th>` is used for col header in a nested header spanning multiple cols
+  - scope="rowgroup": If `<th>` is used for row header in a nested header spanning multiple rows
+- Using `id` and `headers` attributes:
+  - `id`: Define all `<th>` elements with unique `id` attribute
+  - `headers`: Define all `<td>` elements with headers attribute listing both the row and column header ids
+
+#### Active Learning Links
+- [Playing with id and headers](table/itemSold/items-sold-using-id-header.html)
+- [Playing with scope](table/itemSold/items-sold-using-scope.html)
+
 -----------------------------------------
