@@ -301,6 +301,7 @@ A simpler syntax using `srcset` with x-descriptors and without `sizes`
 Eg:
 First column: No CSS
 Second column: Yellow background-color
+
 ```
 <table>
   <colgroup>
@@ -314,8 +315,6 @@ Second column: Yellow background-color
 </table>
 ```
 
-```
-```
-
-
+#### Adding caption to a table
+- Add `<caption>` element after `<table>`
 -----------------------------------------
