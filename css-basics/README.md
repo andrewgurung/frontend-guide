@@ -24,6 +24,7 @@ Notes
 - selector: which elements to apply the properties to
 
 **Simple CSS Syntax**
+
 [JS Bin Example](https://jsbin.com/lapocar/edit?html,css,output)
 
 HTML:
