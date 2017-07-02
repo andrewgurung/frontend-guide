@@ -317,4 +317,11 @@ Second column: Yellow background-color
 
 #### Adding caption to a table
 - Add `<caption>` element after `<table>`
+
+#### Adding table structure
+- Useful to give table structure when it gets complex
+- Used for styling and layout
+- `<thead>`: Wrap the top header section except `<colgroup>`
+- `<tbody>`: Wrap the main content
+- `<tfoot>`: Will render the content at the bottom row
 -----------------------------------------
