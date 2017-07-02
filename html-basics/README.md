@@ -324,4 +324,8 @@ Second column: Yellow background-color
 - `<thead>`: Wrap the top header section except `<colgroup>`
 - `<tbody>`: Wrap the main content
 - `<tfoot>`: Will render the content at the bottom row
+
+#### Nesting tables
+- Achieved by including a complete `<table>` structure
+
 -----------------------------------------
