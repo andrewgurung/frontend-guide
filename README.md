@@ -11,7 +11,7 @@ Table of Contents
 ### Part One
 
 - [ ] HTML and CSS Basics
-  - [ ] [HTML Basics](html-basics/README.md)
+  - [x] [HTML Basics](html-basics/README.md)
   - [ ] [CSS Basics](css-basics/README.md)
 - [ ] Practice Session
   - [ ] Experiment 1: Dribble Example
