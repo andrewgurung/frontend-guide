@@ -396,7 +396,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 ```
 
+### CSS values and units
 
+**Types of CSS values**
+- Numeric values
+- Percentages
+- Colors
+- Coordinate positions
+- Functions
+
+#### Numeric Values
+- Pixels(px) are the most used `absolute` numeric values -- same size regardless of any other related settings
+- mm, cm, in: Millimeters, centimeters, or inches. Absolute numeric values
+- pt, pc: Points (1/72 of an inch) or picas (12 points.). Absolute numeric values
+
+There are also relative units:
+- em: 1em is 16 pixels for an element by default. The most common relative unit
+- ex, ch: Respectively these are the height of a lower case x, and the width of the number 0
+- rem: rem (root em) works in exactly the same way as the em, except that inherited font sizes will have no effect. Much better option than ems although rems don't work in older versions of IE
+- vw, vh: Respectively these are 1/100th of the width of the viewport, and 1/100th of the height of the viewport
+
+Unitless values:
+1. Can be used to completely remove the margin or padding. Eg: padding: 0;
+2. Line height multiplier. Eg: line-height: 1.5;
+3. Number of animations. Eg: animation-iteration-count: 5;
+
+Best practice: Using relative units is quite useful — you can size your HTML elements relative to your font or viewport size
+
+#### Percentages
 
 -----------------------------------------
 
