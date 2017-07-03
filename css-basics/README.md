@@ -450,6 +450,38 @@ width: calc(90%-15px);
 background-image: url('myimage.png');
 ```
 
+### Cascade and inheritance
+At its most basic level `Cascade` indicates that the order of CSS rules matter. But it depends on more factors:
+1. Importance
+2. Specificity
+3. Source order
+
+#### Importance
+- Make sure it always wins over all others
+- Syntax: !important
+- Best practice: Don't use it unless you have to. Because `!important` changes the way the cascade normally works, it can make debugging CSS problems really hard to work out
+
+```
+.better {
+  background-color: gray;
+  border: none !important;
+}
+```
+
+#### Specificity
+- A measure of how specific a selector is
+
+The amount of specificity a selector has is measured using four different values.
+1. Thousands: Score one in this column if the matching selector is inside a <style> element or the declaration is inside a style attribute (such declarations don't have selectors, so their specificity is always simply 1000.) Otherwise 0.
+2. Hundreds: Score one in this column for each ID selector contained inside the overall selector.
+3. Tens: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
+4. Ones: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
+
+
+#### Source order
+- If multiple competing selectors have the same importance and specificity, source order comes in.
+- Later rules will win over earlier rules.
+Note: Rule overriding is on property level, not the entire ruleset.
 -----------------------------------------
 
 ### Styling text
