@@ -58,6 +58,36 @@ p {
 
 #### How does CSS work
 ![CSS Dom](images/css-dom.svg)
+
+#### DOM
+- DOM has a tree-like structure
+- Each element, attribute and piece of text becomes a DOM node
+
+#### Ways to apply CSS
+1. External stylesheet
+```
+<head>
+   <title>My CSS experiment</title>
+   <link rel="stylesheet" href="style.css">
+ </head>
+```
+2. Internal stylesheet
+```
+<head>
+   <title>My CSS experiment</title>
+   <style>
+     p {
+       color: red;
+     }
+   </style>
+ </head>
+```
+3. Inline stylesheet
+```
+<body>
+    <p style="color:red;">This is my first CSS example</p>
+  </body>
+```
 -----------------------------------------
 
 ### Styling text
