@@ -424,6 +424,31 @@ Unitless values:
 Best practice: Using relative units is quite useful — you can size your HTML elements relative to your font or viewport size
 
 #### Percentages
+- Size will always shift to be a certain percentage of their parent container. Eg: width: 75%;
+
+#### Colors
+- Keywords: Oldest color types. Eg: red
+- Hexadecimal values: (#) followed by six hexadecimal numbers. Eg: #ff0000
+- RGB: A function of red, green and blue channel. Eg: rgb(0,0,255)
+- HSL: A function of hue, saturation, and lightness. Eg: hsl(0,100%,50%);
+- RGBA and HSLA: RGB and HSL function with an extra transparency parameter. Eg: rgba(255,0,0,0.5);
+
+**Opacity**
+- Another way to specify transparency via CSS.
+`opacity: 0.5;`
+
+#### Functions
+- Name with parenthesis after it
+```
+/* calculate the new position of an element after it has been rotated by 45 degress */
+transform: rotate(45deg);
+/* calculate the new position of an element after it has been moved across 50px and down 60px */
+transform: translate(50px, 60px);
+/* calculate the computed value of 90% of the current width minus 15px */
+width: calc(90%-15px);
+/* fetch an image from the network to be used as a background image */
+background-image: url('myimage.png');
+```
 
 -----------------------------------------
 
