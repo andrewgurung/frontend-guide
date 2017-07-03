@@ -166,6 +166,99 @@ The following  types of CSS selectors are based on:
 6. Multiple selectors: Multiple selectors share the same CSS rule separated by comma
 
 
+#### Simple selectors
+1. Element selector
+- Selects an HTML element
+- Case in-sensitive
+
+HTML:
+```
+<div>CSS simple selctor</div>
+```
+CSS:
+```
+DIV {
+  color: blue;
+}
+```  
+
+2. Class selector
+- '.' followed by class name
+- Multiple elements can share same class name
+
+HTML:
+```
+<li class="first done">Milk</li>
+<li class="second done">Eggs</li>
+```
+
+CSS:
+```
+.done {
+  text-decoration: line-through;
+}
+```
+
+3. ID selector
+- '#' followed by ID name of an element
+- Most efficient way to select a single element
+
+HTML:
+```
+<p id="polite"> — "Good morning."</p>
+```
+
+CSS:
+```
+#polite {
+  font-family: cursive;
+}
+```
+
+4. Universal selector
+- `*`
+- Rarely useful as it selects all elements
+
+5. Combinators using simple selectors
+- The descendant selector: (space) -- Select an element nested somewhere inside another element (not necessarily a direct descendant)
+- The child selector: `>` -- Select an element that is an immediate child of another element.
+- The adjacent sibling selector: `+` -— Select an element that is an immediate sibling of another element (i.e. right next to it, at the same level in the hierarchy).
+- The general sibling selector: `~` —- allows you to select any elements that are siblings of another element (i.e. at the same level in the hierarchy, but not necessarily right next to it)
+
+HTML:
+```
+<section>
+  <h2>Heading 1</h2>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <div>
+    <h2>Heading 2</h2>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+  </div>
+</section>
+```
+
+CSS:
+```
+section p {
+  color: blue;
+}
+
+section > p {
+  background-color: yellow;
+}
+
+h2 + p {
+  text-transform: UPPERCASE;
+}
+
+h2 ~ p {
+  border: 1px dashed black;
+}
+```
+
+[JSBin Practice](https://jsbin.com/kuyasu/2/edit?html,css,output)
 
 -----------------------------------------
 
