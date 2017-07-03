@@ -260,6 +260,63 @@ h2 ~ p {
 
 [JSBin Practice](https://jsbin.com/kuyasu/2/edit?html,css,output)
 
+
+#### Attribute selectors
+1. Presence and value attribute selectors
+- Tries to match exact attribute value
+
+**Types:**
+- [attr]: All matching attributes `attr`
+- [attr="val"]: Matching attributes where `val` is the `attr`s value
+- [attr~="val"]: Matching attribute where `val` is one of the comma separated list of `attr`s values
+
+[JSBin Practice](https://jsbin.com/hajobuc/9/edit?html,css,output)
+
+CSS:
+```
+[data-vegetable] {
+  color: green;
+}
+
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+}
+
+[data-vegetable~="chili"] {
+  color: red;
+}
+```
+
+2. Substring value attribute selectors
+- Offer flexible matching in a similar fashion to regular expression
+
+**Types:**
+- [attr|="val"]: Attributes `attr` whose value is exactly `val` or starts with `val`
+- [attr^="val"]: Attributes `attr` whose value starts with `val`
+- [attr$="val"]: Attributes `attr` whose value ends with `val`
+- [attr*="val"]: Attributes `attr` whose value contains `val`
+
+[JSBin Practice](https://jsbin.com/mugeqer/7/edit?html,css,output)
+
+CSS:
+```
+/* Classic usage for language selection */
+[lang|=fr] {
+  font-weight: bold;
+}
+
+[data-vegetable*="not spicy"] {
+  color: green;
+}
+
+[data-quantity$="kg"] {
+  font-weight: bold;
+}
+
+[data-quantity^="optional"] {
+  opacity: 0.5;
+}
+```
 -----------------------------------------
 
 ### Styling text
