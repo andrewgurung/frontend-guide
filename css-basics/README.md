@@ -55,6 +55,9 @@ p {
   color: red;
 }
 ```
+
+#### How does CSS work
+![CSS Dom](images/css-dom.svg)
 -----------------------------------------
 
 ### Styling text
