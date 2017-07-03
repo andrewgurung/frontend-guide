@@ -365,7 +365,35 @@ p::first-line {
   padding: 2px;
   margin-right: 4px;
 }
+```
 
+#### Combinators
+1. A, B:	Any element matching A and/or B
+2. A B: 	Any element matching B that is a descendant of an element matching A (that is: a child, or a child of a child, etc.)
+3. A > B:	Any element matching B that is a direct child of an element matching A
+4. A + B:	Any element matching B that is the next sibling of an element matching A
+5. A ~ B:	Any element matching B that is one of the next siblings of an element matching A
+
+```
+/* All <td>s that are a last child,
+   within a <tbody>, within a <table> */
+table tbody td:last-child {
+  text-align: right
+}
+
+/* All <td>s preceded by a <th>, within a <table> */
+table th + td {
+  text-align: right;
+}
+```
+
+#### Multiple selectors on one rule
+- Multiple selectors separated by commas to apply same rule to different sets of elements at once
+
+```
+h1, h2, h3, h4, h5, h6 {
+  font-family: helvetica, 'sans serif';
+}
 ```
 
 
