@@ -88,6 +88,52 @@ p {
     <p style="color:red;">This is my first CSS example</p>
   </body>
 ```
+
+#### CSS Vocabulary
+CSS consists of two building blocks:
+- property: Human-readable identifiers that indicates which stylistic feature to change
+- value: How you want to change those stylistic features
+
+```
+Property + Value ==> CSS Declaration
+
+CSS Declaration + Selectors ==> CSS Rulesets/Rules
+```
+
+- There are around 300 CSS properties
+
+#### CSS Declaration block
+- Enclosed in braces `{ }`
+- Must end with semicolons
+- Best practice: leave the last property with `;` too so that you don't forget
+```
+{
+  background-color: red;
+  color: blue
+}
+```
+
+#### CSS At-rules and Nested Statements
+
+CSS Rules are the most common blocks in CSS. But there are other blocks/statements too.
+1. At-rules:
+  - Used to convey metadata, nested or descriptive information
+  - Starts with `@` sign, then followed by syntax, ending with `;`
+  - Eg: `@import`(metadata), `@media`(nested), `@font-face`(descriptive)
+
+2. Nested Statements:
+  - Subset of At-rule
+  - Syntax is a nested block of CSS which applies only if the condition is met
+  ```
+  @media(min-width: 800px) {
+    body {
+      color: red;
+    }
+  }
+  ```
+
+
+
 -----------------------------------------
 
 ### Styling text
