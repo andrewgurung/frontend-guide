@@ -482,6 +482,34 @@ The amount of specificity a selector has is measured using four different values
 - If multiple competing selectors have the same importance and specificity, source order comes in.
 - Later rules will win over earlier rules.
 Note: Rule overriding is on property level, not the entire ruleset.
+
+### Inheritance
+The idea is that some property values applied to an element will be inherited by that element's children, and some won't.
+- Naturally inherited: Eg: font-family
+- Naturally not-inherited: Eg: border, margin
+
+CSS provides three special values to handle inheritance:
+- inherit: Inherits its value from the parent element
+- initial: Sets to the browser's default style sheet. If no value is set by browser, the property will be naturally inherited. i.e Set to `inherit`
+- unset: If property is a naturally inherited property, it acts as `inherit` else acts as `initial`
+
+```
+body {
+  color: green;
+}
+
+.inherit a {
+  color: inherit;
+}
+
+.initial a {
+  color: initial
+}
+
+.unset a {
+  color: unset;
+}
+```
 -----------------------------------------
 
 ### Styling text
