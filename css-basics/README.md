@@ -132,6 +132,39 @@ CSS Rules are the most common blocks in CSS. But there are other blocks/statemen
   }
   ```
 
+#### Making CSS readable
+1. Whitespace
+- Browsers ignores CSS whitespaces(tabs, spaces, new lines) as in HTML
+
+2. Comment
+- Comments in CSS begin with `/* and end with */`
+
+3. Shorthand
+```
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 15px;
+padding-left: 5px;
+```
+
+Shorthand properties
+```
+/* in shorthand like padding and margin, the values are applied
+   in the order top, right, bottom, left (the same order as an analog clock). There are also other
+   shorthand types, for example two values, which set for example
+   the padding for top/bottom, then left/right */
+padding: 10px 15px 15px 5px;
+```
+
+#### Types of CSS selector
+The following  types of CSS selectors are based on:
+1. Simple selector: Element type, class or id
+2. Attribute selector: Attributes/attribute values
+3. Pseudo-classes: State an element exist in. Eg: Mouse hovered
+4. Pseudo-elements: Relative to an element. Eg: First word of every paragraph
+5. Combinators: Combining two or more selectors. Eg: Paragraphs that are direct descendants of divs
+6. Multiple selectors: Multiple selectors share the same CSS rule separated by comma
+
 
 
 -----------------------------------------
