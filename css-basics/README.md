@@ -317,6 +317,59 @@ CSS:
   opacity: 0.5;
 }
 ```
+
+#### Pseudo-classes
+- Pseudo-classes are added to the end of a selector to style selected elements only when they are in certain state
+- Syntax: colon (:) + keyword. Eg: :active, :checked
+
+```
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}
+
+li:nth-of-type(even) {
+  background-color: #ccc;
+}
+
+li:nth-of-type(odd) {
+  background-color: #eee;
+}
+```
+
+#### Pseudo-elements
+- Similar to Pseudo-classes
+- Syntax: two colons (::) + keyword. Eg: ::after, ::before
+
+[JSBin Practice](https://jsbin.com/hejarof/1/edit?html,css,output)
+```
+/* All elements with an attribute "href", which values
+   start with "http", will be added an arrow after its
+   content (to indicate it's an external link) */
+[href^=http]::after {
+  content: '!';
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+ p::first-letter{
+  font-size: 3em;
+  border: 1px solid black;
+  background: red;
+  display: block;
+  float: left;
+  padding: 2px;
+  margin-right: 4px;
+}
+
+```
+
+
+
 -----------------------------------------
 
 ### Styling text

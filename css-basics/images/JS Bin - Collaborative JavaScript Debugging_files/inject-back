@@ -1,0 +1,5 @@
+document.getElementById('bsaapi').innerHTML = '<a href="//srv.buysellads.com/ads/click/x/GTND4237F6YD5KJYC6SLYKQWF6AI42JLFTSDLZ3JCEAIE5QMCEYDC2JKC6BDL5QJCTYI6K3EHJNCLSIZ" target="_blank">Guide to cPanel &amp; WordPress: Learn to manage hosting with the powerful cPanel dashboard. Reserve a free copy!</a><img src="https://www.launchbit.com/taz-pixel/11382-6887-111" height=1 width=1 border=0 style="display:none">';
+$('body').addClass('bsaapi');
+$('#bsaapi a').click(function () {
+  jsbin.analytics.track('ad', 'click', 'bsa');
+});
