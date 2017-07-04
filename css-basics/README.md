@@ -525,6 +525,30 @@ Solution: Use `box-sizing` property with `border-box` value
 ```
 box-sizing: border-box;
 ```
+
+### Advanced box manipulation
+Beyond setting the width, height, border, padding and margin of boxes, there are some other properties available to change how they behave
+
+#### Overflow
+- When you set the size of a box with absolute values, the content may not fit the box which causes content overflow
+The `overflow` property can have the following values
+1. auto: Displays a scrollbar to accommodate the overflow content
+2. hidden: Cuts off the overflow content
+3. visible: Default browser behavior. Displays the overflow content outside of the box border without any scrollbar
+
+[JSbin Practice](https://jsbin.com/haxefih/1/edit?html,css,output)
+
+```
+p {
+  height: 100px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.autoscroll { overflow: auto;    }
+.clipped    { overflow: hidden;  }
+.default    { overflow: visible; }
+```
 -----------------------------------------
 
 ### Styling text
