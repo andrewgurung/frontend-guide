@@ -575,7 +575,7 @@ Background color and images are drawn under a box (In CSS every element is repre
 outline: 1px solid white;
 ```
 
-### Types of CSS boxes
+#### Types of CSS boxes
 The type of box applied to an element is specified by the `display` property.
 1. block:
 - Stacked upon other boxes
@@ -597,7 +597,12 @@ The type of box applied to an element is specified by the `display` property.
 .inline-block { display: inline-block; }
 ```
 
-
+### Debugging CSS
+- CSS is permissive -- if a declaration is invalid, browser will ignore it completely and move ahead
+- All modern web browsers provide developer tools to help inspect and understand web pages
+- Any invalid properties appear with a line through them and a little warning symbol next to them
+- Best practice: For a large stylesheet, it is worth running it through a W3C CSS Validation service first to get rid of any basic syntax mistakes
+[W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/)
 -----------------------------------------
 
 ### Styling text
