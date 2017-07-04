@@ -510,6 +510,10 @@ body {
   color: unset;
 }
 ```
+
+### The box model
+
+![Box properties](images/box-model-standard-small.png)
 -----------------------------------------
 
 ### Styling text
