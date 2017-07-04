@@ -549,6 +549,28 @@ p {
 .clipped    { overflow: hidden;  }
 .default    { overflow: visible; }
 ```
+
+#### Background clip
+Background color and images are drawn under a box (In CSS every element is represented by a rectangular box)
+- By default, backgrounds extend to the outer edge of a box's border
+- What if you want to only limit the background within the content?
+- `background-clip`: Adjust background settings on the box
+
+1. border-box: Default browser behaviour. The background extends to the outside edge of the border (but underneath the border in z-ordering)
+2. padding-box: No background is drawn below the border. (The background extends to the outside edge of the padding)
+3. content-box: The background is painted within (clipped to) the content box
+
+[JSBin Practice](https://jsbin.com/mabazor/1/edit?html,css,output)
+
+```
+.border-box { background-clip: border-box; }
+.padding-box { background-clip: padding-box; }
+.content-box { background-clip: content-box; }
+```
+
+#### Outline
+
+
 -----------------------------------------
 
 ### Styling text
