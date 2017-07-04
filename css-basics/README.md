@@ -569,6 +569,33 @@ Background color and images are drawn under a box (In CSS every element is repre
 ```
 
 #### Outline
+- Outlines differ from borders
+- It behaves like the border but is drawn on top of the box without changing the size of the box
+```
+outline: 1px solid white;
+```
+
+### Types of CSS boxes
+The type of box applied to an element is specified by the `display` property.
+1. block:
+- Stacked upon other boxes
+- Content before and after the box appears on a separate line
+- Can have width and height set on it
+2. inline:
+- Flows with the document text on the same line
+- Width and height settings have no effect
+- Any padding, margin and border set on inline boxes will update the position of surrounding text, but will not affect the position of surrounding block boxes
+3. inline-block:
+- Something in between the first two
+- Inline characters: It flows with surrounding text without creating line breaks before and after it like an inline box.
+- Block characters: It can be sized using width and height and maintains its block integrity like a block box — it won't be broken across paragraph lines.
+
+[JSBin Practice](https://jsbin.com/hikabel/2/edit?html,css,output)
+```
+.inline       { display: inline;       }
+.block        { display: block;        }
+.inline-block { display: inline-block; }
+```
 
 
 -----------------------------------------
