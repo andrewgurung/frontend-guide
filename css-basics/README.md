@@ -513,7 +513,18 @@ body {
 
 ### The box model
 
+- Every element within a document is structured as a rectangular box
 ![Box properties](images/box-model-standard-small.png)
+
+#### Border box
+- The total width of a box is the sum of its width, padding-right, padding-left, border-right, and border-left properties
+- What if you want to have a box with a total width of 50% with border and padding
+![Border box properties](images/box-model-alt-small.png)
+
+Solution: Use `box-sizing` property with `border-box` value
+```
+box-sizing: border-box;
+```
 -----------------------------------------
 
 ### Styling text
