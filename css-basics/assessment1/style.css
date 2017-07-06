@@ -7,7 +7,12 @@ body {
 html {
   font-family: 'Helvetica neue', Arial, 'sans serif';
   font-size: 10px;
-  background-color: #ccc;
+  background-color: #393E46;
+  color: #393E46;
+}
+
+h2, p {
+  margin: 0;
 }
 
 /* The setup of the card container */
@@ -15,11 +20,10 @@ html {
   width: 35em;
   height: 22em;
   margin: 5em auto;
-  background-color: red;
-  border: 0.2em solid black;
+  background-color: #EEEEEE;
+  border: 0.2em solid #00ADB5;
   border-radius: 1.5em;
 }
-
 
 /* Header and footer */
 .card header {
