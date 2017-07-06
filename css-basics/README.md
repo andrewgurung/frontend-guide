@@ -607,7 +607,43 @@ The type of box applied to an element is specified by the `display` property.
 [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/)
 -----------------------------------------
 
-### Styling text
+## Styling text
+Styling text includes text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows and other text features
+
+### Fundamental text and font styling
+The CSS properties used to style text falls into two categories:
+1. Font styles: What font? How big? Bold or Italics?
+2. Text layout styles: Space between lines and letters? Alignment?
+
+#### Font styles
+1. Color:
+- Sets the foreground color
+```
+color: red;
+```
+
+2. Font-family:
+- Applies the font to elements. If font is not found, browser sets default font
+- There are certain fonts that are generally found across all systems known as `web safe fonts`. Eg: Arial, Courier New, Georgia, Times New Roman, Verdana
+- Serifs are small decorative details on letters and symbols. Eg Times New Roman
+- Sans serifs does not have these details. Eg Arial
+```
+font-family: arial;
+```
+
+**Note:** CSS defines five generic default names for fonts:  serif, sans-serif, monospace, cursive, and fantasy. `Default font` name will be open for interpretation by the browser which will try to replace it will the closet appropriate font face
+
+- Font stack: Since the availability of a font is not guaranteed, it is best to define font stack. Best practice to define `default font` at the end.
+```
+font-family: "Trebuchet MS", Verdana, sans-serif;
+```
+
+#### Text layout styles
+
+
+### Styling lists
+### Styling links
+### Web fonts
 
 -----------------------------------------
 
