@@ -59,7 +59,7 @@ p {
 ```
 
 #### How does CSS work
-![CSS Dom](images/css-dom.svg)
+![CSS Dom](images/htmlcssload.jpg)
 
 #### DOM
 - DOM has a tree-like structure
