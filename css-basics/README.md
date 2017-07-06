@@ -615,6 +615,8 @@ The CSS properties used to style text falls into two categories:
 1. Font styles: What font? How big? Bold or Italics?
 2. Text layout styles: Space between lines and letters? Alignment?
 
+[JSBin Practice](http://jsbin.com/dizijoh/14/edit?html,css,output)
+
 #### Font styles
 1. Color:
 - Sets the foreground color
@@ -638,8 +640,68 @@ font-family: arial;
 font-family: "Trebuchet MS", Verdana, sans-serif;
 ```
 
-#### Text layout styles
+3. Font-size: The most common sizes are
+- pixels
+- em: 1em = font size of parent element
+- rem = font size of root element(i.e `<html>`) not the parent. More predictable than `em`
 
+**Best Practice:** Set base `font-size` to 10px so that setting `em` or `rem` will be must easier to calculate instead of dividing my 16px(default size). `rem` is preferred over `em`
+
+```
+html {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 2.6rem; /* 26px */
+}
+
+p {
+  font-size: 1.4rem; /* 14px */
+}
+```
+
+4. Font style, font weight, text transform, and text decoration
+- font-style: Values include `normal`, `italic`, `oblique` (Slant the normal font if italics version is not available)
+- font-weight: Values include `normal`, `bold`, `lighter`, `bolder`, `100-900` (for fine grain control)
+- text-transform: Values include `none`, `uppercase`, `lowercase`, `capitalize` (Capitalize first letter of every word)
+- text-decoration: Values include `none`, `underline`, `overline`, `line-through`
+
+5. Text drop shadows
+- Takes four values which are horizontal offset, vertical offset, blur radius, shadow color
+```
+text-shadow: 4px 4px 5px red;
+```
+
+**Multiple shadows**
+```
+text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+```
+
+#### Text layout styles
+1. Text align: Values include `left`, `right`, `center`, `justify`
+- Justify can look terrible, especially when applied to a paragraph with lots of long words in it. Use along with `hyphens` property (none, auto, manual) which inserts hyphen to break lines
+
+```
+text-align: center;
+```
+
+2. Line height: The height of each line
+- Best Practice: Use 1.5-2 times `multiplier` instead of exact pixels. It calculates based on the font-size. Eg: 1.5 = 1.5 times of font-size.
+```
+line-height: 1.5;
+```
+
+3. Letter and word spacing
+```
+p::first-line {
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+```
 
 ### Styling lists
 ### Styling links
