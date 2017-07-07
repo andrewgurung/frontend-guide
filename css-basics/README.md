@@ -785,7 +785,132 @@ ul {
 ```
 
 ### Styling links
+- Mnemonic: `L`o`V`e `F`ears `H``A`te
 
+#### States of a link
+1. Link: The default state. Unvisited state. `:link` pseudo class
+2. Visited: A link when it has already been visited. `:visited` pseudo class
+3. Focus: A link when it has been focused. `:focus` pseudo class
+4. Hover: A link when it is being hovered over by a mouse. `:hover` pseudo class
+5. Active: A link when it is being activated (e.g. clicked on). `:active` pseudo class
+
+#### CSS properties to change default link styles:
+- outline: An outline is a line that is drawn around elements (outside the borders) to make the element "stand out"
+- color
+- cursor: Change the hand icon when mouse over
+- text-decoration: Use `none` to remove underline
+- background: Give a background color that stands out
+- border-bottom: Border-bottom is better than default `a href` underline which can cut across the descenders of letters like `g` and `y`
+
+```
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;     
+  background: #CDFEAA;
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}
+```
+
+#### Including icons on link
+Eg: Display icons on link only if it is an external link i.e begins with http
+
+HTML
+```
+<a href="/contact">Contact Us</a> <br>
+<a href="https://en.wikipedia.org/wiki/Weather">weather on Wikipedia</a>
+```
+
+CSS
+```
+a[href*="http"] {
+ background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+ background-size: 16px 16px;
+ padding-right: 20px;
+}
+```
+
+#### Styling links as buttons
+
+- `<li>` are blocks by default. So set `display` to `inline`
+- `<a>` should be `block` that does not spill over the next line but we still want `<a>` to be in same line. Use `display: inline-block` that fulfills both requirements
+- Set the width to 19.5%, and the margin-right to 0.625%. But the total will add up to 100.625%, which would make the last button overflow the <ul> and fall down to the next line. Removes the margin from last link `li:last-child a`
+
+[JSBin Practice](http://jsbin.com/jarahic/edit?html,css,output)
+
+HTML
+```
+<ul>
+  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+</ul>
+```
+
+CSS
+```
+body,html {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  padding: 0;
+  width: 100%;
+}
+
+
+li {
+  display: inline;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  width: 19.5%;
+  display: inline-block;
+  margin-right: 0.625%;
+  line-height: 3;
+  text-align: center;
+  color: black;
+}
+
+li:last-child a {
+  margin-right: 0;
+}
+
+a:link, a:visited, a:focus {
+  background: yellow;
+}
+
+a:hover {
+  background: orange;
+}
+
+a:active {
+  background: red;
+  color: white;
+}
+```
 
 ### Web fonts
 
