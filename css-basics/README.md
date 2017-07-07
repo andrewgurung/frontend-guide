@@ -704,7 +704,89 @@ p::first-line {
 ```
 
 ### Styling lists
+
+#### List-specific styles
+There are 3 properties that can be set to `<ul>` or `<ol>` elements
+1. list-style-type: The type of bullets to use for the list, for example square or circle bullets
+```
+ol {
+  list-style-type: upper-roman;
+}
+```
+
+2. list-style-position: Whether the bullets appear inside or outside the list items
+```
+ol {
+  list-style-position: inside;
+}
+```
+
+3. list-style-image: Allows custom image as bullets
+```
+ul {
+  list-style-image: url(star.svg);
+}
+```
+
+For more flexibility use `background-image` solution:
+```
+ul li {
+  padding-left: 2rem;
+  list-style-type: none;
+  background-image: url(star.svg);
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+```
+
+#### List style shorthand
+```
+ul {
+  list-style-type: square;
+  list-style-image: url(example.png);
+  list-style-position: inside;
+}
+```
+
+Shorthand:
+```
+ul {
+  list-style: square url(example.png) inside;
+}
+```
+
+#### Controlling list count
+
+[JSBin Practice](http://jsbin.com/norowu/1/edit?html,css,output)
+
+1. start: What number to start from?
+```
+<ol start="4">
+  <li>Apple</li>
+  <li>Orange</li>
+<ol>
+```
+
+2. reversed: Reverse the numbering
+```
+<ol reversed>
+  <li>Apple</li>
+  <li>Orange</li>
+<ol>
+```
+
+3. value: Custom numbering
+```
+<ol>
+  <li value="500">Apple</li>
+  <li value="200">Orange</li>
+<ol>
+```
+
 ### Styling links
+
+
 ### Web fonts
 
 -----------------------------------------
