@@ -83,11 +83,7 @@ a {
   outline: none;
 }
 
-a:link {
-  color: #a66;
-}
-
-a:visited {
+a:link, a:visited {
   color: #a66;
 }
 
@@ -125,4 +121,35 @@ ul {
 ol {
   list-style: upper-roman;
   list-style-position: inside;
+}
+
+/* Navigation */
+nav ul {
+  padding-left: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-bottom: 2rem;
+
+}
+
+nav li a {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none;
+  line-height: 3;
+  border: 0.1rem solid #a66;
+}
+
+nav li a:focus, nav li a:hover {
+  background-color: #a66;
+  color: white;
+}
+
+nav li a:active {
+  color: white;
+  background: black;
 }
