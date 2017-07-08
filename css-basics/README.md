@@ -913,6 +913,46 @@ a:active {
 ```
 
 ### Web fonts
+There are only a limited set of `Web-safe fonts` -- available across all systems. But if the developer wants to use a custom font?
+Web-safe fonts:
+```
+p {
+  font-family: Helvetica, "Trebuchet MS", sans-serif;
+}
+```
+
+#### Web fonts
+- A CSS feature that allows you to specify font files to be ***downloaded*** along with your website as it is accessed
+- Can get a bit complex to support different browsers. May have to support the following types
+  - WOFF/WOFF2 (Web Open Font Format versions 1 and 2): the most efficient format around
+  - EOT (Embedded Open Type) fonts: Older versions of IE only support
+  - SVG version: Older versions of iPhone and Android browsers
+- Generating required fonts for multiple browsers from a single font: https://www.fontsquirrel.com/tools/webfont-generator
+- Using an online font service: [Google Fonts](https://fonts.google.com/)
+
+**Web fonts syntax:**
+- font-family: Any name to define the font
+- src: location of font
+- format: Optional parameter. Helps browser to locate a font they can use faster
+- font-weight/font-style: If you are importing multiple weights of the same font, you can specify what their weight/style is
+
+```
+@font-face {
+  font-family: 'ciclefina';
+  src: url('fonts/cicle_fina-webfont.eot');
+  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
+         url('fonts/cicle_fina-webfont.woff') format('woff'),
+         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
+         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "myFront", serif;
+}
+```
 
 -----------------------------------------
 
