@@ -63,9 +63,9 @@ h2 {
   letter-spacing: 0.2rem;
 }
 
-body {
+p, li {
   font-size: 1.5rem;
-  line-height: 2.5rem;
+  line-height: 1.5;
   letter-spacing: 0.1rem;
   word-spacing: 0.2rem;
 }
@@ -75,8 +75,12 @@ header h1 {
 }
 
 /* First sibling of h2 which is equal to p*/
-section h2+p {
+h2 + p {
   text-indent: 2rem;
+}
+
+a {
+  outline: none;
 }
 
 a:link {
@@ -88,7 +92,6 @@ a:visited {
 }
 
 a:focus {
-  outline: none;
   text-decoration: none;
 }
 
@@ -107,4 +110,8 @@ a[href*="http"] {
   background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 1.6rem 1.6rem;
   padding-right: 1.8rem;
+}
+
+ul, ol {
+  margin: 1.6rem 0;
 }
