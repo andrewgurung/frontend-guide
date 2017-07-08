@@ -43,3 +43,10 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+html {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1, h2 {
+  font-family: 'Titillium Web', sans-serif;
+}
