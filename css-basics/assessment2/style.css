@@ -73,3 +73,8 @@ body {
 header h1 {
   text-align: center;
 }
+
+/* First sibling of h2 which is equal to p*/
+section h2+p {
+  text-indent: 2rem;
+}
