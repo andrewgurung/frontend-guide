@@ -958,6 +958,24 @@ html {
 
 ### Styling boxes
 
+Box properties include:
+- width/height of content box
+- padding
+- border
+- margin
+
+#### Percentage values
+- Box height doesn't take percentages. It has to be exact values (Eg. Set in `em`, `px`)
+- Border doesn't tale percentages
+- Margin collapsing: When two boxes touches, the larger margin overrides the smaller
+
+#### Overflow:
+- auto: If there is too much content, the overflowing content is hidden and scroll bars are shown to let the user scroll to see all the content.
+- hidden: If there is too much content, the overflowing content is hidden.
+- visible: If there is too much content, the overflowing content is shown outside of the box. Default behavior
+
+
+
 -----------------------------------------
 
 ### CSS layout
