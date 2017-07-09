@@ -978,6 +978,10 @@ Box properties include:
 - Box background is made up of `background-color` and `background-image`
 - Background extends upto the border which can be controlled by `background-clip`
 
+Values for `background-clip`
+1. border-box
+2. padding-box
+3. content-box
 
 -----------------------------------------
 
