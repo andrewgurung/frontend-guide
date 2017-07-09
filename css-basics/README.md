@@ -1025,12 +1025,23 @@ box-sizing: border-box;
 
 ### Backgrounds
 #### Background color
-- `background-color`
+- Syntax: `background-color`
 - Default color: `transparent`
 - Best practice: Set background-color for failover mechanism to background image or newer background-gradient properties
 ```
 background-color: yellow;
 ```
+
+#### Background image
+- Syntax: `background-image`
+- Pass image path through `url` function
+- background-image is used decoration without being parsed by screen readers. Must use `<img>` element if the image is important
+```
+background-image: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png);
+```
+
+#### Background image
+
 
 
 
