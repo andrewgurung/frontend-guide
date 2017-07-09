@@ -1144,6 +1144,27 @@ border-radius: 10px / 20px;
 ```
 
 #### Border images
+- Recent addition to CSS which makes it easier to achieve complex border patterns
+- Syntax: `border-image` shorthand
+- Use `background-clip` to make any background color only fill the area under the content and padding. i.e padding-box
+
+[JSBin Practice](http://jsbin.com/xelawil/3/edit?html,css,output)
+
+```
+background-clip: padding-box;
+border-image-source: url(https://mdn.mozillademos.org/files/13060/border-image.png);
+border-image-slice: 40;
+border-image-repeat: round;
+```
+
+1. border-image-source: `url()` function with filename
+2. border-image-slice: For a 160x160px image with 4x4 grid, each slice will be 40px each. Hence value = 40.
+If the image is a raster graphic (like a .png or .jpg), then the number will be interpreted in terms of pixels. If the image is a vector graphic (like a .svg), then the number will be interpreted as coordinates in the graphic
+3. border-image-repeat:
+- stretch: The default; the side images are stretched to fill the borders. This generally looks terrible and pixellated, so is not recommended.
+- repeat: The side images are repeated until the borders are filled. Depending on circumstances, this might look ok, but you can get left with unsightly image fragments.
+- round: The side images are repeated until the borders are filled, and they are all stretched slightly so that no fragments appear.
+- space: The side images are repeated until the borders are filled, and a small amount of spacing is added between each copy such that no fragments appear.
 
 
 ## Styling tables
