@@ -1040,10 +1040,72 @@ background-color: yellow;
 background-image: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png);
 ```
 
-#### Background image
+#### Background repeat
+- Syntax: `background-repeat`
+- Possible values:
+  1. no-repeat
+  2. repeat-x
+  3. repeat-y
+```
+background-repeat: no-repeat;
+```
+
+#### Background position
+- Syntax: `background-position`
+- Horizontal (x) and vertical (y) coordinates
+- Possible values:
+  1. Absolute values like pixels — for example background-position: 200px 25px.
+  2. Relative values like rems — for example background-position: 20rem 2.5rem.
+  3. Percentages — for example background-position: 90% 25%.
+  4. Keywords — for example background-position: right center. These two values are intuitive, and can take values of left, center, right, and top, center, bottom, respectively.
+```
+background-position: 99% center;
+```
+
+#### Background image: gradient
+- A linear gradient is created by passing in a `linear-gradient()` function as the value of a background-image property
+- Three parameters
+- Use keywords to specify the direction (to bottom, to right, to bottom right, etc.), or degree values (0deg is equivalent to top, 90deg is equivalent to to right, up to 360deg, which would be equivalent to to top again)
+```
+background-image: linear-gradient(to bottom, orange, yellow);
+```
+- Color stops: Color 20% of the top area with yellow-red gradient and color the rest 80% with red-orange gradient
+```
+background-image: linear-gradient(to bottom, yellow, red 20%, orange);
+
+```
+- Repeating gradient:
+```
+background-image: repeating-linear-gradient(to right, yellow, orange 25px, yellow 50px);
+```
+
+#### Background attachment
+- Syntax: `background-attachment`
+1. scroll: This fixes the background to the page viewport, so it will scroll as the page scrolls. Note we said viewport, not element — if you scroll the actual element the background is set on, not the page, the background won't scroll.
+2. fixed: This fixes the background in position on the page, so it won't scroll as the page scrolls — it will stay in exactly the same position whether you scroll the page or the element the background is set on.
+3. local: This value was added later on (it is only support in Internet Explorer 9+, whereas the others are supported in IE4+) because the scroll value is rather confusing and doesn't really do what you want in many cases. The local value fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.
+
+[Example](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)
 
 
+#### Background shorthand
+- Any properties not specified in the shorthand will be assigned default properties
+```
+background: yellow linear-gradient(to bottom, yellow, #dddd00 50%, orange) no-repeat 99% center;
+```
 
+#### Multiple backgrounds
+- Multiple backgrounds can be stacked separated by comma
+```
+background: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png) no-repeat 99% center,
+            linear-gradient(to bottom, yellow, orange);
+```
+
+#### Background size
+- Syntax: `background-size`
+```
+background-size: 16px 16px;
+```
 
 ## Borders
 
