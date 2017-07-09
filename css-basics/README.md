@@ -1022,8 +1022,25 @@ box-sizing: border-box;
 - display: table -- allows you to emulate table layouts using non-table elements, without abusing table HTML to do so
 - display: flex -- allows you to solve many classic layout problems such as laying a series of containers in flexible equal width columns, or vertically centering content
 - display: grid -- gives CSS a native way of easily implementing grid systems
+
+### Backgrounds
+#### Background color
+- `background-color`
+- Default color: `transparent`
+- Best practice: Set background-color for failover mechanism to background image or newer background-gradient properties
+```
+background-color: yellow;
+```
+
+
+
+## Borders
+
+## Styling tables
+
+## Advanced box effects
 -----------------------------------------
 
-### CSS layout
+## CSS layout
 
 -----------------------------------------
