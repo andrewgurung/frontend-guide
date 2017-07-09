@@ -1108,6 +1108,24 @@ background-size: 16px 16px;
 ```
 
 ## Borders
+Borders take the color of the text by default, and a width of 3px
+
+- border-top, border-right, border-bottom, border-left: Set the thickness, style and color of one side of the border.
+- border-width, border-style, border-color: Set only the thickness, style, or color individually, but for all four sides of the border.
+- You can also set one of the three properties of a single side of the border individually, using border-top-width, border-top-style, border-top-color, etc.
+
+Short-hand:
+```
+border: 2px solid red;
+```
+
+#### Border radius
+- Syntax `border-radius`
+- Used for rounded border
+```
+border-radius: 6px;
+
+```
 
 ## Styling tables
 
