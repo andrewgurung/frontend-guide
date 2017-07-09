@@ -1123,9 +1123,28 @@ border: 2px solid red;
 - Syntax `border-radius`
 - Used for rounded border
 ```
+/* All corners*/
 border-radius: 6px;
 
+/* 1st value is top left and bottom right corners,
+   2nd value is top right and bottom left  */
+border-radius: 20px 10px;
+/* 1st value is top left corner, 2nd value is top right
+   and bottom left, 3rd value is bottom right  */
+border-radius: 20px 10px 50px;
+/* top left, top right, bottom right, bottom left */
+border-radius: 20px 10px 50px 0;
 ```
+
+#### Elliptical corners
+- The two different radii are specified separated by a forward slash (/)
+
+```
+border-radius: 10px / 20px;
+```
+
+#### Border images
+
 
 ## Styling tables
 
