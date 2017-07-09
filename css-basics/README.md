@@ -969,11 +969,14 @@ Box properties include:
 - Border doesn't tale percentages
 - Margin collapsing: When two boxes touches, the larger margin overrides the smaller
 
-#### Overflow:
+#### Overflow
 - auto: If there is too much content, the overflowing content is hidden and scroll bars are shown to let the user scroll to see all the content.
 - hidden: If there is too much content, the overflowing content is hidden.
 - visible: If there is too much content, the overflowing content is shown outside of the box. Default behavior
 
+#### Background clip
+- Box background is made up of `background-color` and `background-image`
+- Background extends upto the border which can be controlled by `background-clip`
 
 
 -----------------------------------------
