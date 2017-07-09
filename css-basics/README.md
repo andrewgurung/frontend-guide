@@ -956,7 +956,7 @@ html {
 
 -----------------------------------------
 
-### Styling boxes
+## Styling boxes
 
 Box properties include:
 - width/height of content box
@@ -983,6 +983,45 @@ Values for `background-clip`
 2. padding-box
 3. content-box
 
+### Advanced box properties
+
+#### Setting width and height properites
+Ways of handling content box size -- setting constraints rather than absolute value using `max-width`, `max-height`, `min-width`, `min-height`
+
+[JSBin Practice](http://jsbin.com/bokowin/6/edit?css,output)
+
+```
+width: 70%;
+max-width: 1280px;
+min-width: 480px;
+```
+
+Center align the content
+```
+margin: 0 auto;
+```
+
+Center align and constraint an image:
+- `max-width`: Keeps the media (e.g. images and video) constrained inside a container
+```
+display: block;
+margin: 0 auto;
+max-width: 100%;
+```
+
+#### Changing the box model completely
+- Total width of a box is the sum of its width, padding-right, padding-left, border-right, and border-left properties
+- Setting box content size to 50% width will not be exact 50% after you add padding and borders
+- To fix this, we can use `box-sizing: border-box` to have an all inclusive width
+
+```
+box-sizing: border-box;
+```
+
+#### Uncommon display types
+- display: table -- allows you to emulate table layouts using non-table elements, without abusing table HTML to do so
+- display: flex -- allows you to solve many classic layout problems such as laying a series of containers in flexible equal width columns, or vertically centering content
+- display: grid -- gives CSS a native way of easily implementing grid systems
 -----------------------------------------
 
 ### CSS layout
