@@ -1168,6 +1168,8 @@ If the image is a raster graphic (like a .png or .jpg), then the number will be 
 
 ## Styling tables
 
+[JSBin Practice](http://jsbin.com/xejulid/3/edit?html,css,output)
+
 ### Spacing and layout
 Default table styling is so cramped. This is the first thing to be styled
 
@@ -1176,9 +1178,23 @@ Default table styling is so cramped. This is the first thing to be styled
 - It will set a fixed width of columns which otherwise would be sized based on the content of the cell
 - Hence we have to deal with each headings separately using `thead th:nth-child(n)` selector where n=column number
 - Width can be can be set in percentage which sums to 100% making it responsive
-
+- Padding on `th` and `td` will give some breathing room
+- `caption-side: bottom` will place the caption at the table footer
 Default table border will have space between them as below:
 ![Default table border](https://mdn.mozillademos.org/files/13068/no-border-collapse.png)
+
+- `border-collapse: collapse` is preferred which collapses the borders into one line
+
+#### Zebra effect
+```
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+```
 
 ## Advanced box effects
 -----------------------------------------
