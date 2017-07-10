@@ -39,3 +39,7 @@ h1 {
 }
 
 /* Your CSS below here */
+article {
+  background: url(top-image.png) no-repeat top,
+              url(bottom-image.png) no-repeat bottom;
+}
