@@ -1197,6 +1197,28 @@ tbody tr:nth-child(even) {
 ```
 
 ## Advanced box effects
+
+#### Simple box shadow
+- Parameters: Horizontal offset, vertical offset, blur radius, shadow color
+```
+.simple {
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+}
+```
+
+#### Inner shadow
+- Use `inset` keyword
+```
+box-shadow: inset 2px 2px 1px black,
+```
+
+#### Multiple box shadow
+```
+.multiple {
+  box-shadow: 5px 5px 5px black,
+              10px 10px 5px red            
+}
+```
 -----------------------------------------
 
 ## CSS layout
