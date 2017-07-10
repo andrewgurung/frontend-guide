@@ -1166,8 +1166,19 @@ If the image is a raster graphic (like a .png or .jpg), then the number will be 
 - round: The side images are repeated until the borders are filled, and they are all stretched slightly so that no fragments appear.
 - space: The side images are repeated until the borders are filled, and a small amount of spacing is added between each copy such that no fragments appear.
 
-
 ## Styling tables
+
+### Spacing and layout
+Default table styling is so cramped. This is the first thing to be styled
+
+#### table-layout
+- `table-layout: fixed`
+- It will set a fixed width of columns which otherwise would be sized based on the content of the cell
+- Hence we have to deal with each headings separately using `thead th:nth-child(n)` selector where n=column number
+- Width can be can be set in percentage which sums to 100% making it responsive
+
+Default table border will have space between them as below:
+![Default table border](https://mdn.mozillademos.org/files/13068/no-border-collapse.png)
 
 ## Advanced box effects
 -----------------------------------------
