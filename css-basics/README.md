@@ -12,6 +12,8 @@ Context
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works
 
 [Assessment 1](assessment1)
+[Assessment 2](assessment2)
+[Assessment 3](assessment3)
 
 Notes
 -----
