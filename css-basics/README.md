@@ -1197,6 +1197,7 @@ tbody tr:nth-child(even) {
 ```
 
 ## Advanced box effects
+[JSBin Practice](http://jsbin.com/rirekiv/2/edit?html,css,output)
 
 #### Simple box shadow
 - Parameters: Horizontal offset, vertical offset, blur radius, shadow color
@@ -1209,7 +1210,7 @@ tbody tr:nth-child(even) {
 #### Inner shadow
 - Use `inset` keyword
 ```
-box-shadow: inset 2px 2px 1px black,
+box-shadow: inset 2px 2px 1px gray,
 ```
 
 #### Multiple box shadow
@@ -1219,6 +1220,47 @@ box-shadow: inset 2px 2px 1px black,
               10px 10px 5px red            
 }
 ```
+
+#### Filters
+CSS provides a way to apply filters to an element
+- drop-shadow() is a filter similar to `box-shadow` but more versatile. Instead of being limited to shadowing the box boundary, drop-shadow can be applied to a text inside of content box
+- Note: Some browser may not finalized the implementation of filter. In such cases we can use Vendor prefix to use an experimental version of `filter` property
+
+```
+.filter {
+  -webkit-filter: drop-shadow(5px 5px 1px gray);
+  filter: drop-shadow(5px 5px 1px gray);
+}
+
+.box-shadow {
+  box-shadow: 5px 5px 1px gray;
+}
+```
+
+#### Blend modes
+- CSS blend modes allow us to add blend modes to elements that specify a blending effect when two elements overlap
+
+There are two properties that use blend modes in CSS:
+1. background-blend-mode, which blends together multiple background images and colors set on a single element
+```
+background-blend-mode: multiply;
+```
+2. mix-blend-mode, which blends together the element it is set on with elements it is overlapping — both background and content
+```
+mix-blend-mode: multiply;
+```
+
+[Blend modes](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html)
+
+#### -webkit-background-clip: text
+- Allows you to clip background images to the shape of the element's text
+```
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+```
+
+[Cool Text](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)
+
 -----------------------------------------
 
 ## CSS layout
