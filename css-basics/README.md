@@ -1391,7 +1391,7 @@ Flexible box (or flexbox) was invented to do what was pretty much impossible to 
 - display: flex -- Tells the element's children to be laid out as flexible boxes to fill the available height of the parent, whatever that is, and be laid out in a row
 - flex: 1 -- tells each element to take up an equal amount of the space available in the row, no matter how many there are
 
-[JSBin Practice](http://jsbin.com/xacaroluqa/1/edit?html,css,output)
+[JSBin Practice](http://jsbin.com/jihehunini/1/edit?html,css,output)
 
 ### Grid layout
 - CSS Grids is the most experimental feature
