@@ -1398,6 +1398,34 @@ Flexible box (or flexbox) was invented to do what was pretty much impossible to 
 - Not really supported anywhere yet except for experimental versions of Chrome and Firefox
 
 ## Floats
+
+### Introduction to floats
+- Originally, the `float` property was introduced to allow web devs to float an image around a column of text as in a newspaper layout
+- Later found out that `float` isn't limited to images
+- Element with `float` property is taken out of normal layout flow and stuck to left-right hand side of parent container
+- Any content that comes after the `floated` element will be wrapped around it
+[JSBin Practice: A simple float example](http://jsbin.com/cikabujova/1/edit?css,output)
+
+```
+img {
+  float: left;
+  margin-right: 30px;
+}
+```
+
+### Revisiting our drop cap example
+[JSBin Practice: Drop cap example](http://jsbin.com/fepupudida/1/edit?css,output)
+```
+p::first-letter {
+  font-size: 3em;
+  border: 1px solid black;
+  background: red;
+  float: left;
+  padding: 2px;
+  margin-right: 4px;
+}
+```
+
 ## Positioning
 ## Practical positioning examples
 ## Flexbox
