@@ -42,10 +42,21 @@ h1 {
 
 article {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0, 0, 0, 0.2)),
-  url(top-image.png) no-repeat top,
-              url(bottom-image.png) no-repeat bottom
-              ;
+              url(top-image.png) no-repeat top,
+              url(bottom-image.png) no-repeat bottom;
   background-color: white;
   border-top: 1mm solid red;
   border-bottom: 1mm solid red;
+}
+
+h1 {
+  background: url(logo.png) no-repeat;
+  /* Option 1
+  filter: drop-shadow(5px 3px 2px rgba(0,0,0,0.8));
+  -webkit-filter: drop-shadow(5px 3px 2px rgba(0,0,0,0.8));
+  */
+
+  /* Option 2 */
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.8);
 }
