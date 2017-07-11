@@ -1426,6 +1426,68 @@ p::first-letter {
 }
 ```
 
+### Multiple column floated layouts
+- Floats are commonly used to create multiple column
+- But they were not really intended for this job, and have some strange side effects
+
+#### A three column layout
+In the following example:
+- We enclose `h2` and `p` within `div` to style the whole component easily
+- By default, `h2`, and `div` are block elements so the example code would render elements stacked vertically as blocks
+- To display `div` blocks side-by-side, we need to float these `div`s
+- 36% + 30% + 4% + 26% = 96%, which leaves a 4% remainder to form a gutter between the second and third columns
+- Best practice: Percentage widths are preferred for responsiveness
+
+[JSBin Practice: Three column layout](http://jsbin.com/qalujix/4/edit?html,css,output)
+HTML
+```
+<h1>2 column layout example</h1>
+<div>
+  <h2>First column</h2>
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. </p>
+</div>
+
+<div>
+  <h2>Second column</h2>
+  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. </p>
+</div>
+
+<div>
+  <h2>First column</h2>
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. </p>
+</div>
+```
+
+CSS
+```
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+div:nth-of-type(1) {
+  width: 36%;
+  float: left;
+}
+
+div:nth-of-type(2) {
+  width: 30%;
+  float: left;
+  margin-left: 4%;
+}
+
+div:nth-of-type(3) {
+  width: 26%;
+  float: right;
+}
+```
+
+Warning:
+- If div2 and div3 are both floated right, the div2 will have higher priority and will be floated to the right most.
+- HTML will be rendered as
+`div1 div3 div2`
+
 ## Positioning
 ## Practical positioning examples
 ## Flexbox
