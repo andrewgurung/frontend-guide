@@ -1074,8 +1074,13 @@ background-image: linear-gradient(to bottom, orange, yellow);
 - Color stops: Color 20% of the top area with yellow-red gradient and color the rest 80% with red-orange gradient
 ```
 background-image: linear-gradient(to bottom, yellow, red 20%, orange);
-
 ```
+
+- Color stops: Top and bottom 20% gray, middle part should be white
+```
+background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0, 0, 0, 0.2));
+```
+
 - Repeating gradient:
 ```
 background-image: repeating-linear-gradient(to right, yellow, orange 25px, yellow 50px);
@@ -1101,6 +1106,12 @@ background: yellow linear-gradient(to bottom, yellow, #dddd00 50%, orange) no-re
 ```
 background: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png) no-repeat 99% center,
             linear-gradient(to bottom, yellow, orange);
+```
+
+Long hand:
+```
+background-image: url(image.png), url(background-tile.png);
+background-repeat: no-repeat, repeat;
 ```
 
 #### Background size
