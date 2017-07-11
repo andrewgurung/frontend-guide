@@ -1357,4 +1357,50 @@ Four main types of positioning
   left: 30px;
 }
 ```
+
+### CSS tables
+- HTML table layout are inflexible, difficult to debug and semantically wrong
+- CSS tables makes it easy to layout regular elements into tabular layout
+- Eg: Used in HTML `<form>`s to align `<label>` and `<input>` elements
+- `display` property with values such as `table`, `table-row`, `table-cell`, `table-caption`
+- `caption-side` property to position caption
+
+[JSBin Practice](http://jsbin.com/sukerivuke/2/edit?css,output)
+```
+form {
+  display: table;
+}
+
+form div {
+  display: table-row;
+}
+
+form label, form input {
+  display: table-cell;
+}
+
+form p {
+  display: table-caption;
+  caption-side: bottom;
+  font-style: italic;
+}
+```
+
+### Flexible/Flex boxes
+Flexible box (or flexbox) was invented to do what was pretty much impossible to achieve with regular CSS
+- display: flex -- Tells the element's children to be laid out as flexible boxes to fill the available height of the parent, whatever that is, and be laid out in a row
+- flex: 1 -- tells each element to take up an equal amount of the space available in the row, no matter how many there are
+
+[JSBin Practice](http://jsbin.com/xacaroluqa/1/edit?html,css,output)
+
+### Grid layout
+- CSS Grids is the most experimental feature
+- Not really supported anywhere yet except for experimental versions of Chrome and Firefox
+
+## Floats
+## Positioning
+## Practical positioning examples
+## Flexbox
+## Grids
+
 -----------------------------------------
