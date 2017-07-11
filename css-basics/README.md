@@ -1103,6 +1103,7 @@ background: yellow linear-gradient(to bottom, yellow, #dddd00 50%, orange) no-re
 
 #### Multiple backgrounds
 - Multiple backgrounds can be stacked separated by comma
+- And the backgrounds are stacked on top of one another with the first appearing at the top, then the second below it, then the third, etc
 ```
 background: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png) no-repeat 99% center,
             linear-gradient(to bottom, yellow, orange);
