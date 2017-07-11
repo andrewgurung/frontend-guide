@@ -1279,4 +1279,82 @@ mix-blend-mode: multiply;
 
 ## CSS layout
 
+## Introduction to CSS layout
+CSS page layout techniques allow us to take elements contained in a web page and control where they are positioned
+
+### Normal layout flow
+- Normal flow is how the browser lays out HTML pages by default
+- Displayed in the exact order in which it appears in source code
+- The default behavior can be overriden with layout techniques -- `position`, `float`, `display` etc.
+
+### Floats
+- Rather than sitting on top of each other, `float` property allows elements to float to right or left
+- Main uses are to layout columns and float text around an image
+- Four possible values
+  1. left: floats the element to the left
+  2. right: floats the element to the right
+  3. none: specifies no floating. Default value
+  4. inherit: specifies the value of the float property to be inherited from the parent element
+
+#### Making columns float
+- Set `width` of column
+- `float` one div with `left` and the other with `right` value
+
+HTML
+```
+<div>
+   <h2>First column</h2>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+ </div>
+
+ <div>
+   <h2>Second column</h2>
+   <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut.</p>
+ </div>
+```
+
+CSS
+```
+div:nth-of-type(1) {
+  width: 48%;
+  float: left;
+
+}
+
+div:nth-of-type(2) {
+  width: 48%;
+  float: right;
+}
+```
+
+### Positioning Techniques
+Four main types of positioning
+1. Static positioning: Default behavior similar to Normal layout
+2. Relative positioning: Modify an element's position on the page, moving it relative to its position in normal flow
+3. Absolute positioning: Moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's <html> element (or it's nearest positioned ancestor element)
+4. Fixed positioning: Similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element
+
+[JSBin Practice](http://jsbin.com/pidugorape/1/edit?html,css,output)
+
+#### Relative Positioning:
+- Useful in making small tweaks in your layout such as moving an icon down a bit
+- Syntax: `position: relative`
+- Note: You also need to tweak `top` and `left` properties else the element will stay where it was
+```
+.positioned {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+```
+
+#### Absolute Positioning
+- Specify the distance the element should sit from the top and left sides of the page's boundaries (the <html> element, to be exact)
+```
+.positioned {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+```
 -----------------------------------------
