@@ -1707,6 +1707,7 @@ body {
 ```
 
 #### Styling the panels
+[JSBin Practice: Styling our panels](http://jsbin.com/jopewumoti/2/edit?html,css,output)
 - Fit panels div inside parent element -- info-box
 - Position all the panels to stack on top:0 and left:0 with background-white to hide the overlapping panels
 - Set `active-panel` to z-index of 1
@@ -1723,6 +1724,41 @@ body {
 
 .info-box .active-panel {
   z-index: 1;
+}
+```
+
+#### Adding our JavaScript
+[JSBin Practice: Adding our JavaScript](http://jsbin.com/jopewumoti/3/edit?html,css,output)
+- Save references to all tabs and panels in `tabs` and `panels` variables
+- Loop through all tabs and run setTabHandler() function
+- setTableHandler() has onClick event
+  - Loop through all tabs and remove all classes
+  - Set class of active on the tab that was clicked on
+  - Loop through all panels and remove all classes
+  - Set active-panel on the panel that corresponds to the tab clicked
+```
+var tabs = document.querySelectorAll('.info-box li a');
+var panels = document.querySelectorAll('.info-box article');
+
+for(i = 0; i < tabs.length; i++) {
+  var tab = tabs[i];
+  setTabHandler(tab, i);
+}
+
+function setTabHandler(tab, tabPos) {
+  tab.onclick = function() {
+    for(i = 0; i < tabs.length; i++) {
+      tabs[i].className = '';
+    }
+
+    tab.className = 'active';
+
+    for(i = 0; i < panels.length; i++) {
+      panels[i].className = '';
+    }
+
+    panels[tabPos].className = 'active-panel';
+  }
 }
 ```
 ## Flexbox
