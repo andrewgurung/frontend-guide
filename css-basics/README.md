@@ -1488,6 +1488,66 @@ Warning:
 - HTML will be rendered as
 `div1 div3 div2`
 
+### Clearing floats
+- Any content below the floats that isn't floated itself will wrap around the floated elements, which can start to look terrible
+- Solution:  `clear:both` -- This element and those after it in the source will not float, unless you apply a new float declaration to another element later on
+[JSBin Practice: Clear both example](http://jsbin.com/yohado/2/edit?css,output)
+
+Clear can take three values:
+1. left: Stop any active left floats
+2. right: Stop any active right floats
+3. both: Stop any active left and right floats
+
+### Float problems
+#### Problem #1: The whole width can be tricky to calculate
+Simple 3 column layout works great with `float` until there are extra width introduced by the padding and the border. Then the three columns no longer fit on one line, so the third column drops below the other two.
+
+#### Solution #1:
+- box-sizing width = content + padding + border, not just content
+- So adding padding and border will instead make the content narrower
+
+```
+* {
+  box-sizing: border-box;
+}
+```
+
+#### Problem #2: Add a 4% margin between floated 3 columns VS non-floating(clear:both) footer
+- After applying `clear:both` to footer, it will be displayed on a new line but be pressed right up against the longest column
+- `margin-top: 4%` will not work on footer
+- You can't use margins on non-floated elements to create space between them and floated elements
+
+#### Solution for #2:
+1. Create a new div after the 3 columns
+```
+<div class="clearfix"></div>
+```
+
+2. Style clearfix to clear both
+```
+.clearfix {
+  clear: both;
+}
+```
+
+3. Footer margin-top will work now
+[JSBin Practice: Float problem](http://jsbin.com/yohado/3/edit?css,output)
+
+#### Problem #3: Background height of floated items
+- Columns can be given a fixed height but only if the content are almost equal
+```
+.column {
+  height: 550px;
+}
+```
+
+- Solution: Setting the background color of the columns to the same as the background color of their parent, so you can't see that the heights are different. This is the best other option at the moment.
+
+- Solution: Setting them to a fixed height and make the content scroll using overflow
+
+- Solution: Using a technique called faux columns
+- Flexbox was built to fix this problem.
+
 ## Positioning
 ## Practical positioning examples
 ## Flexbox
