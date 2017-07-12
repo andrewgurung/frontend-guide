@@ -1397,6 +1397,8 @@ Flexible box (or flexbox) was invented to do what was pretty much impossible to 
 - CSS Grids is the most experimental feature
 - Not really supported anywhere yet except for experimental versions of Chrome and Firefox
 
+-----------------------------------------
+
 ## Floats
 
 ### Introduction to floats
@@ -1604,6 +1606,20 @@ body {
 - Positioned element with greater `z-index` value will win
 - Syntax: `z-index: 1`
 
+#### Fixed positioning
+[JSBin Practice: Positioning contexts](http://jsbin.com/tapaxizebe/5/edit?html,css,output)
+- Similar to absolute positioning except that it is relative to the browser viewport
+- Syntax: `position: fixed`
+- Stick to top using `top: 0`
+- Content appears to scroll up and disappear underneath it
+
+#### Experimental: position sticky
+- Syntax: `position: sticky`
+- Still in experimental phase
+- Hybrid between relative and fixed position
+- Allows a positioned element to act like it is relatively positioned until it is scrolled to a certain threshold point (e.g. 10px from the top of the viewport), after which it becomes fixed
+
+-----------------------------------------
 
 ## Practical positioning examples
 ## Flexbox
