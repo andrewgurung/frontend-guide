@@ -1595,6 +1595,16 @@ body {
 }
 ```
 
+#### Introducing z-index
+[JSBin Practice: Positioning contexts](http://jsbin.com/tapaxizebe/4/edit?html,css,output)
+- When multiple elements start to overlap, we need a priority of which elements appears on top
+- By default, the element defined later will override the previous elements
+- z-axis: An imaginary line that is perpendicular to the screen (3D)
+- Positioned elements all have a z-index of auto, which is effectively 0
+- Positioned element with greater `z-index` value will win
+- Syntax: `z-index: 1`
+
+
 ## Practical positioning examples
 ## Flexbox
 ## Grids
