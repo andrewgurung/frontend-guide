@@ -1622,6 +1622,90 @@ body {
 -----------------------------------------
 
 ## Practical positioning examples
+### A tabbed info-box
+HTML
+```
+<section class="info-box">
+  <ul>
+    <li><a href="#" class="active">Tab 1</a></li>
+    ..
+  </ul>
+  <div class="panels">
+    <article class="active-panel">
+      <h2>The first tab</h2>
+      <p>Lorem ipsum</p>
+    </article>
+    
+    <article>
+      <h2>The second tab</h2>
+      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+    </article>
+    
+    <article>
+      <h2>The third tab</h2>
+      <p>And now an ordered list: how exciting!</p>
+      <ol>
+        <li>Nulla facilisi</li>
+        ..
+      </ol>
+    </article>
+  </div>
+</section>
+```
+
+#### General setup
+- box-sizing
+- Get rid of default body margin
+- Fixed tab height with info-box
+```
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.info-box {
+  width: 450px;
+  height: 400px;
+  margin: 0 auto;
+}
+```
+
+#### Styling our tabs
+[JSBin Practice: Styling our tabs](http://jsbin.com/jopewumoti/1/edit?html,css,output)
+- Remove the default padding-left and margin-top from the unordered list
+- `list-style-type` is set to `none` to get rid of the bullets
+- `<a>` elements are set to display inline-block so they will sit in a line but still be stylable
+- Set some styles on the link states
+```
+.info-box ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.info-box li {
+  float: left;
+  list-style-type: none;
+  width: 150px;
+}
+
+.info-box li a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  line-height: 3;
+  background-color: red;
+  color: black;
+  text-align: center;
+}
+```
+
 ## Flexbox
 ## Grids
 
