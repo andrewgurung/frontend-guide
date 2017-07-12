@@ -1566,15 +1566,23 @@ Syntax: `position` property is used to make a specific type of positioning activ
 [JSBin Practice: Static positioning](http://jsbin.com/xihofozapo/2/edit?html,css,output)
 - Static positioning is the default positioning that **every** element gets
 - Put the element in it's normal document layout flow. Nothing special
-```
-position: static;
-```
+- Syntax `position: static`
 
 #### Relative positioning
 [JSBin Practice: Relative Positioning](http://jsbin.com/tapaxizebe/1/edit?html,css,output)
 - Very similar to static positioning, except once an element is positioned using normal layout flow, you can modify its final position
 - Syntax: `position: relative`. But just using relative positioning won't move an element
 - Must be used alongside `top`, `bottom`, `left`, or `right` properties to move an element
+- Shift behavior: Move an element in the direction based on `top`, `bottom`, `left`, or `right` values
+
+#### Absolute positioning
+[JSBin Practice: Absolute Positioning](http://jsbin.com/tapaxizebe/2/edit?html,css,output)
+- An `absolute`ly positioned element will no longer occupy their original space in the normal document layout flow
+- Any element that comes after an absolute element will take over its space
+- Syntax `position: absolute`
+- Start behavior: Element should start from `top`, `bottom`, `left`, or `right` values
+- Eg: Setting `top: 0; bottom: 0; left: 0; right: 0; and margin: 0;` will stretch the element to cover the whole page
+
 
 ## Practical positioning examples
 ## Flexbox
