@@ -1706,6 +1706,25 @@ body {
 }
 ```
 
+#### Styling the panels
+- Fit panels div inside parent element -- info-box
+- Position all the panels to stack on top:0 and left:0 with background-white to hide the overlapping panels
+- Set `active-panel` to z-index of 1
+```
+.info-box article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 352px;
+  padding: 10px;
+  color: white;
+  background-color: #a60000;
+}
+
+.info-box .active-panel {
+  z-index: 1;
+}
+```
 ## Flexbox
 ## Grids
 
