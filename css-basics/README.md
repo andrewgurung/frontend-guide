@@ -1558,6 +1558,17 @@ Positioning allows you to take elements out of the normal document layout flow, 
 - Inline elements: Width = As wide as its content, Height = As tall as its content. You **CANNOT** set width and height on inline elements. Appears on same line wrapped where overflowing text will move down to a new line
 - Margin collapsing: If adjacent elements both have margins set on them, the larger will remain, and smaller disappears
 
+### Introducing positioning
+The whole idea of positioning is to override the basic document flow described above
+Syntax: `position` property is used to make a specific type of positioning active on an element
+
+#### Static positioning
+[JSBin Practice: Basic Document Flow](http://jsbin.com/xihofozapo/2/edit?html,css,output)
+- Static positioning is the default positioning that **every** element gets
+- Put the element in it's normal document layout flow. Nothing special
+```
+position: static;
+```
 
 ## Practical positioning examples
 ## Flexbox
