@@ -1583,6 +1583,17 @@ Syntax: `position` property is used to make a specific type of positioning activ
 - Start behavior: Element should start from `top`, `bottom`, `left`, or `right` values
 - Eg: Setting `top: 0; bottom: 0; left: 0; right: 0; and margin: 0;` will stretch the element to cover the whole page
 
+#### Positioning contexts
+[JSBin Practice: Positioning contexts](http://jsbin.com/tapaxizebe/3/edit?html,css,output)
+- By default, the "containing element" of an absolutely positioned element will be the `<html>` element
+- In the previous example, even though `<body>` was the containing element of the absolutely positioned element, it ignored `<body>` and referenced the edge of the page -- referring `<html>` element
+- This is more accurately called the element's **positioning context**
+- Positioning context can be changed by giving **any** of the parent/ancestor element a `relative` position
+```
+body {
+  position: relative;
+}
+```
 
 ## Practical positioning examples
 ## Flexbox
