@@ -1549,6 +1549,16 @@ Simple 3 column layout works great with `float` until there are extra width intr
 - Flexbox was built to fix this problem.
 
 ## Positioning
+Positioning allows you to take elements out of the normal document layout flow, and make them behave differently. Positioning is a fairly complex topic
+
+### Document Flow
+[JSBin Practice: Basic Document Flow](http://jsbin.com/xihofozapo/1/edit?html,css,output)
+- Box model: Individual element boxes are rendered by taking the element's content, then adding padding, border and margin
+- Block elements: Width = 100% of parent, Height = As tall as its content. Appears vertically separated by specified margin
+- Inline elements: Width = As wide as its content, Height = As tall as its content. You **CANNOT** set width and height on inline elements. Appears on same line wrapped where overflowing text will move down to a new line
+- Margin collapsing: If adjacent elements both have margins set on them, the larger will remain, and smaller disappears
+
+
 ## Practical positioning examples
 ## Flexbox
 ## Grids
