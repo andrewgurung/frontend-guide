@@ -1635,12 +1635,12 @@ HTML
       <h2>The first tab</h2>
       <p>Lorem ipsum</p>
     </article>
-    
+
     <article>
       <h2>The second tab</h2>
       <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
     </article>
-    
+
     <article>
       <h2>The third tab</h2>
       <p>And now an ordered list: how exciting!</p>
@@ -1761,6 +1761,16 @@ function setTabHandler(tab, tabPos) {
   }
 }
 ```
+
+### A fixed position tabbed info-box
+[JSBin Practice: Fixed position tabbed box](http://jsbin.com/quxuhu/2/edit?css,output)
+- Add some HTML to represent the web site main content
+- Change the tabbed `.info-box` to be fixed and remove the margin: 0 auto; (we no longer want the info-box centered)
+- Fix the tabbed `.info-box` to `top: 0`
+- Set the site main content to right side with `margin-left: 470px`
+
+### A sliding hidden panel
+
 ## Flexbox
 ## Grids
 
