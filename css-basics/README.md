@@ -1770,8 +1770,29 @@ function setTabHandler(tab, tabPos) {
 - Set the site main content to right side with `margin-left: 470px`
 
 ### A sliding hidden panel
+- Show and hide a sliding panel by clicking `?` mark icon
+- Start with a <label> and <input> checkbox
+- Checkbox hack: You can click the checkbox's label to select the checkbox which provides a JavaScript-free way of controlling an element by toggling a button
+- <aside> element is the content to be controlled
+- Position icon label to top right
+- Hide checkbox with `top: -100px;`
+- Panel CSS: Set width: 340px, position: fixed, height: 98%, transition
+
+1. Panel initial state: Element will be hidden
+```
+right: -370px;
+transition: 0.6s all;
+```
+
+2. ?/label/checkbox clicked: Panel will slowly slide to be viewed
+- When checkbox is checked, set right to 0px so that panel will appear
+- Clever JavaScript-free way to create a toggling button effect
+```
+input[type=checkbox]:checked + aside {
+  right: 0px;
+}
+```
 
 ## Flexbox
-## Grids
 
 -----------------------------------------
