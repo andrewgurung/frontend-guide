@@ -1770,6 +1770,7 @@ function setTabHandler(tab, tabPos) {
 - Set the site main content to right side with `margin-left: 470px`
 
 ### A sliding hidden panel
+[JSBin Practice: Sliding hidden panel](http://jsbin.com/kuqeku/1/edit?html,css,output)
 - Show and hide a sliding panel by clicking `?` mark icon
 - Start with a <label> and <input> checkbox
 - Checkbox hack: You can click the checkbox's label to select the checkbox which provides a JavaScript-free way of controlling an element by toggling a button
