@@ -1793,7 +1793,33 @@ input[type=checkbox]:checked + aside {
   right: 0px;
 }
 ```
+-----------------------------------------
 
 ## Flexbox
+Flexbox provides tools to allow rapid creation of complex, flexible layouts, and features that historically proved difficult with CSS
 
+### Introducing a simple example
+- Start with a `<header>` element with `<section>` containing three `<article>` elements
+[JSBin Flexbox: Skeleton](http://jsbin.com/wutitux/edit?css,output)
+
+### Specifying what elements to lay out as flexible boxes
+- Set special value of `display: flex` on the **parent** element
+- Sets equal size and height of all columns
+[JSBin Flexbox: Display flex](http://jsbin.com/wutitux/3/edit?html,css,output)
+
+### An aside on the flex model
+![Flex model](https://developer.mozilla.org/files/3739/flex_terms.png)
+- The parent element that has display: flex set on it (the <section> in our example) is called the flex container
+
+### Columns or rows?
+- By default the direction is horizontal or row
+- You can change the default behavior by setting a column
+- Other options: `row-reverse` and `column-reverse`
+```
+flex-direction: column
+```
+
+### Wrapping
+[JSBin: Wrapping Problem](http://jsbin.com/cosaka/1/edit?css,output)
+- When you have a fixed amount of width or height in your layout, the children are indeed breaking out of their container
 -----------------------------------------
