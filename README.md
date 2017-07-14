@@ -13,7 +13,7 @@ Table of Contents
 - [ ] HTML and CSS Basics
   - [x] [HTML Basics](html-basics/README.md)
   - [x] [CSS Basics](css-basics/README.md)
-- [ ] [CodeAcademy: Make a Website](https://www.codecademy.com/learn/make-a-website)
+- [ ] [CodeAcademy: Make a Website](make-a-website/README.md)
 - [ ] Practice Session
   - [ ] Experiment 1: Dribble Example
   - [ ] Experiment 2: Clone sections from popular sites
