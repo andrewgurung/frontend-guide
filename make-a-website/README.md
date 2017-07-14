@@ -39,5 +39,24 @@ CSS can be divided into 3 parts:
 - Ids have greater specificity than classes
 
 ## Boundaries and Space
+- An important part of styling a webpage with CSS is organizing boundaries and space
+- The box model consists of: content, padding, border and margin
+- Border property consists of: thickness, type and color
+![Block-Inline](blockVsInline.png)
+- Display images in a row: `display: flex` on parent element
+- Some of the gallery images are cut off. Fix: `flex-wrap: wrap` on parent element
+- Center the gallery images: Fix: `justify-content: center` on parent element
+- `position: relative`: You can then use it along with top, left, bottom, and right to shift an element away from where it would have normally appeared on the page
+
+Eg: Simulate a button press by shifting it 2px down when it is pressed
+```
+.contact-btn a {
+  position: relative;
+}
+
+.contact-btn a:active {
+	top: 2px;
+}
+```
 
 ## Building with Bootstrap
