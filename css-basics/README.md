@@ -1822,4 +1822,63 @@ flex-direction: column
 ### Wrapping
 [JSBin: Wrapping Problem](http://jsbin.com/cosaka/1/edit?css,output)
 - When you have a fixed amount of width or height in your layout, the children are indeed breaking out of their container
+- Solution: `flex-wrap: wrap`
+- The `flex: 200px` means that each column will be at least 200px wide
+
+### flex-flow shorthand
+Longhand
+```
+flex-direction: row;
+flex-wrap: wrap;
+```
+
+Shorthand
+```
+flex-flow: row wrap;
+```
+
+### Flexible sizing of flex items
+1. Equal sizing of items
+[Example 1](http://jsbin.com/wutitux/6/edit?css,output)
+```
+article {
+  flex: 1;
+}
+```
+
+2. Double the size
+[Example 2](http://jsbin.com/wutitux/7/edit?css,output)
+```
+article:nth-of-type(3) {
+  flex: 2;
+}
+```
+
+3. Flexible size
+[Example 3](http://jsbin.com/wutitux/8/edit?css,output)
+- Each flex item will first be given 200px of the available space. After that, the rest of the available space will be shared out according to the proportion units
+- Try resizing
+```
+article {
+  flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+  flex: 2 200px;
+}
+```
+
+### Horizontal and vertical alignment
+1. Cross axis/Vertical: `align-items`
+[JSBin: Centered both vertically and horizontally](http://jsbin.com/jefoxof/1/edit?css,output)
+- Used to align flex items along the main or cross axes
+- `align-items: center;` Centers an item vertically. Can also take other values like `flex-start` and `flex-end`
+
+2. Main axis/Horizontal: `justify-content`
+- Default is `flex-start` -- start of main axis
+- `space-around` -- distributes all the items evenly along the main axis, with a bit of space left at either end
+- `space-between` -- very similar to space-around except that it doesn't leave any space at either end
+
+### Ordering flex items
+
 -----------------------------------------
