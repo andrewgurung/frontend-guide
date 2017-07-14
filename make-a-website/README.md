@@ -25,6 +25,18 @@ Notes
 </video>
 ```
 ## A Closer Look at CSS
+- CSS is a language used to style websites
+- `<link rel="stylesheet" type="text/css" href="main.css"/>`
+
+CSS can be divided into 3 parts:
+1. rule: a list of CSS instructions for how to style a specific HTML element or group of HTML elements
+2. selector: specifies exactly which HTML elements to style
+3. properties and values: located inside the { } brackets, properties and values specify what aspect of the selector to style
+
+- Changing font: `font-family: Palatino, 'Palatino Linotype', serif;`
+- Background image" `background-image: url("image.jpg");`
+- Background image color: `background-size: cover;`
+- Ids have greater specificity than classes
 
 ## Boundaries and Space
 
