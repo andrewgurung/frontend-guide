@@ -1880,5 +1880,15 @@ article:nth-of-type(3) {
 - `space-between` -- very similar to space-around except that it doesn't leave any space at either end
 
 ### Ordering flex items
-
+Flexbox also has a feature for changing the layout order of flex items, without affecting the source order
+- By default, all flex items have an order value of 0
+- Flex items with higher order values set on them will appear later in the display order
+- Flex items with the same order value will appear in their source order
+- `order: -1`: Negative value will bring an item to the front
+CSS: This button will be displayed at the last
+```
+button:first-child {
+  order: 1;
+}
+```
 -----------------------------------------
