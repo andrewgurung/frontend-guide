@@ -196,3 +196,15 @@ section {
 ```
 
 ## percent width
+- Percent is a measurement unit relative to the `containing` block
+
+## media queries
+- Used for responsive design
+```
+@media screen and (min-width:600px) {
+  ..
+}
+@media screen and (max-width:599px) {
+  ..
+}
+```
