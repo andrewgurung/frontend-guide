@@ -42,4 +42,16 @@ Notes
   width: 600px;
   margin: 0 auto;
 }
-``
+```
+
+## max-width
+- Better than using `width`
+- Improves the browser handling of small windows
+```
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+```
+
+## 
