@@ -15,7 +15,7 @@ Table of Contents
   - [x] [CSS Basics](css-basics/README.md)
 - [x] [CodeAcademy: Make a Website](make-a-website/README.md)
 - [x] [CodeAcademy: Building web forms](building-web-forms/README.md)
-- [ ] [CSS Diner](css-diner/README.md)
+- [x] [CSS Diner](css-diner/README.md)
 - [ ] [Learn CSS Layout](learn-css-layout/README.md)
 - [ ] Practice Session
   - [ ] Experiment 1: Dribble Example
