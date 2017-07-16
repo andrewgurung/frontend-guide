@@ -235,3 +235,20 @@ Using `inline-block`:
   margin: 1em;
 }
 ```
+
+## column
+- New set of CSS properties that let you easily make multi-column text
+- Divides the content into 3 columns
+```
+.container {
+  padding: 1em
+  column-count: 3;
+  column-gap: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+}
+```
+
+## flexbox
