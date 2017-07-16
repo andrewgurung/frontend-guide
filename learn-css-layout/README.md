@@ -181,3 +181,18 @@ img {
 ```
 overflow: auto;
 ```
+
+## float layout example
+- first div: Set width:200px and float left
+- second div: Set left margin equal to 200px
+```
+nav {
+  float: left;
+  width: 200px;
+}
+section {
+  margin-left: 200px;
+}
+```
+
+## percent width
