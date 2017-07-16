@@ -54,4 +54,43 @@ Notes
 }
 ```
 
-## 
+## The box model
+- `width:500px` doesn't guarantee a total box width of 500px
+- The element's border and padding will stretch out the element beyond the specified width
+- In the following case, even though both elements have the same `width` of 500px, the `fancy div` will end up being bigger than `simple div`
+```
+.simple {
+  width: 500px;
+  margin: 20px auto;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border: solid blue 10px;
+}
+```
+
+## box-sizing
+- `box-sizing: border-box;` -- the padding and border of that element no longer increase its width
+- `-webkit-` and `-moz-` prefixes needs to be added as box-sizing is an experimental feature
+```
+.simple {
+  width: 500px;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border: solid blue 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+```
