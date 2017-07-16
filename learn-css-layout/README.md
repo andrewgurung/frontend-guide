@@ -32,3 +32,14 @@ Notes
 - `display: none`
 - Better than `visibility: hidden` which will take space even if it is hidden
 - `script` use this as their default
+
+## margin: auto
+- `width`: Set the width of `block` elements so that it doesn't stretch out to the edges of its container from left to right
+- `margin`: Set left and right margins to `auto` to center the element
+- Problem: If browser window is smaller than the width of your element
+```
+#main {
+  width: 600px;
+  margin: 0 auto;
+}
+``
