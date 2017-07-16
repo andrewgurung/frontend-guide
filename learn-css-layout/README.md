@@ -208,3 +208,30 @@ section {
   ..
 }
 ```
+
+## inline-block
+- Create a grid of boxes that fills the browser width and wraps nicely
+- Can be effected by `vertical-align` property which is normally set to top
+
+Hard way using float:
+```
+.box {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+.after-box {
+  clear: left;
+}
+```
+
+Using `inline-block`:
+```
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+```
