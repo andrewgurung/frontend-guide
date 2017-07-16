@@ -252,3 +252,45 @@ Using `inline-block`:
 ```
 
 ## flexbox
+- Syntax: `display: flex`
+
+```
+.container {
+  display: -webkit-flex;
+  display: flex;
+}
+.initial {
+  -webkit-flex: initial;
+          flex: initial;
+  width: 200px;
+  min-width: 100px;
+}
+.none {
+  -webkit-flex: none;
+          flex: none;
+  width: 200px;
+}
+.flex1 {
+  -webkit-flex: 1;
+          flex: 1;
+}
+.flex2 {
+  -webkit-flex: 2;
+          flex: 2;
+}
+```
+### Additional `flex` properties
+1. flex: initial
+- I will be 200px when there is room, and I will shrink down to 100px if there is not room, but no smaller
+2. flex: none
+- I will always be 200px, no matter what
+3. flex: 1 or flex: 2
+- I will fill up 1/3 of the remaining width
+- I will fill up 2/3 of the remaining width
+
+### Centering using `flexbox`
+```
+display: flex;
+align-items: center;
+justify-content: center;
+```
