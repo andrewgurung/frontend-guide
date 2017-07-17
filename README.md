@@ -16,9 +16,10 @@ Table of Contents
 - [x] [CodeAcademy: Make a Website](make-a-website/README.md)
 - [x] [CodeAcademy: Building web forms](building-web-forms/README.md)
 - [x] [CSS Diner](css-diner/README.md)
-- [ ] [Learn CSS Layout](learn-css-layout/README.md)
+- [x] [Learn CSS Layout](learn-css-layout/README.md)
+- [ ] [Professional Web Typography](https://prowebtype.com/)
 - [ ] Practice Session
-  - [ ] Experiment 1: Dribble Example
+  - [ ] [Experiment 1: Dribble Example](html-css-experiment/README.md)
   - [ ] Experiment 2: Clone sections from popular sites
 - [ ] HTML and CSS best practices
 - [ ] Grid Systems and Responsiveness
