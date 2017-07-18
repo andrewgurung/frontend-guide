@@ -10,10 +10,5 @@ Context
 -----------------
 ## Experiment 1: Dribble Examples
 
-### [Project XYZ](http://codepen.io)
-- Notes 1
-- Notes 2
-
-### [Project XYZ](http://codepen.io)
-- Notes 1
-- Notes 2
+### [Mobile Blog App Interface](https://codepen.io/andrewgurung/project/full/XLYzGa/)
+- Used `flexbox` to create equal sized columns
