@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #F3F3FD;
+}
+
+.container {
+  margin: 10rem auto;
+  width: 50rem;
+  height: 89rem;
+  box-shadow: 0 0 4rem #a8aeb7;
+}
+
+header {
+  height: 21rem;
+  background-color: rgba(100,80,131,0.6);
+}
