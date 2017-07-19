@@ -10,5 +10,5 @@ Context
 -----------------
 ## Experiment 1: Dribble Examples
 
-### [Mobile Blog App Interface](https://codepen.io/andrewgurung/project/full/XLYzGa/)
+### [Mobile Blog App Interface](https://codepen.io/andrewgurung/full/rwEOaP/)
 - Used `flexbox` to create equal sized columns
