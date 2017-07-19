@@ -20,3 +20,4 @@ Context
 
 ### [Task List App Interface](https://codepen.io/andrewgurung/pen/yXdRjP)
 - Halo effect `box-shadow: 0 0 4rem #a8aeb7`
+- Transparent background color `background-color: rgba(100,80,131,0.6)`
