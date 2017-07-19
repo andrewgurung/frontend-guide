@@ -19,4 +19,4 @@ Context
 
 
 ### [Task List App Interface](https://codepen.io/andrewgurung/pen/yXdRjP)
-- 
+- Halo effect `box-shadow: 0 0 4rem #a8aeb7`
