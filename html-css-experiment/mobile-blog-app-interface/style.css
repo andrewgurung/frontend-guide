@@ -2,7 +2,12 @@ html {
   font-size: 10px;
 }
 
+p {
+  margin: 0;
+}
+
 body {
+  font-family: 'Spectral', serif;
   margin: 0 auto;
   box-sizing: border-box;
   background-color: #DBE2EC;
@@ -12,14 +17,57 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10rem;
+  align-items: center;
 }
 
 .column {
-  flex: 1;
+  color: #5D656F;
   background-color: #F8F9FA;
+  height: 57.6rem;
+  width: 32.4rem;
   padding: 3rem;
-  margin: 5rem;
-  height: 48rem;
+  margin: 9rem 4rem 4rem 4rem;
   box-shadow: 0 0 4rem #a8aeb7;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.column:nth-of-type(1) {
+  background: url(images/manbag.jpg) no-repeat;
+  background-size: 100% 100%;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #DBE2EC;
+}
+
+.cover {
+  text-transform: uppercase;
+  padding-top: 20rem;
+  width: 30%;
+  font-size: 4rem;
+}
+
+.slider {
+  font-family: 'Spectral', sans-serif;
+  font-weight: bold;
+  color: #2C3137;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5rem;
+  width: 100%;
+  font-size: 1.4rem;
+  background: white;
+}
+/*
+.content::first-letter {
+  color: #2C3137;
+  font-size: 9rem;
+  float: left;
+}*/
+
+#first {
+  color: #2C3137;
+  font-size: 9rem;
+  float: left;
 }
