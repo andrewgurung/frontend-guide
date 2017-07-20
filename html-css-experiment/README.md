@@ -44,3 +44,21 @@ input:checked {
   opacity: 0.8;
 }
 ```
+
+### [Location Card Interface](https://codepen.io/andrewgurung/pen/jwgGwM)
+- Nested div that floats in middle
+```
+main {
+  width: 80rem;
+  height: 60rem;
+  margin: 0 auto;
+}
+
+.card {
+  margin: auto;
+  position:relative;
+  top: 3rem;
+  width: 63rem;
+  height: 52rem;
+}
+```
