@@ -32,3 +32,15 @@ Context
 ```
 - Add .svg `<img>` and changed color using `filter` CSS property
 - Hide checkbox but keep the space intact `visibility: hidden`. Note: `display: hidden` will remove space
+- Style checked and unchecked checkbox
+```
+input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.4;
+}
+
+input:checked {
+  opacity: 0.8;
+}
+```
