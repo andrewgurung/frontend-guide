@@ -10,6 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   background-color: #F3F3FD;
+  font-size: 1.8rem;
 }
 
 .container {
@@ -21,7 +22,68 @@ body {
 
 header {
   height: 21rem;
-  /*background-color: rgba(100,80,131,0.9);*/
-  background: linear-gradient(to right, rgba(100,80,131,0.5), rgba(71, 67, 114,0.8)), 
-              url(http://res.cloudinary.com/ddylgzvo9/image/upload/c_scale,w_500/v1500511449/pexels-photo_dtx3ub.jpg) repeat;
+  background: linear-gradient(to right, rgba(100,80,131,0.7), rgba(71, 67, 114,0.9)),
+              url(http://res.cloudinary.com/ddylgzvo9/image/upload/c_scale,w_500/v1500511449/pexels-photo_dtx3ub.jpg) no-repeat;
+  position: relative;
+}
+
+img {
+  float: left;
+  height: 5rem;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 2rem;
+  color: white;
+  font-size: 3rem;
+}
+
+.day {
+  color: #9CA6BA;
+  margin: 2rem;
+  text-transform: uppercase;
+}
+
+.taskContainer {
+  display: flex;
+  align-items: center;
+  color: #595A8A;
+  letter-spacing: 1.5px;
+}
+
+.checkbox {
+  padding-left: 2rem;
+  width: 15%;
+}
+
+.task {
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.task-image {
+  width: 10%;
+}
+
+.task-description {
+  width: 75%;
+}
+
+.star {
+  width: 15%;
+}
+
+
+.star-checked::before {
+  content: '★';
+  font-size: 2.5rem;
+}
+
+.star-unchecked::before {
+  content: '☆';
+  font-size: 2rem;
 }
