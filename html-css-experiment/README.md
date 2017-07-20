@@ -31,3 +31,4 @@ Context
 }
 ```
 - Add .svg `<img>` and changed color using `filter` CSS property
+- Hide checkbox but keep the space intact `visibility: hidden`. Note: `display: hidden` will remove space
