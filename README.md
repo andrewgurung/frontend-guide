@@ -42,6 +42,7 @@ Table of Contents
   - [ ] Experiment 4: Create JS Clock
 - [ ] JS Design Patterns
 - [ ] JS Frameworks
+- [ ] [Full Stack React Book](https://www.fullstackreact.com/)
 - [ ] Practice Session
   - [ ] Experiment 5: ToDo App using vanilla JS
   - [ ] Experiment 6: Etsy Clone using AngularJS
