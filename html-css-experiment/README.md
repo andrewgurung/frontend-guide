@@ -30,4 +30,4 @@ Context
   font-size: 2.5rem;
 }
 ```
--
+- Add .svg `<img>` and changed color using `filter` CSS property
