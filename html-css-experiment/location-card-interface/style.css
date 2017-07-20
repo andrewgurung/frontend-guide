@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #F3F3FD;
+  font-size: 1.8rem;
+}
+
+main {
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0, 0, 0,0.8)),
+              url(http://res.cloudinary.com/ddylgzvo9/image/upload/c_crop,h_650,w_900/v1500572429/pexels-photo-481178_rncxva.jpg) no-repeat;
+  width: 90rem;
+  height: 65rem;
+  margin: 5rem auto;
+}
+
+footer {
+  position: relative;
+  top: 8rem;
+  left: 12rem;
+  color: rgba(83, 131, 127, 0.5);
+  font-size: 1rem;
+}
+
+
+.card {
+  border-radius: 1.2rem;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  top: 6.5rem;
+  width: 75rem;
+  height: 52rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardPhotoSection {
+  border-bottom-left-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  width: 45rem;
+  height: 100%;
+  background: url(http://res.cloudinary.com/ddylgzvo9/image/upload/c_crop,h_600,w_800/v1500572429/pexels-photo-481178_rncxva.jpg) no-repeat;
+  background-size: 45rem 52rem;
+}
+
+.cardDescSection {
+  width: 30rem;
+}
+
+.cardTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 5rem 0 1rem 4rem;
+  letter-spacing: 1px;
+}
+
+.likeCount {
+  color: #67CBF1;
+  padding-left: 4rem;
+  font-size: 1.5rem;
+}
