@@ -11,6 +11,7 @@ body {
   margin: 0;
   background-color: #F3F3FD;
   font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .container {
@@ -29,7 +30,8 @@ header {
 
 img {
   float: left;
-  height: 5rem;
+  max-height: 5rem;
+  max-width: 4rem;
 }
 
 .title {
@@ -44,6 +46,7 @@ img {
 .day {
   color: #9CA6BA;
   margin: 2rem;
+  margin-top: 5rem;
   text-transform: uppercase;
 }
 
@@ -81,12 +84,34 @@ img {
   width: 15%;
 }
 
-.star-checked::before {
-  content: '★';
-  font-size: 2.5rem;
+.star-checked img {
+  filter: contrast(0) sepia(100%) hue-rotate(90deg);
+  width: 3.5rem;
 }
 
+.star-checked img {
+  filter: contrast(0) sepia(100%) hue-rotate(90deg);
+  width: 3.5rem;
+}
 .star-unchecked::before {
   content: '☆';
-  font-size: 2rem;
+  font-size: 5rem;
+}
+
+.completed {
+  color: #9CA6BA;
+}
+
+.completed .checkbox  {
+  visibility: hidden;
+}
+
+.completed .task-image  {
+  display: none;
+  
+}
+
+.completed .task-description {
+  width: 85%;
+  text-decoration: line-through;
 }
