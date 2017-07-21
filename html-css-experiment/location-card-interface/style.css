@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: 'PT Sans', sans-serif;
-  background-color: #F3F3FD;
+  background-color: rgba(0,0,0,0.8);
   font-size: 1.8rem;
 }
 
@@ -19,7 +19,7 @@ main {
   width: 90rem;
   height: 65rem;
   margin: 5rem auto;
-  box-shadow: 0 0 4rem #a8aeb7;
+  box-shadow: 0 0 9rem black;
 }
 
 footer {
@@ -81,6 +81,22 @@ footer {
   display: flex;
   flex-direction: column;
   width: 30rem;
+  position: relative;
+}
+
+.cardDescSection::after {
+  content: "";
+  background-image: url('http://res.cloudinary.com/ddylgzvo9/image/upload/v1500601554/newyorkskyline_zqredc.png');
+  background-repeat: no-repeat;
+  background-position: 0% 78%;
+  background-size: 30rem 18rem;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
 }
 
 .cardDescTop {

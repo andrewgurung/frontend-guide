@@ -79,3 +79,23 @@ main {
   cursor: pointer;
 }
 ```
+
+- Background image opacity hack. There is no such thing as background-opacity but can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.
+
+```
+.cardDescSection {
+  position: relative;
+}
+
+.cardDescSection::after {
+  content: "";
+  background-image: url('http://res.cloudinary.com/ddylgzvo9/image/upload/v1500601554/newyorkskyline_zqredc.png');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
+}
+```
