@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  margin: 0 auto;
+  font-size: 2rem;
+  background-color: #F4F4F4;
+}
+
+main {
+  margin: 10rem auto;
+  background-color: white;
+  width: 35rem;
+  height: 60rem;;
+}
