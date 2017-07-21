@@ -23,3 +23,14 @@ main {
   color: gray;
   padding: 4rem;
 }
+
+.searchBar, #searchIcon {
+  font-size: 3rem;
+}
+
+#searchIcon {
+  float: right;
+  transform: rotate(305deg);
+  font-size: 4rem;
+  line-height: 1;
+}

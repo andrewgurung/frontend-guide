@@ -101,3 +101,4 @@ main {
 ```
 
 ### [Confirm Reservation Interface](https://codepen.io/andrewgurung/full/LjPyVO)
+- Use `⚲` for search icon and rotate using `transform: rotate(305deg)`
