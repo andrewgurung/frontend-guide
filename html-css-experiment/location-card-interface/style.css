@@ -88,15 +88,16 @@ footer {
   content: "";
   background-image: url('http://res.cloudinary.com/ddylgzvo9/image/upload/v1500601554/newyorkskyline_zqredc.png');
   background-repeat: no-repeat;
-  background-position: 0% 78%;
+  /*background-position: 0% 78%;*/
   background-size: 30rem 18rem;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   position: absolute;
+  opacity: 0.5;
+  top: 26rem;
+  left: 0;
+  bottom: 5rem;
+  right: 0;
   z-index: 10;
+  /*position: relative;*/
 }
 
 .cardDescTop {
