@@ -62,3 +62,20 @@ main {
   height: 52rem;
 }
 ```
+- Use `word-spacing` to space hashtags
+- Use `filter:brightness(0.4)` to darken thumbnail when not selected
+- Display thumbnails as links: hover effect + hand when mouse over
+```
+/* Darken image when not selected*/
+.cardDescFooter img {
+  height: 7rem;
+  width: 7rem;
+  filter:brightness(0.4);
+}
+
+/* Display full brightness when hovered*/
+.cardDescFooter img:hover{
+  filter:brightness(1);
+  cursor: pointer;
+}
+```

@@ -19,6 +19,7 @@ main {
   width: 90rem;
   height: 65rem;
   margin: 5rem auto;
+  box-shadow: 0 0 4rem #a8aeb7;
 }
 
 footer {
@@ -28,7 +29,6 @@ footer {
   color: rgba(83, 131, 127, 0.5);
   font-size: 1rem;
 }
-
 
 .card {
   border-radius: 1.2rem;
@@ -42,6 +42,7 @@ footer {
   flex-direction: row;
 }
 
+/* Left half */
 .cardPhotoSection {
   border-bottom-left-radius: 1.2rem;
   border-top-left-radius: 1.2rem;
@@ -49,10 +50,64 @@ footer {
   height: 100%;
   background: url(http://res.cloudinary.com/ddylgzvo9/image/upload/c_crop,h_600,w_800/v1500572429/pexels-photo-481178_rncxva.jpg) no-repeat;
   background-size: 45rem 52rem;
+  display: flex;
+  flex-direction: column;
 }
 
+.cityName {
+  height: 85%;
+  width: 60%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 8rem;
+  padding: 22rem 0 0 3rem;
+  color: #F2F2F2;
+  letter-spacing: 2px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.hashtags {
+  margin-top: 3rem;
+  padding: 3rem 0 0 3rem;
+  border-top: 2px solid rgba(128,0,128,0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  color: rgba(242, 242, 242, 0.8);
+  word-spacing: 1.5rem;
+  height: 100%;
+}
+
+/* Right half */
 .cardDescSection {
+  display: flex;
+  flex-direction: column;
   width: 30rem;
+}
+
+.cardDescTop {
+  min-height: 44rem;
+}
+
+.cardDescFooter {
+  background: rgba(30,9,49,0.9);
+  font-size: 1.3rem;
+  color: rgba(242, 242, 242, 0.8);
+  height: 100%;
+}
+
+.cardDescFooter img {
+  height: 7rem;
+  width: 7rem;
+  margin-top: 0.6rem;
+  filter:brightness(0.4);
+}
+
+.cardDescFooter img:hover{
+  filter:brightness(1);
+  cursor: pointer;
+}
+
+.cardDescFooter img:first-child {
+  margin-left: 0.5rem;
 }
 
 .cardTitle {
@@ -70,4 +125,14 @@ footer {
 #cardContent {
   color: rgba(0,0,0,0.5);
   padding: 4rem 4rem 0 4rem;;
+}
+
+.imageCount {
+  display: inline-block;
+  float: right;
+  width: 5.5rem;
+  /*text-align: center;*/
+  margin-top: 3.5rem;
+
+
 }
