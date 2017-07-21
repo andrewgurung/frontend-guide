@@ -9,6 +9,7 @@ html {
 body {
   display: flex;
   margin: 0 auto;
+  font-family: 'PT Sans', sans-serif;
   font-size: 2rem;
   background-color: #F4F4F4;
 }
@@ -16,6 +17,9 @@ body {
 main {
   margin: 10rem auto;
   background-color: white;
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.3);
   width: 35rem;
-  height: 60rem;;
+  height: 60rem;
+  color: gray;
+  padding: 4rem;
 }
