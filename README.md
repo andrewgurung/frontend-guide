@@ -19,7 +19,7 @@ Table of Contents
 - [x] [Learn CSS Layout](learn-css-layout/README.md)
 - [ ] [Professional Web Typography](https://prowebtype.com/)
 - [ ] Practice Session
-  - [ ] [Experiment 1: Dribble Example](html-css-experiment/README.md)
+  - [x] [Experiment 1: Dribble Example](html-css-experiment/README.md)
   - [ ] Experiment 2: Clone sections from popular sites
 - [ ] HTML and CSS best practices
 - [ ] Grid Systems and Responsiveness
