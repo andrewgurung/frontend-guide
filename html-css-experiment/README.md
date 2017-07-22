@@ -102,3 +102,5 @@ main {
 
 ### [Confirm Reservation Interface](https://codepen.io/andrewgurung/full/LjPyVO)
 - Use `⚲` for search icon and rotate using `transform: rotate(305deg)`
+- Cast shadow downwards vertically using `box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6)`
+  Syntax: position of horizontal-shadow, position of vertical-shadow, blur, color

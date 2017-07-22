@@ -7,30 +7,93 @@ html {
 }
 
 body {
-  display: flex;
   margin: 0 auto;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Hind', sans-serif;
   font-size: 2rem;
   background-color: #F4F4F4;
 }
 
 main {
-  margin: 10rem auto;
+  display: flex;
+  margin: 4rem auto;
   background-color: white;
   box-shadow: 0 0 4rem rgba(0, 0, 0, 0.3);
-  width: 35rem;
-  height: 60rem;
+  width: 45rem;
+  height: 76rem;
   color: gray;
-  padding: 4rem;
+  padding: 6rem;
+  align-content: center;
+  flex-direction: column;
 }
 
 .searchBar, #searchIcon {
   font-size: 3rem;
 }
 
+#back {
+  float: left;
+}
+
 #searchIcon {
   float: right;
-  transform: rotate(305deg);
+  transform: rotate(310deg);
   font-size: 4rem;
   line-height: 1;
+}
+
+div {
+  text-align: center;
+}
+
+.hotelImage img {
+  box-sizing: content-box;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 0.6rem solid #474850;
+  margin-top: -1.6rem;
+}
+
+.hotelName {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2rem 0 3rem 0;
+}
+
+.updatePeople {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.minus, .pplCount, .plus {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #5E606A;
+  width: 33%;
+}
+
+.pplCount {
+  font-size: 9rem;
+  font-weight: bold;
+}
+
+.dateTime {
+  color: #5E606A;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+button {
+  background-color: #474850;
+  text-transform: uppercase;
+  height: 7rem;
+  border: none;
+  margin-top: 2rem;
+  color: white;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+  font-size: 1.6rem;
 }
