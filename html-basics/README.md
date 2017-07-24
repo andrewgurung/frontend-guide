@@ -12,12 +12,185 @@ Context
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
 
 [Assessment 1](assessment1)
+
 [Assessment 2](assessment2)
+
 [Assessment 3](assessment3)
+
 [Assessment 4](assessment4)
 
 Notes
 -----
+### HTML Basics
+#### Whitespaces
+- Whitespaces in HTML are ignored
+```
+<p>Whitespaces
+       does       not mean
+
+                 anything.
+</p>
+```
+
+#### Entity References
+- Special Characters: `< > & " '`
+- Each character reference is started with an ampersand (`&`), and ended by a semi-colon (`;`)
+
+#### Inline Vs Block elements
+- Block level elements form a visible block on a page. Eg: paragraphs, lists, menus, footers
+- Inline elements are contained within a block element. Eg: a, em, strong
+`<em>First</em><em>Second</em><em>Third</em>`
+
+#### Empty elements
+- Elements without closing tags. Eg: img tag
+```
+<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox logo">
+```
+#### Boolean attribute
+- Attributes without values. Eg: disabled
+```
+<input type="text" disabled="disabled">
+<input type="text" disabled>
+```
+
+#### HTML Head
+
+- `head` element is not displayed but is used to store metadata about the document
+- `title` element is also used in search result page and bookmark title
+- `meta charset="utf-8"` is a universal character set
+- Nepalese example: `नेपाली`
+- `meta name="author" content="Andrew Gurung"`
+- `meta name="description" content="HTML Basics"`: helps in Search Engine Optimization
+
+#### Other types of metadata
+- Facebook and Twitter has their own proprietary creations
+- meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png" : will display an image when you link to MDN on facebook
+
+#### Adding custom icons to your site
+- link rel="shortcut icon" href="favicon.png": add png or jpg as favicon
+- link rel="shortcut icon" href="favicon.ico" type="image/x-icon": add .ico as favicon
+- link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon.png": favicon for specific devices. Eg: High-resolution Iphone
+
+#### Adding CSS and JavaScript
+1. Adding CSS: link rel="stylesheet" href="my-css-file.css"
+2. Adding JavaScript: <script src="my-js-file.js"></script>. It is often better to put 'script' element is better at the end of the document before closing 'body' tag
+
+#### Setting the primary language of the document CSS and JavaScript
+- `html lang="en-US"`
+- Helps page to be indexed effectively by search engines
+- Useful for visal impairments using screen readers
+
+#### HTML text fundamentals
+- `h1` element: Gives both appearance and semantic value. Used by search engines and screen readers
+- `span style="font-size: 32px; margin: 21px 0;"` may be used to achieve the same appearance as 'h1' element but doesn't provide any semantic value
+- `em` element: Used to emphasis words putting them in italics. Spoken in different tone of voice by screen readers
+- Presentational elements: `i`, `b`, `u` elements should no longer be used. Opt for semantic elements like `em`, `strong`
+- **Warning** about underline: People strongly associate underlining with hyperlinks
+
+
+#### Hyperlinks
+```
+<a href="http://www.andrewgurung.com" title="Hover over tooltip text">AndrewGurung.com</a>
+```
+- Moving down into subdirectories: children/index.html
+- Moving back into parent directory: ../home/index.html
+- Document fragments: index.html#html_head. Eg: HTML Head
+
+#### Best Practice:
+- Don't repeat the link text
+- Don't say 'link' or 'link to'. It's just noise
+- Keep link text short for screen readers
+- Multiple copies of same text like 'click here' which points to different places is confusing for screenreader users
+- Use relative paths as absolute paths are less efficient. Browser will query domain with DNS
+- Leave clear signpost for non-HTML resources. Eg: Download sales report (PDF, 10MB), Play car game (requires Flash)
+- Use download="firefox-39-installer.exe" attribute to provide a default save filename
+
+#### Email links
+` href="mailto:nowhere@gmail.com?cc=no@gmail.com&bcc=name3@rapidtables.com&subject=The%20subject&body=The%20body"` Eg. Send email with `cc`, `bcc`, `subject` and `body`
+
+#### Advanced text formatting
+- Description Lists
+```
+<dl>
+  <dt>Description Title</dt>
+  <dd>'dt' (description term) element</dd>
+  <dt>Description Description</dt>
+  <dd>'dd' (description term) element</dd>
+</dl>
+```
+
+- Blockquotes: Section of content quoted from somewhere else. Include a url in 'cite' attribute
+```
+<blockquote cite="http://www.google.com">
+  <p>The <strong>HTML</strong> blockquote</p>
+</blockquote>
+```
+
+- Inline quotation: Displays content surrounded by quotes
+```
+<p>The inline <q cite="http://google.com">quotation don't require paragraph breaks</q></p>
+```
+
+- Citations: cite element vs cite attribute. If you want to make the source of the quotation available on the page, a better way to mark it up is put the cite element next to the quote element.
+```
+<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<cite>MDN blockquote page</cite></a>:
+</p>
+<blockquote cite="http://www.google.com">
+  <p>The <strong>HTML</strong> blockquote</p>
+</blockquote>
+```
+
+- Abbreviations: `abbr` element with title attribute shown when hovered over
+```
+<p>We use <abbr title="Hypertext Markup Language">HTML</abbr></p>
+```
+
+- Address: `address` element used for marking up contact details
+```
+<address>
+  <p>Bethesda, Maryland, USA</p>
+  <p>Page written by <a href="../authors/andrew/">Andrew</a></p>
+</address>
+```
+
+- Superscript and subscript: `sup` and `sub` for date, chemical, mathematical equations
+```
+<p>22<sup>nd</sup> August</p>
+<p>H<sub>2</sub>0</p>
+```
+
+- Time and Date
+```
+<!-- Standard simple date -->
+<time datetime="2017-06-19">19 June 2017</time>
+<br>
+<!-- Just year and month -->
+<time datetime="2017-06">June 2017</time>
+```
+
+#### Representing computer code
+[JSFiddle Practice](https://jsfiddle.net/dxa2thnh/)
+1. code: Generic code
+2. pre: Retains whitespace and multilines
+3. var: Mark variable names
+4. kbd: Keyboard input
+5. samp: Output
+```
+<pre>
+ <code>
+   var para = 'Test para';
+   function display() {
+     console.log(para);
+   }
+ </code>
+</pre>
+<p><var>para</var> is a sample textarea</p>
+
+<p>Select all text with <kbd>Cmd</kbd>+<kbd>A</kbd></p>
+<samp>$ ping google.com</samp>
+<hr>
+```
 ### Document and website structure
 
 #### Basics of a document
@@ -344,5 +517,3 @@ Second column: Yellow background-color
 #### Active Learning Links
 - [Playing with id and headers](table/itemSold/items-sold-using-id-header.html)
 - [Playing with scope](table/itemSold/items-sold-using-scope.html)
-
------------------------------------------
