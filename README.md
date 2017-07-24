@@ -20,7 +20,7 @@ Table of Contents
 - [ ] [Professional Web Typography](https://prowebtype.com/)
 - [ ] Practice Session
   - [x] [Experiment 1: Dribble Example](html-css-experiment/README.md)
-  - [ ] Experiment 2: Clone sections from popular sites
+  - [ ] [Experiment 2: Clone sections from popular sites](html-css-experiment/README.md)
 - [ ] HTML and CSS best practices
 - [ ] Grid Systems and Responsiveness
 - [ ] Practice Session
