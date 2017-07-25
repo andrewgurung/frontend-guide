@@ -11,3 +11,75 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 2rem;
 }
+
+.button-primary {
+  background-color: #0071e0;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 2.8rem;
+  color: white;
+}
+
+.hero {
+  background: #e3eefc;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+.hero-background-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -28rem;
+  width: 100rem;
+  height: 100%;
+  padding: 0;
+  background-image: url(https://cfl.dropboxstatic.com/static/images/business/homepage/background--db-vfl4SbjZf.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  z-index: 1;
+}
+
+.top-section {
+  box-sizing: content-box;
+  position: relative;
+  margin: 0 auto;
+  text-align: left;
+  padding: 75px 0 75px 0;
+  min-height: 550px;
+  max-width: 990px;
+  z-index: 2;
+}
+
+.hero-header, .hero-sub-header {
+  width: 50rem;
+  color: rgb(71, 82, 93);
+}
+
+.hero-header {
+  margin-top: 2rem;
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+.hero-sub-header {
+  margin-top: 3.5rem;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  margin-bottom: 7.5rem;
+  font-weight: 100;
+}
+
+.purchase-container {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.purchase {
+  margin-top: 2rem;
+  color: #0071e0;
+}

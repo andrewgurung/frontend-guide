@@ -109,5 +109,23 @@ main {
 
 ## Experiment 2: Clone sections from popular sites
 
-### [Dropbox Hero Section]()
-- 
+### [Dropbox Hero Section](https://codepen.io/andrewgurung/full/vJYRGM/)
+- Make the parent div `position: relative` so that the inner child can be `absolute`
+```
+.hero {
+  background: #e3eefc;
+  position: relative;
+  padding: 0;
+  width: 100%;
+}
+```
+- Set background to center and offset towards left using
+```
+position: absolute;
+top: 0;
+left: 50%;
+margin-left: -28rem;
+width: 100rem;
+```
+- The contain value specifies that regardless of the size of the containing box, the background image should be scaled so that each side is as large as possible while not exceeding the length of the corresponding side of the container
+`background-size: contain;`
