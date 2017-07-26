@@ -231,3 +231,23 @@ line-height: 3.5rem;
 ```
 transform: translateY(-20%);
 ```
+- Cool trick: Drop down arrow with pure CSS
+  - Have a square border
+  - Rotate 45deg
+  - Hide top right and left borders
+  - Results in lower right and left borders --> Displayed as a downward arrow
+```
+.submenu:after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  top: -0.4rem;
+  left: 1rem;
+  border: 1px solid #FFFFFF;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transform: rotate(45deg);
+}
+```
