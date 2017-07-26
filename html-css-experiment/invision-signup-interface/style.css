@@ -22,3 +22,44 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  padding: 21px 40px;
+  border-radius: 6.25em;
+  border: 0;
+  font-size: 1.7rem;
+  margin-right: 2rem;
+}
+
+div input[type=submit] {
+  padding: 21px 40px;
+  background: #f36;
+  color: #FFF;
+  border: 0;
+  border-radius: 6.25em;
+  font-weight: bold;
+}
+
+.signup-container {
+  max-width: 128rem;
+}
+
+.signup-container div:first-child {
+  font-size: 3rem;
+}
+
+.signup-head {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.signup-input {
+  margin-bottom: 4rem;
+}
+
+.signup-terms {
+  text-align: center;
+  color: #747c83;
+  font-size: 1.2rem;
+}

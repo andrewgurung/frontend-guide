@@ -255,4 +255,46 @@ transform: translateY(-20%);
 ------------------------------
 
 ### [Invision Signup Interface](https://codepen.io/andrewgurung/full/MvwYqP/)
-- 
+- Center align `section` container both vertically and horizontally
+```
+section {
+  display: flex;
+  min-height: 53rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  ...
+}
+```
+- Customize input boxes
+```
+input {
+  padding: 21px 40px 19px 40px;
+  border-radius: 6.25em;
+  border: 0;
+  ...
+}
+```
+- Fix max-width so that container will be displayed in center with spaces on both sides
+```
+.signup-container {
+  max-width: 128rem;
+}
+```
+- Set the font-size of first child `<div>` of `signup-container`
+```
+.signup-container div:first-child {
+  font-size: 3rem;
+}
+```
+- Customize `input` button
+```
+div input[type=submit] {
+  padding: 21px 40px;
+  background: #f36;
+  color: #FFF;
+  border: 0;
+  border-radius: 6.25em;
+  font-weight: bold;
+}
+```
