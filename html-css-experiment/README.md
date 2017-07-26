@@ -110,6 +110,7 @@ main {
 ## Experiment 2: Clone sections from popular sites
 
 ### [Dropbox Hero Section](https://codepen.io/andrewgurung/full/vJYRGM/)
+Challenge: Responsive square background image. Would have been easier if the background image size would cover the whole width/container
 - Make the parent div `position: relative` so that the inner child can be `absolute`
 ```
 .hero {
@@ -119,7 +120,7 @@ main {
   width: 100%;
 }
 ```
-- Set background to center and offset towards left using
+- Solution 1: Set background to center and offset towards left which looks good even when the window is resized
 ```
 position: absolute;
 top: 0;
@@ -127,9 +128,35 @@ left: 50%;
 margin-left: -28rem;
 width: 100rem;
 ```
-- The contain value specifies that regardless of the size of the containing box, the background image should be scaled so that each side is as large as possible while not exceeding the length of the corresponding side of the container
-`background-size: contain;`
+- Solution 2: Use media queries in ascending order
+  - Base: No Image
+  - Small window: `background-size: cover` to zoom
+  - Bigger window: `background: contain` to scale and fit
+```
+.hero-background-container {
+}
 
+@media (min-width: 381px) {
+  .hero-background-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-image: url(https://cfl.dropboxstatic.com/static/images/business/homepage/background--db-vfl4SbjZf.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 801px) {
+  .hero-background-container {
+    background-size: contain;
+  }
+}
+```
 -----------------------------------
 
 ### [Airbnb Footer](https://codepen.io/andrewgurung/full/KvwaKV/)
