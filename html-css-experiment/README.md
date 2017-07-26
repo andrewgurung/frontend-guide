@@ -205,4 +205,20 @@ style="display: inline-block; fill: rgb(118, 118, 118); height: 1.5em; width: 1.
 ------------------------------
 
 ### [Paypal Navigation](https://codepen.io/andrewgurung/full/KvwaKV/)
-- 
+- Paypal logo is displayed using empty anchor tag. Height and width cannot be applied to inline element, hence need to set it as `inline-block`
+HTML:
+```
+```
+<a href="#" class="logo-icon-nav"></a>
+```
+
+CSS:
+```
+.logo-icon-nav {
+  display: inline-block;
+  background: url("https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom-white.svg") no-repeat top center;
+  background-size: contain;
+  width: 136px;
+  height: 43px;
+}
+```
