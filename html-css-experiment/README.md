@@ -222,3 +222,12 @@ CSS:
   height: 43px;
 }
 ```
+- Align text inside button vertically
+```
+height: 4rem;
+line-height: 3.5rem;
+```
+- Offset buttons to line up with navigation menu. By default the button is pushed a bit lower than regular navigation menu text
+```
+transform: translateY(-20%);
+```

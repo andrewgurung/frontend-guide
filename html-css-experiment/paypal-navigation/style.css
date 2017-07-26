@@ -25,6 +25,7 @@ ul {
 
 li {
   display: inline-block;
+  padding-right: 5rem;
 }
 
 .hero {
@@ -50,7 +51,11 @@ nav {
 }
 
 .logo {
-  width: 30%;
+  width: 28%;
+}
+
+.menu {
+  width:50%;
 }
 
 .logo-icon-nav {
@@ -59,6 +64,15 @@ nav {
   background-size: contain;
   width: 136px;
   height: 43px;
-  /*position: absolute;
-  top: 13px;*/
+}
+
+.buttons a {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 2.5rem;
+  text-align: center;
+  width: 10rem;
+  height: 4rem;
+  line-height: 3.5rem;
+  transform: translateY(-20%);
 }
