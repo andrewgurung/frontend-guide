@@ -208,7 +208,6 @@ style="display: inline-block; fill: rgb(118, 118, 118); height: 1.5em; width: 1.
 - Paypal logo is displayed using empty anchor tag. Height and width cannot be applied to inline element, hence need to set it as `inline-block`
 HTML:
 ```
-```
 <a href="#" class="logo-icon-nav"></a>
 ```
 
@@ -255,6 +254,7 @@ transform: translateY(-20%);
 ------------------------------
 
 ### [Invision Signup Interface](https://codepen.io/andrewgurung/full/MvwYqP/)
+
 - Center align `section` container both vertically and horizontally
 ```
 section {
@@ -296,5 +296,61 @@ div input[type=submit] {
   border: 0;
   border-radius: 6.25em;
   font-weight: bold;
+}
+```
+
+------------------------------
+
+### [Stripe Payment Interface](https://codepen.io/andrewgurung/full/dzoNWj/)
+- Set container to be in middle
+```
+.payment-container {
+  max-width: 104rem;
+  width: 100%;
+  margin: 0 auto;
+}
+```
+- Use custom columns to set percentage widths
+```
+col-3 {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.col-6 {
+  width: 48%;
+}
+
+.col-9 {
+  width: 73%;
+}
+```
+- Set icon to be float right using `justify-content: flex-end`
+```
+.iconContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  align-items: center;
+}
+```
+- Set a light vertical divider using psuedoclass + border
+```
+.price-col::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-left: 1px solid rgba(52,21,112,.075);
+  height: 100%;
+  left: 20%;
+}
+```
+- Display an arrow after a hyperlink
+```
+.common-Link-arrow:after {
+    content: '\2192';
+    padding-left: 5px;
 }
 ```

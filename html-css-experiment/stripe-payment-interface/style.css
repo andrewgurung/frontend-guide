@@ -12,3 +12,112 @@ body {
   font-size: 1.7rem;
   color: #6b7c93;
 }
+
+h3, h4 {
+  color: #32325d;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-top: 4rem;
+  border-top: 2px solid #f6f9fc;
+}
+
+.container:first-of-type .col-3, .container:first-of-type .col-9 {
+  display: flex;
+  align-items: center;
+}
+
+.container-highlight {
+  background-color:#f6f9fc;
+}
+
+.payment-container {
+  max-width: 104rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 2.5rem 0;
+}
+
+.col-3 {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.col-6 {
+  width: 48%;
+}
+
+.col-9 {
+  width: 73%;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  align-items: center;
+}
+
+.payment-title {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+#payment-title {
+  padding-left: 1rem;
+}
+
+.price {
+  padding-left: 40%;
+}
+
+.price-col::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-left: 1px solid rgba(52,21,112,.075);
+  height: 100%;
+  left: 20%;
+}
+
+.price-highlight {
+  color: #24b47e;
+  font-size: 2.4rem;
+}
+
+.price-highlight.hasCap {
+  font-size: 1.7rem;
+  display: block;
+}
+
+.capText {
+  color: #919fae;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.col-image {
+  margin-top: 1rem;
+}
+
+.commonLink {
+  color: #6772e5;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.common-Link-arrow:after {
+    content: '\2192';
+    padding-left: 5px;
+}
