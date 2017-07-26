@@ -194,7 +194,9 @@ select + i.fa {
 ```
 - Use SVG for Airbnb logo
 ```
-<svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="display: inline-block; fill: rgb(118, 118, 118); height: 1.5em; width: 1.5em;">
+<svg viewBox="0 0 1000 1000" role="presentation"
+aria-hidden="true" focusable="false"
+style="display: inline-block; fill: rgb(118, 118, 118); height: 1.5em; width: 1.5em;">
 <path d="M499.3 ........">
 </path>
 </svg>
