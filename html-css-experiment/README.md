@@ -201,3 +201,8 @@ style="display: inline-block; fill: rgb(118, 118, 118); height: 1.5em; width: 1.
 </path>
 </svg>
 ```
+
+------------------------------
+
+### [Paypal Navigation](https://codepen.io/andrewgurung/full/KvwaKV/)
+- 

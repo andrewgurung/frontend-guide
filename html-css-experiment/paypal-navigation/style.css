@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
@@ -10,4 +11,19 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-size: 1.4rem;
+}
+
+.hero {
+  width: 100%;
+  height: 62rem;
+  padding: 0;
+  background-image: url("https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/apr-2017/hero-cookoo-clock-creative-cookied-and-uncookied.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+nav {
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  height: 7rem;
 }
