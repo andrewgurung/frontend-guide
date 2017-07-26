@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+body, select {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  color: #767676;
+}
+
+h3 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  color: #484848;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid #DBDBDB;
+  margin-top: 5rem;
+}
+
+select {
+  margin-bottom: 2rem;
+  display: block;
+  width: 70%;
+  height: 25%;
+  border: 1px solid #DBDBDB !important;
+  border-radius: .3rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+}
+
+/* remove the original arrow */
+select.customArrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+
+select + i.fa {
+  float: left;
+  margin-top: -5rem;
+  margin-left: 62%;
+  pointer-events: none;
+}
+
+.footerContent {
+  max-width: 108rem;
+  margin: 3rem auto;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.topRow div:first-of-type {
+  width: 32%;
+}
+
+.topRow div {
+  width: 25%;
+}
+
+.topRow div:last-of-type {
+  width: 10%;
+}
+
+.bottomRow {
+  border-top: 1px solid #DBDBDB;
+  margin-top: 5rem;
+  padding-top: 2rem;
+}
+
+.bottomRow_left {
+  float: left;
+}
+
+.bottomRow_right {
+  float: right;
+}
+
+.bottomRow_right span {
+  padding-left: 1rem;
+}
+
+#footer_logo {
+  float: left;
+  margin-top: -3px;
+}
+
+.bottomRow_left span:last-child {
+  padding-left: 1rem;
+}
