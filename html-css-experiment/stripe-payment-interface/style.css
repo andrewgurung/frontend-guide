@@ -9,12 +9,15 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #6b7c93;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 h3, h4 {
   color: #32325d;
+  font-size: 1.9rem;
 }
 
 h4 {
@@ -71,11 +74,13 @@ ul.features {
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+  padding-top: 1.5rem;
 }
 
 ul.features li {
   flex-basis: 33.333%;
   max-width: 33.333%;
+  line-height: 2;
 }
 
 .iconContainer {
@@ -133,7 +138,7 @@ ul.features li {
 }
 
 .col-image {
-  margin-top: 1rem;
+  margin-top: 1.8rem;
 }
 
 .commonLink {
