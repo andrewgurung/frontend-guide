@@ -31,6 +31,10 @@ section {
   align-items: center;
 }
 
+.container:first-of-type .row, .container:nth-of-type(2) .row {
+  padding-bottom: 0;
+}
+
 .container-highlight {
   background-color:#f6f9fc;
 }
@@ -44,7 +48,7 @@ section {
 .row {
   display: flex;
   flex-direction: row;
-  padding: 2.5rem 0;
+  padding: 5rem 0;
 }
 
 .col-3 {
@@ -60,6 +64,18 @@ section {
 
 .col-9 {
   width: 73%;
+}
+
+ul.features {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+ul.features li {
+  flex-basis: 33.333%;
+  max-width: 33.333%;
 }
 
 .iconContainer {
@@ -101,6 +117,15 @@ section {
   display: block;
 }
 
+.price-description {
+  font-size: 1.4rem;
+}
+
+.space {
+  display: block;
+  padding-top: 1em;
+}
+
 .capText {
   color: #919fae;
   font-size: 1.2rem;
@@ -113,11 +138,10 @@ section {
 
 .commonLink {
   color: #6772e5;
-  font-size: 1.4rem;
   text-decoration: none;
 }
 
 .common-Link-arrow:after {
-    content: '\2192';
-    padding-left: 5px;
+  content: '\2192';
+  padding-left: 5px;
 }

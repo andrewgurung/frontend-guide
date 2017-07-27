@@ -354,3 +354,30 @@ col-3 {
     padding-left: 5px;
 }
 ```
+- Remove `padding-bottom` of first and second `container`'s `row` element
+```
+.container:first-of-type .row, .container:nth-of-type(2) .row {
+  padding-bottom: 0;
+}
+```
+- flex-basis is used to grow an element is space is available
+```
+item {
+  width: 30px;
+  flex-basis: 250px;
+}
+```
+- Arrange `<ul>` lists into 3 columns using `flex`, `wrap` and `flex-basis`
+```
+ul.features {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+ul.features li {
+  flex-basis: 33.333%;
+  max-width: 33.333%;
+}
+```
