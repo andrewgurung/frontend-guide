@@ -18,7 +18,7 @@ Table of Contents
 - [x] [CSS Diner](css-diner/README.md)
 - [x] [Learn CSS Layout](learn-css-layout/README.md)
 - [ ] [Professional Web Typography](https://prowebtype.com/)
-- [ ] Practice Session
+- [x] Practice Session
   - [x] [Experiment 1: Dribble Example](html-css-experiment/README.md)
   - [x] [Experiment 2: Clone sections from popular sites](html-css-experiment/README.md)
 - [ ] [HTML and CSS best practices](html-best-practices/README.md)
