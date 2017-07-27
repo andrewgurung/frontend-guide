@@ -13,7 +13,7 @@ Context
 Table of Contents
 -----------------
 
-- [ ] [A Look Into Proper HTML5 Semantics](A Look Into Proper HTML5 Semantics)
+- [ ] [A Look Into Proper HTML5 Semantics](http://www.hongkiat.com/blog/html-5-semantics/)
 - [ ] [What Makes For a Semantic Class Name](https://css-tricks.com/semantic-class-names/)
 - [ ] [OOCSS, ACSS, BEM, SMACSS](http://clubmate.fi/oocss-acss-bem-smacss-what-are-they-what-should-i-use/)
 - [ ] [Medium’s CSS is actually pretty f***ing good](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06#.ef81j61eg)
