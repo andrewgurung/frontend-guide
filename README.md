@@ -20,11 +20,12 @@ Table of Contents
 - [ ] [Professional Web Typography](https://prowebtype.com/)
 - [ ] Practice Session
   - [x] [Experiment 1: Dribble Example](html-css-experiment/README.md)
-  - [ ] [Experiment 2: Clone sections from popular sites](html-css-experiment/README.md)
-- [ ] HTML and CSS best practices
-- [ ] Grid Systems and Responsiveness
+  - [x] [Experiment 2: Clone sections from popular sites](html-css-experiment/README.md)
+- [ ] [HTML and CSS best practices](html-best-practices/README.md)
+- [ ] [Grid Systems and Responsiveness](grid-systems/README.md)
 - [ ] Practice Session
   - [ ] Experiment 3: Refactor previous project
+  - [ ] [My (Simple) Workflow To Design And Develop A Portfolio Website](https://www.smashingmagazine.com/2013/06/workflow-design-develop-modern-portfolio-website/)
   - [ ] Experiment 4: Build a portfolio site
 - [ ] Learn by example
 
