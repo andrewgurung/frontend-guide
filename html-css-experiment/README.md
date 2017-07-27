@@ -12,15 +12,15 @@ Context
 
 Table of Contents
 -----------------
-- [x][Mobile Blog App Interface](https://codepen.io/andrewgurung/full/rwEOaP/)
-- [x][Task List App Interface](https://codepen.io/andrewgurung/pen/yXdRjP)
-- [x][Location Card Interface](https://codepen.io/andrewgurung/pen/jwgGwM)
-- [x][Confirm Reservation Interface](https://codepen.io/andrewgurung/full/LjPyVO)
-- [x][Dropbox Hero Section](https://codepen.io/andrewgurung/full/vJYRGM/)
-- [x][Airbnb Footer](https://codepen.io/andrewgurung/full/KvwaKV/)
-- [x][Paypal Navigation](https://codepen.io/andrewgurung/full/GvgwXK/)
-- [x][Invision Signup Interface](https://codepen.io/andrewgurung/full/MvwYqP/)
-- [x][Stripe Payment Interface](https://codepen.io/andrewgurung/full/dzoNWj/)
+- [x] [Mobile Blog App Interface](https://codepen.io/andrewgurung/full/rwEOaP/)
+- [x] [Task List App Interface](https://codepen.io/andrewgurung/pen/yXdRjP)
+- [x] [Location Card Interface](https://codepen.io/andrewgurung/pen/jwgGwM)
+- [x] [Confirm Reservation Interface](https://codepen.io/andrewgurung/full/LjPyVO)
+- [x] [Dropbox Hero Section](https://codepen.io/andrewgurung/full/vJYRGM/)
+- [x] [Airbnb Footer](https://codepen.io/andrewgurung/full/KvwaKV/)
+- [x] [Paypal Navigation](https://codepen.io/andrewgurung/full/GvgwXK/)
+- [x] [Invision Signup Interface](https://codepen.io/andrewgurung/full/MvwYqP/)
+- [x] [Stripe Payment Interface](https://codepen.io/andrewgurung/full/dzoNWj/)
 
 
 -----------------
