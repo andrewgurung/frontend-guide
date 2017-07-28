@@ -21,7 +21,7 @@ Table of Contents
 - [x] [Create Your Own Simple Reset.css File](http://code.tutsplus.com/tutorials/weekend-quick-tip-create-your-own-resetcss-file--net-206)
 - [x] [CSS Vendor Prefixes](https://www.thoughtco.com/css-vendor-prefixes-3466867)
 - [x] [Sass Basics](http://sass-lang.com/guide)
-- [ ] [SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
+- [x] [SASS Vs SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 - [ ] [PostCSS](https://github.com/postcss/postcss)
 
 -----------------
@@ -354,10 +354,32 @@ body {
 ```
 
 ### Operators
-- Sass provides math operators like ``+, -, *, /, and %`
+- Sass provides math operators like `+, -, *, /, and %`
 ```
 aside[role="complementary"] {
   float: right;
   width: 300px / 960px * 100%;
 }
 ```
+-----------------
+
+## SASS vs SCSS
+NOTE: Use SCSS over SASS
+The Sass processor has two syntax:
+1. Sass: Indented syntax
+2. SCSS: CSS like syntax
+
+### History
+- Sass was part of another processor `Haml` developed by Ruby devs
+- Sass initially used Ruby liked no braces, no semicolons syntax
+
+### SASS
+- Shorter and easier to write
+- Enforces clean coding with indentation
+- No need for @mixin or @include
+- But need to be careful with spaces/indentation
+
+### SCSS
+- Fully CSS compliant
+- Less learning curve
+- Easier to read and understand `mixins` and `include`
