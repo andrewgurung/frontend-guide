@@ -78,3 +78,39 @@ NOTES:
 -  `class="success"`: Can be used with other class to represent success and style it differently
 - `<article class="movie-review">` is more flexible and semantic. Easier to change the background to green
 - Unsemantic version: `<article class="blueBg">`. Problem arises when the movie background or blueBg has to be changed to green?
+
+-----------------
+## OOCSS, ACSS, BEM, SMACSS
+### Object Oriented CSS (OOCSS)
+- Keep the structure and skin separate
+  - Eg: Button and gradient should be separate
+- Separate container and content by going straight into the object
+  - Eg: Use `.list-item` instead of `ul li.list-item`
+
+### Atomic CSS (ACSS)
+- Just one declaration per class to make it reusable
+- Styling goes into markup
+- Hard for responsive media queries to affect layout as the styling is inside the markup
+- Instead of styling `p` in CSS, we put the style `di` inside of the markup of `p`
+```
+<p>
+    Paragraphs are by default block elements.
+</p>
+<a href="#">
+    More→
+</a>
+```
+```
+CSS:
+.di {
+    display: inline;
+}
+
+HTML:
+<p class="di">
+    Paragraphs are by default block elements.
+</p>
+<a href="#">
+    More→
+</a>
+```
