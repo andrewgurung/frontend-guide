@@ -148,3 +148,8 @@ HTML:
     </nav>
 </header>
 ```
+
+### SMACSS—Scalable and Modular Architecture for CSS
+- More of a style guide than rigid framework
+- Pronounced as smacks
+- [SMACSS official site](https://smacss.com/)
