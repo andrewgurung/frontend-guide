@@ -17,9 +17,9 @@ Table of Contents
 - [x] [What Makes For a Semantic Class Name](https://css-tricks.com/semantic-class-names/)
 - [x] [OOCSS, ACSS, BEM, SMACSS](http://clubmate.fi/oocss-acss-bem-smacss-what-are-they-what-should-i-use/)
 - [X] [Medium’s CSS is actually pretty f***ing good](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06#.ef81j61eg)
-- [ ] [MeyerWeb CSS Reset](http://meyerweb.com/eric/tools/css/reset/index.html)
-- [ ] [Create Your Own Simple Reset.css File](http://code.tutsplus.com/tutorials/weekend-quick-tip-create-your-own-resetcss-file--net-206)
-- [ ] [CSS Vendor Prefixes](https://www.thoughtco.com/css-vendor-prefixes-3466867)
+- [x] [MeyerWeb CSS Reset](http://meyerweb.com/eric/tools/css/reset/index.html)
+- [x] [Create Your Own Simple Reset.css File](http://code.tutsplus.com/tutorials/weekend-quick-tip-create-your-own-resetcss-file--net-206)
+- [x] [CSS Vendor Prefixes](https://www.thoughtco.com/css-vendor-prefixes-3466867)
 - [ ] [SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 - [ ] [PostCSS](https://github.com/postcss/postcss)
 
@@ -242,4 +242,26 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+```
+-----------------
+
+## CSS Vendor Prefixes
+- A way for browser vendors to add support for new CSS features before they are fully supported in all browsers
+- Webkit-powered browsers: Safari and Chrome
+- Vendor Prefixes aren't hacks
+- [Can I use.com](http://caniuse.com/)
+
+### CSS browser prefixes:
+- `-webkit-`: Android, Chrome, iOS, Safari
+- `-moz-`: Firefox
+- `-ms-`: Internet Explorer
+- `-o-`: Opera
+
+CSS prefix for transition property:
+```
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;
 ```
