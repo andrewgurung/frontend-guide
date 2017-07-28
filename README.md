@@ -21,7 +21,7 @@ Table of Contents
 - [x] Practice Session
   - [x] [Experiment 1: Dribble Example](html-css-experiment/README.md)
   - [x] [Experiment 2: Clone sections from popular sites](html-css-experiment/README.md)
-- [ ] [HTML and CSS best practices](html-best-practices/README.md)
+- [x] [HTML and CSS best practices](html-best-practices/README.md)
 - [ ] [Grid Systems and Responsiveness](grid-systems/README.md)
 - [ ] Practice Session
   - [ ] Experiment 3: Refactor previous project
