@@ -114,3 +114,37 @@ HTML:
     More→
 </a>
 ```
+
+### Block, Element, Modifier (BEM)
+- Easier for everyone to understand because of strict naming rules
+- `.block {}`: This is the Block
+- `.block__element {}`: This is an element, that helps to form the block as a whole
+- `.block--modifier {}`: This modifies the element or a block
+
+```
+<!-- Block -->
+<header class="col-header">
+
+    <!-- Block element -->
+    <h1 class="col-header__heading">
+        <a class="col-header__link" href="/">clubmate.fi</a>
+    </h1>
+
+    <!-- Block element -->
+    <span class="col-header__beta">(beta)</span>
+
+    <!-- New Block / Not related to parent block-->
+    <nav class="nav">
+
+        <!-- Block element -->
+        <a class="nav__item" href="/">Home</a>
+
+        <!-- Block element -->
+        <a class="nav__item" href="/archives">Archives</a>
+
+        <!-- Element and a modifier -->
+        <a class="nav__item nav__item--uplink" href="#header">&uarr;</a>
+
+    </nav>
+</header>
+```
