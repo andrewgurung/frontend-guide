@@ -157,3 +157,38 @@ HTML:
 -----------------
 
 ## Medium's CSS is actually pretty f***ing good
+- Icon font reduced 97% of the img folder
+- Use LESS to manage z-index
+```
+@zIndex-1:   100;
+
+@zIndex-1--screenForeground:        @zIndex-1;
+```
+- .js- prefixed class names for elements being relied upon for javascript selectors. No styling on .js classes
+- .u- prefixed class name for single purpose utility classes like .u-underline, .u-capitalize,
+- Components: `<componentName>[--modifierName|-descendantName]`
+  - Modifier: `btn--default`
+  - Descendant: `tweet-avatar`
+- Variables: `<property>-<value>[--componentName]`
+```
+@color-grayLight--highlightMenu: rgb(51, 51, 50);
+```
+- Colors: Use rgb, rgba instead of hex-value or hsl
+- Use quotes
+```
+Correct:
+background-image: url("/img/you.jpg");
+
+Wrong:
+background-image: url(/img/you.jpg);
+```
+- Specificity for performance
+```
+Correct:
+.user-list > a:hover {
+  color: red;
+}
+
+Wrong:
+ul.user-list li span a:hover { color: red; }
+```
