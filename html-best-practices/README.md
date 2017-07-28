@@ -20,6 +20,7 @@ Table of Contents
 - [x] [MeyerWeb CSS Reset](http://meyerweb.com/eric/tools/css/reset/index.html)
 - [x] [Create Your Own Simple Reset.css File](http://code.tutsplus.com/tutorials/weekend-quick-tip-create-your-own-resetcss-file--net-206)
 - [x] [CSS Vendor Prefixes](https://www.thoughtco.com/css-vendor-prefixes-3466867)
+- [x] [Sass Basics](http://sass-lang.com/guide)
 - [ ] [SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 - [ ] [PostCSS](https://github.com/postcss/postcss)
 
@@ -264,4 +265,99 @@ CSS prefix for transition property:
 -ms-transition: all 4s ease;
 -o-transition: all 4s ease;
 transition: all 4s ease;
+```
+-----------------
+
+## Sass Guide
+### Variables
+- Store information to be reused
+```
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
+### Nesting
+- Hierarchy
+```
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+}
+```
+
+### Partials and imports
+- Partials: Named with leading underscore. Partials aren't generated into individual CSS file
+- Imports: Used to import Partials
+```
+// _reset.scss (Partials)
+
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+```
+
+```
+// base.scss
+@import 'reset';
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+```
+
+### Mixins
+- Useful to add CSS vendor prefix
+```
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+```
+
+### Extend/Inheritance
+```
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+```
+
+### Operators
+- Sass provides math operators like ``+, -, *, /, and %`
+```
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
 ```
