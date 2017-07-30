@@ -232,3 +232,31 @@ CSS
 -----------------
 
 ## CSS media queries
+- A block of CSS properties that is included only if certain condition is true
+- Syntax: `@media .. {}`
+
+### Add a Breakpoint
+```
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+```
+
+### Always Design for Mobile First
+- Start with smaller screens and grow bigger
+```
+/* For mobile phones */
+[class*="col-"] {
+  width: 100%;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  ...
+}
+```
