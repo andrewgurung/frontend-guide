@@ -14,7 +14,7 @@ Table of Contents
 -----------------
 
 - [x] [Understanding CSS Grid Systems](http://www.sitepoint.com/understanding-css-grid-systems/)
-- [ ] [Don’t Overthink Grids](https://css-tricks.com/dont-overthink-it-grids/)
+- [x] [Don’t Overthink Grids](https://css-tricks.com/dont-overthink-it-grids/)
 - [ ] [CSS media queries](http://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - [ ] [Media Queries](https://varvy.com/mobile/media-queries.html)
 - [ ] [An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
@@ -163,4 +163,69 @@ Table of Contents
     <div class="column column-4"></div>
     <div class="column column-2"></div>
 </div>
+```
+-----------------
+
+## Don’t Overthink It Grids
+
+1. Context / Row
+- As wide as the parent. `width: auto`. i.e 100%
+```
+<div class="grid">
+  <!-- 100% wide -->
+</div>
+```
+
+2. Columns
+HTML
+```
+<div class="grid">
+  <div class="col-2-3">
+     Main Content
+  </div>
+  <div class="col-1-3">
+     Sidebar
+  </div>
+</div>
+```
+
+CSS
+```
+[class*='col-'] {
+  float: left;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+.col-1-3 {
+  width: 33.33%;
+}
+```
+
+3. Clearing Context
+- The parent element will collapse to zero height since it has only floated children
+- Fix that by clearing it
+```
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+```
+
+4. Gutters
+-  Apply a fixed padding to the right side of all columns except the last one
+```
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  [class*='col-'] {
+    padding-right: 20px;
+  }
+  
+  [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+}
 ```
