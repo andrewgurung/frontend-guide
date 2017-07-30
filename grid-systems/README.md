@@ -223,9 +223,12 @@ CSS
   [class*='col-'] {
     padding-right: 20px;
   }
-  
+
   [class*='col-']:last-of-type {
     padding-right: 0;
   }
 }
 ```
+-----------------
+
+## CSS media queries
