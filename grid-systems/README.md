@@ -260,3 +260,34 @@ CSS
   ...
 }
 ```
+
+### Multiple breakpoints
+- You can add multiple breakpoints
+```
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  ...
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  ...
+}
+```
+
+### Orientation: Portrait / Landscape
+- Conditional CSS based on orientation of the browser
+```
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
