@@ -306,7 +306,7 @@ Media queries do two things:
 2. (min-width:900px){}: When should it be turned
 3. p{color:red;}: What to do if circumstance happens
 
------------------
+CSS Architectures: Refactor Your CSS
 
 ## An Introduction to Mobile-First Media Queries
 
@@ -339,7 +339,6 @@ Media queries do two things:
   }
 }
 ```
-
 
 2. Bottom-up approach: Best Practice
 [Codepen.io Media Query Bottom-up](https://codepen.io/andrewgurung/pen/WEwQQg)
@@ -385,3 +384,12 @@ Then can be referenced in this way:
   }  
 }
 ```
+-----------------
+
+## CSS Architectures: Refactor Your CSS
+
+### The MetaCoax Process
+- CSS refactoring process, designed to "de-bloatify" thousands of lines of redundant CSS—improving the readability, simplicity and extensibility
+- Measure twice, cut once css → mtco css → meta coa css → MetaCoax
+
+
