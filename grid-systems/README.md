@@ -15,7 +15,7 @@ Table of Contents
 
 - [x] [Understanding CSS Grid Systems](http://www.sitepoint.com/understanding-css-grid-systems/)
 - [x] [Don’t Overthink Grids](https://css-tricks.com/dont-overthink-it-grids/)
-- [ ] [CSS media queries](http://www.w3schools.com/css/css_rwd_mediaqueries.asp)
+- [x] [CSS media queries](http://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - [ ] [Media Queries](https://varvy.com/mobile/media-queries.html)
 - [ ] [An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
 - [ ] [CSS Architectures: Refactor Your CSS](https://www.sitepoint.com/css-architectures-refactor-your-css/)
@@ -291,3 +291,19 @@ CSS
   }
 }
 ```
+-----------------
+
+## Media Queries
+Media queries do two things:
+1. They find out how big a screen is
+2. They apply CSS for the size of the screen found
+
+### Anatomy
+```
+@media(min-width:900px){p{color:red;}}
+```
+1. `@media`: Media query announcement
+2. (min-width:900px){}: When should it be turned
+3. p{color:red;}: What to do if circumstance happens
+
+-----------------
