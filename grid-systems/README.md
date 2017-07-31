@@ -413,6 +413,8 @@ Then can be referenced in this way:
   - Solution 2: If descendent selector is a must, eliminate the superfluous elements. `.widget li a` => `.widget a`
 
 3. Make the selector chain three or less
+  - A combinator selector should have no more than three steps to get to the key selector
+  - `div#blog-footer div#col2.column div.bestright p.besttitle` => `#col2.column .besttitle`
 
 #### Leverage + Layer Rulesets
 
