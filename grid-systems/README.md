@@ -16,7 +16,7 @@ Table of Contents
 - [x] [Understanding CSS Grid Systems](http://www.sitepoint.com/understanding-css-grid-systems/)
 - [x] [Don’t Overthink Grids](https://css-tricks.com/dont-overthink-it-grids/)
 - [x] [CSS media queries](http://www.w3schools.com/css/css_rwd_mediaqueries.asp)
-- [ ] [Media Queries](https://varvy.com/mobile/media-queries.html)
+- [x] [Media Queries](https://varvy.com/mobile/media-queries.html)
 - [ ] [An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
 - [ ] [CSS Architectures: Refactor Your CSS](https://www.sitepoint.com/css-architectures-refactor-your-css/)
 -----------------
@@ -307,3 +307,10 @@ Media queries do two things:
 3. p{color:red;}: What to do if circumstance happens
 
 -----------------
+
+## An Introduction to Mobile-First Media Queries
+
+### Shades of Mobile-First
+1. Mobile-first design: Designs that focus on essentials due to device screen constraints. Enhance user experience through GPS, accelerometer etc.
+2. Mobile-first implementation: Start by designing at the smallest viewport possible then progressively add styles as viewport increases
+
