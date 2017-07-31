@@ -392,4 +392,18 @@ Then can be referenced in this way:
 - CSS refactoring process, designed to "de-bloatify" thousands of lines of redundant CSS—improving the readability, simplicity and extensibility
 - Measure twice, cut once css → mtco css → meta coa css → MetaCoax
 
+### MetaCoax Phase 1: Shorten Selectors and Leverage + Layer Rulesets
 
+#### Shorten Selectors
+
+#### Leverage + Layer Rulesets
+
+### MetaCoax Phase 2: Restructure, Adjust, and Modularize
+
+### Restructure to refactor
+
+### Begin instituting modules
+
+### Create portable helper styles
+
+### Adjust the HTML
