@@ -314,3 +314,47 @@ Media queries do two things:
 1. Mobile-first design: Designs that focus on essentials due to device screen constraints. Enhance user experience through GPS, accelerometer etc.
 2. Mobile-first implementation: Start by designing at the smallest viewport possible then progressively add styles as viewport increases
 
+### Creating Mobile-First Media Queries
+
+1. Top-down approach
+[Codepen.io Media Query Top Down](https://codepen.io/andrewgurung/pen/zdqGbV)
+- Start at large viewports and go down by the presence of `max-width` in media queries
+- It forces us to undo our styles. Instead we should be adding styles
+- The original float styles go against the natural flow of HTML elements
+```
+.sidebar {
+  float: left;
+  width: 25%;
+}
+
+.content {
+  float: left;
+  width: 75%;
+}
+
+@media (max-width:60rem) {
+  .sidebar, .content {
+    float: none;
+    width: auto;
+  }
+}
+```
+
+
+2. Bottom-up approach: Best Practice
+[Codepen.io Media Query Bottom-up](https://codepen.io/andrewgurung/pen/WEwQQg)
+- Start at smallest viewport and go up by the presence of `min-width` in media queries
+- Reduces a lot of unnecessary CSS
+```
+@media (min-width: 60rem) {
+  .sidebar {
+    float: left;
+    width: 25%;
+  }
+  .content {
+    float: left;
+    width: 75%;
+  }
+}
+```
+
