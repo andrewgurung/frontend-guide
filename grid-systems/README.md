@@ -393,8 +393,28 @@ Then can be referenced in this way:
 - Measure twice, cut once css → mtco css → meta coa css → MetaCoax
 
 ### MetaCoax Phase 1: Shorten Selectors and Leverage + Layer Rulesets
+- Phase 1 is focused on minimum work to improve a site's CSS
+- No touching of current HTML
+- Optimize selectors and reduce redundancy
 
 #### Shorten Selectors
+- Goal is to use shallow instead of deep/long selector chain
+1. Kill qualifiers:
+  - 
+2. Drop descendants:
+  - Descendent selector (a b) is one of the most expensive combinatory selectors to use
+  - Other expensive CSS selector include universal (`*`) and the child selector (a > b)
+  - The longer the selector the more checks required which leads to longer render time
+  - Solution 1: Use child selector instead of descendent selector. Child selector only includes direct children instead of including grandchild and great-grandchild
+  - Solution 2: If descendent selector is a must, eliminate the superfluous elements
+  ```
+  .widget li a
+
+  \* would become *\
+
+  .widget a
+  ```
+3. Make the selector chain three or less
 
 #### Leverage + Layer Rulesets
 
