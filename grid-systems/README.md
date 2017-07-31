@@ -400,30 +400,28 @@ Then can be referenced in this way:
 #### Shorten Selectors
 - Goal is to use shallow instead of deep/long selector chain
 1. Kill qualifiers:
-  - 
+  - ID has one of the highest specificity weight
+  - Selectors such as  
+  `div#widget-nav div#widget-nav-slider` => `#widget-nav #widget-nav-slider` =>  `#widget-nav-slider`
+  - `li.chapter` ==> `.chapter`. Or even better change class name to `.list-chapter`
+  
 2. Drop descendants:
   - Descendent selector (a b) is one of the most expensive combinatory selectors to use
   - Other expensive CSS selector include universal (`*`) and the child selector (a > b)
   - The longer the selector the more checks required which leads to longer render time
   - Solution 1: Use child selector instead of descendent selector. Child selector only includes direct children instead of including grandchild and great-grandchild
-  - Solution 2: If descendent selector is a must, eliminate the superfluous elements
-  ```
-  .widget li a
+  - Solution 2: If descendent selector is a must, eliminate the superfluous elements. `.widget li a` => `.widget a`
 
-  \* would become *\
-
-  .widget a
-  ```
 3. Make the selector chain three or less
 
 #### Leverage + Layer Rulesets
 
 ### MetaCoax Phase 2: Restructure, Adjust, and Modularize
 
-### Restructure to refactor
+#### Restructure to refactor
 
-### Begin instituting modules
+#### Begin instituting modules
 
-### Create portable helper styles
+#### Create portable helper styles
 
-### Adjust the HTML
+#### Adjust the HTML
