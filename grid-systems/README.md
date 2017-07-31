@@ -18,7 +18,7 @@ Table of Contents
 - [x] [CSS media queries](http://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - [x] [Media Queries](https://varvy.com/mobile/media-queries.html)
 - [x] [An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
-- [ ] [CSS Architectures: Refactor Your CSS](https://www.sitepoint.com/css-architectures-refactor-your-css/)
+- [x] [CSS Architectures: Refactor Your CSS](https://www.sitepoint.com/css-architectures-refactor-your-css/)
 -----------------
 
 ## Understanding CSS Grid Systems
@@ -425,11 +425,65 @@ Then can be referenced in this way:
 - Dry CSS: Group reusable css properties together and add your selector to various CSS groups
 
 ### MetaCoax Phase 2: Restructure, Adjust, and Modularize
+- Phase 2 involves altering both CSS and HTML
+- Goal is to give structure by removing excessive selectors and creating modules
 
 #### Restructure to refactor
+- Moving away from creating styles that are based on page components and page hierarchy, and moving toward portable, reusable and modular styles
+- Categorize CSS Rules in the Stylesheet: Based on the type of styles
+  ```
+  /* Table of Contents
+
+  - Base
+  - Layout: page sections
+  - Module
+  - State: how a module or layout looks in a particular state
+  - Theme
+
+  */
+  …
+
+  (later in the document…)
+
+  /* =Layout */ (etc.)
+  ```
+- Restructure Styles That Rely on Qualifiers High in the DOM  
+- Use Class Names as Key Selector:
+  - IDs are highly specific. Avoid using them. Instead use classes
+  - Review child selectors and replace them with specific classes when possible
 
 #### Begin instituting modules
+- Frequently used styles can be abstracted into a module with base set of styles that every module would share
+- Module can be extended or skinned to change text, color, float etc
+- Extend Substyles with `--`
+  - Visual indication that new style is based on previous one
+  ```
+  .button-search{
+    width: 29px;
+    height: 29px;
+    border: 0;
+    cursor: pointer;
+    margin: 4px 0 0 4px;
+    background: transparent url("/images/go.jpg") 0 0 no-repeat;
+  }
+
+  .button-search--pm{
+    margin: 2px 0 0 3px;
+    background: transparent url("/images/go.jpg") no-repeat center top;
+  }
+  ```
 
 #### Create portable helper styles
+- A pre-defined clas for layout helpers and typographical styles
+```
+.margin-top {margin-top: 5px;}
+.margin-bottom {margin-bottom: .5em;}
+.h-slug {font-size: .8em;}
+.h-title {font-size: 1.5em;}
+.h-author {font-size: 1em;}
+```
 
 #### Adjust the HTML
+- If inline element like `<span>` needs to be displayed as block, opt for `<p>` tags
+- Remove inline styles
+
