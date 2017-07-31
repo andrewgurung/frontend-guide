@@ -17,7 +17,7 @@ Table of Contents
 - [x] [Don’t Overthink Grids](https://css-tricks.com/dont-overthink-it-grids/)
 - [x] [CSS media queries](http://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 - [x] [Media Queries](https://varvy.com/mobile/media-queries.html)
-- [ ] [An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
+- [x] [An Introduction to Mobile-First Media Queries](https://www.sitepoint.com/introduction-mobile-first-media-queries/)
 - [ ] [CSS Architectures: Refactor Your CSS](https://www.sitepoint.com/css-architectures-refactor-your-css/)
 -----------------
 
@@ -358,3 +358,30 @@ Media queries do two things:
 }
 ```
 
+### Source Ordering
+- When media query kicks in, the page is rendered with stacked elements in the order of the DOM structure
+
+### Manage Your Media Queries with Sass
+```
+@mixin mquery($size) {
+ if $size == small {
+  @media (min-width: 30rem) {
+    @content;
+  }
+ }
+
+ else if $size == medium {
+  @media (min-width: 40rem) {
+    @content;
+  }
+ }
+}
+```
+Then can be referenced in this way:
+```
+.sidebar, .content {
+  @include mquery(medium) {
+    float: left; 
+  }  
+}
+```
