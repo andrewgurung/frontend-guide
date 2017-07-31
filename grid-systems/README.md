@@ -417,6 +417,12 @@ Then can be referenced in this way:
   - `div#blog-footer div#col2.column div.bestright p.besttitle` => `#col2.column .besttitle`
 
 #### Leverage + Layer Rulesets
+- The next step is to focus on the style declarations themselves
+- There are many properties that get inherited by descendent elements. 
+  - Eg `color font-family font-size font-weightline-height list-style-type list-style text-align`
+- Try to reduce the use of `!important`
+- New rules should not undo an earlier style. Instead it should add style known as layering style rulesets
+- Dry CSS: Group reusable css properties together and add your selector to various CSS groups
 
 ### MetaCoax Phase 2: Restructure, Adjust, and Modularize
 
