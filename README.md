@@ -30,20 +30,20 @@ Table of Contents
 
 
 ### Part Two
-- [ ] JavaScript Basics(javascript-basics/README.md)
-- [ ] Interactivity + Inspector(interactivity-inspector/README.md)
-- [ ] Practice Session(javascript-experiment/README.md)
-  - [ ] Experiment 1: Manipulate AirBnB live page
-  - [ ] Experiment 2: Heavy DOM manipulation
-- [ ] Advanced JS Concepts(javascript-advanced-concepts/README.md)
-- [ ] ES5 vs ES6(es5-es6/README.md)
-- [ ] Practice Session(javascript-experiment/README.md)
-  - [ ] Experiment 3: Clone Flipboard Homepage
-  - [ ] Experiment 4: Create JS Clock
-- [ ] JS Design Patterns(design-patterns/README.md)
-- [ ] React Basics(react-basics/README.md)
+- [ ] [JavaScript Basics](javascript-basics/README.md)
+- [ ] [Interactivity + Inspector](interactivity-inspector/README.md)
+- [ ] [Practice Session](javascript-experiment/README.md)
+  - [ ] [Experiment 1: Manipulate AirBnB live page]
+  - [ ] [Experiment 2: Heavy DOM manipulation]
+- [ ] [Advanced JS Concepts](javascript-advanced-concepts/README.md)
+- [ ] [ES5 vs ES6](es5-es6/README.md)
+- [ ] [Practice Session](javascript-experiment/README.md)
+  - [ ] [Experiment 3: Clone Flipboard Homepage]
+  - [ ] [Experiment 4: Create JS Clock]
+- [ ] [JS Design Patterns](design-patterns/README.md)
+- [ ] [React Basics](react-basics/README.md)
 - [ ] [Full Stack React Book](https://www.fullstackreact.com/)
-- [ ] Practice Session(javascript-experiment/README.md)
-  - [ ] Experiment 5: ToDo App using vanilla JS
-  - [ ] Experiment 6: Etsy Clone using AngularJS
-  - [ ] Experiment 7: ToDo App using ReactJS + Flux
+- [ ] [Practice Session](javascript-experiment/README.md)
+  - [ ] [Experiment 5: ToDo App using vanilla JS]
+  - [ ] [Experiment 6: Etsy Clone using AngularJS]
+  - [ ] [Experiment 7: ToDo App using ReactJS + Flux]
