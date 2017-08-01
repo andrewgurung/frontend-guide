@@ -16,7 +16,7 @@ Table of Contents
 - [x] [Language basics crash course](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [x] [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 - [x] [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
-- [ ] [Loops and iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [x] [Loops and iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [ ] [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 - [ ] [Decoupling Your HTML, CSS, and JavaScript](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
 
@@ -422,7 +422,59 @@ for (var i of arr) {
 -----------------
 
 ## Functions
+### Function declaration
+- Hoisted
+- Parameter: Primitive parameter are passed by value. Objects can also be passed as parameter
+- NOTE: If function modifies an object parameter, its change will be visible outside the function. Whereas changes to primitive parameters (like number) will not be reflected
+```
+function fn_name(parameter) {
+  statement;
+}
+```
 
+### Function expression
+- Not hoisted
+- Functions created using function expression can be `anonymous`
+- Convenient when passing a function as an argument to another function
+
+```
+var square = function(number) { return number * number; };
+var square = function square(number) { return number * number; };
+```
+
+### Calling functions
+- A function is executed only when it is `called`
+- Function must be in scope
+- Function declaration are hoisted
+
+### Function scope
+- Function defined in the global scope can access all variables defined in the global scope
+- Function defined inside another function can also access all variables defined in its parent function and any other variable to which the parent function has access
+
+### Recursion
+- Some algorithms cannot be simple iterative loops. Eg: getting all the nodes of a tree structure
+Three ways for a function to refer to itself
+1. the function's name
+2. arguments.callee
+3. an in-scope variable that refers to the function
+
+```
+var foo = function bar() {
+   // statements go here
+};
+```
+1. bar()
+2. arguments.callee()
+3. foo()
+
+### Nested functions and closures
+- A closure is a typically a function that can have free variables together with an environment that binds those variables
+- A nested function is a closure
+- A closure must preserve the arguments and variables in all scopes it references
+- The inner function can be accessed only from statements in the outer function
+- The inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function
+
+### Closures
 -----------------
 
 ## Decoupling Your HTML, CSS, and JavaScript
