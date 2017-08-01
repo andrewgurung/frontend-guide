@@ -47,6 +47,8 @@ myHeading.textContent = 'Hello World!';
 3. Boolean
 4. Array
 5. Object
+6. null
+7. undefined
 
 ### Comments
 ```
@@ -142,8 +144,82 @@ if (true) {
 console.log(y);  // ReferenceError: y is not defined
 ```
 
-### Variable hoisting and Function hoisting
+### Variable hoisting
+- `var` are hoisted
+- `let` and `const` are not hoisted
+- Eventhough `var` variables are hoisted, the value will still be `undefined`
+- Best Practice: `var` statements should be at the top of a function
+```
+console.log(x); // undefined
+var x = 3;
 
+console.log(y); // ReferenceError
+let y = 3;
+```
+
+### Function hoisting
+- Function declaration gets hoisted
+- Function expression does not get hoisted
+```
+foo(); // Foo
+function foo() {
+	console.log('Foo');
+}
+
+baz(); // TypeError: baz is not a function
+var baz = function() {
+	console.log('baz');
+};
+```
+
+### Global variables
+- In web pages, `window` is the global Object
+- Global variables can be set and accessed using the `window.variable` syntax
+
+### Constant
+- read-only
+- `const` variable cannot be declared with the same name `function` or `variable` in same scope
+
+### Data type conversion
+- JS is a dynamically typed language. The data type need not be specified during declaration
+- Data type can be changed without errors
+
+### Converting string to Number
+- parseInt()
+- parseFloat()
+- Unary plus
+```
+'1.1' + '1.1' = '1.11.1'
+(+'1.1') + (+'1.1') = 2.2  
+```
+
+### Literals
+Literals are fixed values that can be literally provided in your script
+1. Array literals: `var coffees = ['French Roast', 'Colombian', 'Kona'];` Can be accessed using `coffees[0]`
+2. Boolean literals: `true`, `false`.
+3. Floating-point literals: `3.1415926, -.123456789, -3.1E+12`
+4. Integers: Can be expressed as `decimal (base 10)`, `hexadecimal (base 16)`, `octal (base 8)` and `binary (base 2)`
+5. Object literals: `var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };`
+6. RegExp literals: Enclosed between slashes. `var re = /ab+c/;`
+7. String literals: Enclosed between double `"` or single `'` quote. `'1234', 'one line \n another line'`
+8. Template literals: ES2015 introduced template literals.
+  ```
+  var name = 'Bob', time = 'today';
+  `Hello ${name}, how are you ${time}?`
+  ```
+### Using special characters in strings
+```
+\b	Backspace
+\n	New line
+\t	Tab
+\'	Apostrophe or single quote
+\"	Double quote
+\\	Backslash character
+\uXXXX	The Unicode character
+```
+
+### Escaping characters
+- Use backslash `\` to escape characters. Eg: `var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";`
 -----------------
 
 ## Control flow and error handling
