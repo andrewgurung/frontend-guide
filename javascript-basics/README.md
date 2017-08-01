@@ -101,6 +101,48 @@ var storedName = localStorage.getItem('name');
 -----------------
 
 ## Grammar and types
+### Declarations
+1. var: Declares a variable
+2. let: Declares a block-scoped, local variable
+3. const: Declares a block-scoped, read-only variable
+
+### Variables
+- Must start with letter, underscore `_`, or dollar sign `$`
+- Subsequent characters can be digits (0-9)
+- Unicode letters can be used in variables
+- Variable declared using `var` or `let` with no assigned value has a value of `undefined`
+- Undeclared `var` if tried to access will result in `ReferenceError`
+- `undefined` can be used to check if a variable has a value
+```
+var a;
+console.log('The value of a is ' + a); // The value of a is undefined
+
+console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+
+if (input === undefined) {
+  console.log('Empty');
+}
+```
+- `undefined` converts to `NaN` when used in numeric context
+```
+var a;
+a + 2; // NaN
+```
+- Variable declared outside of `function` is a `global` variable which can be accessed
+- ECMAScript 2015 introduced the concept of block-scoping through `let` variables
+```
+if (true) {
+  var x = 5;
+}
+console.log(x);  // x is 5
+
+if (true) {
+  let y = 5;
+}
+console.log(y);  // ReferenceError: y is not defined
+```
+
+### Variable hoisting and Function hoisting
 
 -----------------
 
