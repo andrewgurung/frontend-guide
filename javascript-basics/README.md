@@ -323,7 +323,102 @@ imgLoad('http://xyz.com/image,jpg').then(
 -----------------
 
 ## Loops and iterations
+The statements for loops provided in JavaScript are:
 
+### for statement
+```
+for ([initialExpression]; [condition]; [incrementExpression])
+  statement
+```
+
+### do...while statement
+```
+do
+  statement
+while (condition);
+```
+
+### while statement
+- Warning: Avoid infinite loops
+```
+while (condition)
+  statement
+```
+
+### labeled statement
+```
+label :
+   statement
+```
+
+### break statement
+- label is optional
+- `break` terminates the execution of the loop entirely
+- When you use break without a label, it terminates the innermost enclosing while, do-while, for, or switch immediately and jumps to the next outer statement
+- When you use break with a label, it terminates the specified labeled statement
+```
+break [label];
+```
+- Breaking a labeled statement
+```
+var x = 0;
+labelCancelLoops:
+while (true) {
+  x += 1;
+  console.log(x);
+  if (x === 10) {
+    break labelCancelLoops;
+  }
+}
+```
+### continue statement
+- `continue` does not terminate the execution of the loop entirely
+```
+continue [label];
+```
+Be careful:
+```
+var i = 0;
+while (i < 5) {
+  i++;
+  if (i == 3) {
+    continue;
+  }
+  console.log(i); // 1 2 4 5. '3 won't be printed but 4 and 5 will be continued
+}
+```
+
+### for...in statement
+- Iterates a specified variable over all the enumerable properties of an object
+- Iterates over user-defined properties
+```
+for (variable in object) {
+  statements
+}
+```
+
+
+### for...of statement
+- Iterates over property values
+```
+for (variable of object) {
+  statement
+}
+```
+
+### for..in Vs for..of
+```
+var arr = [3, 5, 7];
+arr.foo = 'hello';
+
+for (var i in arr) {
+   console.log(i); // "0", "1", "2", "foo". Doesn't print hello
+}
+
+for (var i of arr) {
+   console.log(i); // 3, 5, 7. Doesn't print array properties/indices (0,1,2) and user defined property + value
+}
+```
 -----------------
 
 ## Functions
