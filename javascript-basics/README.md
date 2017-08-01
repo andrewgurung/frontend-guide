@@ -14,8 +14,8 @@ Table of Contents
 -----------------
 
 - [x] [Language basics crash course](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ ] [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
-- [ ] [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [x] [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [x] [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [ ] [Loops and iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [ ] [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 - [ ] [Decoupling Your HTML, CSS, and JavaScript](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
@@ -223,7 +223,103 @@ Literals are fixed values that can be literally provided in your script
 -----------------
 
 ## Control flow and error handling
+### if...else statement
+```
+if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+  statement_2;
+} else {
+  statement_last;
+}
+```
 
+### Falsy values
+- false
+- null
+- 0
+- undefined
+- NaN
+- empty string ("")
+Note:
+```
+var b = new Boolean(false);
+if (b) // this condition evaluates to true
+```
+
+### switch statement
+- `break` statement is optional but helps to break out of `switch` once the matched statement is executed
+```
+switch (fruittype) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Apples':
+    console.log('Apples are $0.32 a pound.');
+    break;
+  default:
+   console.log('Sorry, we are out of ' + fruittype + '.');
+}
+```
+
+### Exception handling
+- Throw Exception: `throw` statement
+- Handle Exception: try...catch statement
+- `finally` block: Executes whether or not an exception is thrown
+
+### Utilizing Error objects
+```
+function doSomethingErrorProne() {
+  throw (new Error('The message'));
+}
+....
+try {
+  doSomethingErrorProne();
+} catch (e) {
+  console.log(e.name); // logs 'Error'
+  console.log(e.message); // logs 'The message' or a JavaScript error message)
+}
+```
+
+### Promises
+- ECMAScript2015 supports Promise objects allowing you to control the flow of deferred and asynchronous operations
+- A Promise is in one of these states:
+  1. pending: initial state, not fulfilled or rejected.
+  2. fulfilled: successful operation
+  3. rejected: failed operation.
+  4. settled: the Promise is either fulfilled or rejected, but not pending.
+
+### Loading an image with XHR
+- [Code Sample](promise-image-load)
+```
+function imgLoad(url) {
+    // Create new promise with the Promise() constructor with two parameters, resolve and reject
+    return new Promise(function(resolve, reject) {
+        ...
+        request.onload = function() {
+            if (request.status === 200) {
+                // If successful, resolve the promise
+                resolve(request.response);
+            } else {
+                // If it fails, reject the promise
+                reject(Error('Image didn\'t load successfully; error code:' + request.statusText));
+            }
+        }
+    });
+}
+
+// Call the function to load image, chain the promise then() method which contains two callbacks
+imgLoad('http://xyz.com/image,jpg').then(
+  // The first callback runs when the promise resolves
+  function(response) {
+      doSomething(response);
+  },
+  // The second callback runs when the promise rejects
+  function(Error) {
+      console.log(Error);
+  }
+);
+```
 -----------------
 
 ## Loops and iterations
