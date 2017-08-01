@@ -97,3 +97,23 @@ document.querySelector('html').onclick = function() {
 localStorage.setItem('name', myName);
 var storedName = localStorage.getItem('name');
 ```
+
+-----------------
+
+## Grammar and types
+
+-----------------
+
+## Control flow and error handling
+
+-----------------
+
+## Loops and iterations
+
+-----------------
+
+## Functions
+
+-----------------
+
+## Decoupling Your HTML, CSS, and JavaScript
