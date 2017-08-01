@@ -17,7 +17,7 @@ Table of Contents
 - [x] [Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 - [x] [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [x] [Loops and iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [ ] [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+- [x] [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 - [ ] [Decoupling Your HTML, CSS, and JavaScript](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
 
 -----------------
@@ -475,6 +475,94 @@ var foo = function bar() {
 - The inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function
 
 ### Closures
+- A closure is created when the inner function is somehow made available to any scope outside the outer function
+- If both inner and outer function uses the same variable name, there is no way to refer to the variable in outer scope again
+```
+var pet = function(name) {
+
+  var getName = function() {
+    return 'Nice ' + name; //Inner function has access to the "name" variable in outer function
+  }
+  return getName; // Return the inner function, thereby exposing it to outer scopes
+}
+
+myPet = pet('Dog');
+myPet(); // Nice Dog
+```
+
+### Using the arguments object
+- The arguments are maintained in an array-like object. Syntax: `arguments[i]`
+- Total arguments count: `arguments.length`
+
+### Function parameters
+Starting from ES2015 there are two **new** kinds of parameters:
+1. Default parameters
+```
+function multiply(a, b = 1) {
+  return a * b;
+}
+multiply(5); // 5
+```
+2. Rest parameters
+- Allows us to represent indefinite number of arguments
+```
+function fun1(...theArgs) {
+  console.log(theArgs.length);
+}
+fun1();
+fun1(5, 6, 7); // 3
+```
+
+### Arrow functions
+- Shorter syntax alternative to function expressions and lexically binds the `this` value
+- Always anonymous
+```
+arrayList.map(function(s) { return s.length; });
+arrayList.map(s => s.length);
+```
+
+### Lexical `this`
+
+1. Before ES6
+`this` refers to global `this` instead of Person `this`
+```
+function Person() {
+  this.age = 0;
+
+  setInterval(function growUp() {
+    this.age++; // Points to global `this`
+  }, 1000);
+}
+```
+
+#### Hack:
+```
+function Person() {
+  var self = this;
+  self.age = 0;
+
+  setInterval(function growUp() {
+    self.age++; // Points to self which is the correct Person
+  }, 1000);
+}
+```
+
+2. Using Arrow functions
+```
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+      this.age++; // |this| properly refers to the person object
+  }, 1000);
+}
+```
+
+### Predefined functions
+JS has several top-level, built-in functions
+- `eval()`: Evaluates JavaScript code represented as a string.
+- `isNaN()`: Determines whether a value is NaN or not
+- `parseFloat()`: Parses a string argument and returns a floating point number.
 -----------------
 
 ## Decoupling Your HTML, CSS, and JavaScript
