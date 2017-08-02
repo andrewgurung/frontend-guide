@@ -10,7 +10,7 @@ Table of Contents
 -----------------
 ### Part One
 
-- [ ] HTML and CSS Basics
+- [x] HTML and CSS Basics
   - [x] [HTML Basics](html-basics/README.md)
   - [x] [CSS Basics](css-basics/README.md)
 - [x] [CodeAcademy: Make a Website](make-a-website/README.md)
@@ -31,7 +31,7 @@ Table of Contents
 
 ### Part Two
 - [x] [JavaScript Basics](javascript-basics/README.md)
-- [ ] [Interactivity + Inspector](interactivity-inspector/README.md)
+- [x] [Interactivity + Inspector](interactivity-inspector/README.md)
 - [ ] [Practice Session](javascript-experiment/README.md)
   - [ ] [Experiment 1: Manipulate AirBnB live page]
   - [ ] [Experiment 2: Heavy DOM manipulation]
