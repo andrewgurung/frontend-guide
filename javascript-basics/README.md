@@ -18,7 +18,7 @@ Table of Contents
 - [x] [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [x] [Loops and iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [x] [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
-- [ ] [Decoupling Your HTML, CSS, and JavaScript](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
+- [x] [Decoupling Your HTML, CSS, and JavaScript](http://philipwalton.com/articles/decoupling-html-css-and-javascript/)
 
 -----------------
 

@@ -30,7 +30,7 @@ Table of Contents
 
 
 ### Part Two
-- [ ] [JavaScript Basics](javascript-basics/README.md)
+- [x] [JavaScript Basics](javascript-basics/README.md)
 - [ ] [Interactivity + Inspector](interactivity-inspector/README.md)
 - [ ] [Practice Session](javascript-experiment/README.md)
   - [ ] [Experiment 1: Manipulate AirBnB live page]
