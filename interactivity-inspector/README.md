@@ -16,8 +16,8 @@ Table of Contents
 - [x] [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 - [x] [What is the DOM](https://css-tricks.com/dom/)
 - [x] [The Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-- [ ] [JavaScript Objects](http://javascriptissexy.com/javascript-objects-in-detail/)
-- [ ] [Attach keyboard event listeners](https://plainjs.com/javascript/events/getting-the-keycode-from-keyboard-events-17/)
+- [x] [JavaScript Objects](http://javascriptissexy.com/javascript-objects-in-detail/)
+- [x] [Attach keyboard event listeners](https://plainjs.com/javascript/events/getting-the-keycode-from-keyboard-events-17/)
 - [ ] [Chrome developer tool](https://developer.chrome.com/devtools)
 
 -----------------
@@ -250,7 +250,23 @@ console.log(christmasList.mike); // Book
 -----------------
 
 ## Attach keyboard event listeners
+- There are lots of vanilla JS utilites at plainJS website
+- [plainJS Website](https://plainjs.com/javascript/)
 
+### Getting the keycode from keyboard events
+- [plainJS Link](https://plainjs.com/javascript/events/getting-the-keycode-from-keyboard-events-17/)
+- Bind event handler when keyboard is pressed
+- In the following example, the event handler is attached to the entire page/document
+```
+// Event handler
+function handler(e) {
+    var key = window.event ? e.keyCode : e.which;
+    console.log(key, e.shiftKey, e.altKey, e.ctrlKey);
+}
+
+// Attach handler to the keydown event of the document
+document.addEventListener('keydown', handler);
+```
 -----------------
 
 ## Chrome developer tool
