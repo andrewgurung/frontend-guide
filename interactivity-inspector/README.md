@@ -18,7 +18,7 @@ Table of Contents
 - [x] [The Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [x] [JavaScript Objects](http://javascriptissexy.com/javascript-objects-in-detail/)
 - [x] [Attach keyboard event listeners](https://plainjs.com/javascript/events/getting-the-keycode-from-keyboard-events-17/)
-- [ ] [Chrome developer tool](https://developer.chrome.com/devtools)
+- [x] [Chrome developer tool](https://developer.chrome.com/devtools)
 
 -----------------
 
@@ -269,6 +269,38 @@ document.addEventListener('keydown', handler);
 ```
 -----------------
 
-## Chrome developer tool
+## Chrome developer tool(DevTools)
+- Set of web authoring and debugging tools built into Google Chrome
 
+### Accessing the DevTools
+- Windows Shortcut: Ctrl+Shift+I
+- Mac Shortcut: Cmd+Opt+I
+
+### Inspecting the DOM and styles
+- The Elements panel lets you see everything in one DOM tree
+- Element panels allows on-the-fly editing of DOM elements
+
+### Working with the Console
+1. Log diagnostic information. Eg: `console.log()` or `console.profile()`
+2. Shell prompt to interact with document
+3. Command Line API includes a lot of utilites to interact with elements. Eg: `$('img')` which is an alias for the `document.querySelector()` function
+
+### Debugging JavaScript
+- Chrome DevTools include a number of useful tools to help make debugging JavaScript less painful
+
+### Improving network performance
+- The `Network` panel provides insights into resources that are requested and downloaded over the network in real time
+
+### Audits
+- The `Audits` panel can analyze a page as it loads
+- It provides suggestions and optimizations for decreasing page load time and increase perceived (and real) responsiveness
+
+### Improving rendering performance
+- The `Performance` panel gives you a complete overview of where time is spent when loading and using your web app or page
+- It contains more information than Network panel
+- 'Performance' panel includes all events, from loading resources to parsing JavaScript, calculating styles, and repainting
+
+### Inspecting storage
+- The `Application` panel lets you inspect resources that are loaded in the inspected page
+- It lets you interact with HTML5 database, Local Storage, Cookies etc.
 -----------------
