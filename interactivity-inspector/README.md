@@ -88,12 +88,165 @@ table.summary = "note: increased border";
 ![DOM](https://cdn.css-tricks.com/wp-content/uploads/2013/12/dom-dom-dom-dom.jpg)
 -----------------
 
-## The Document Object Model
-[List of DOM APIs](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+### The Document Object Model
+- [List of DOM APIs](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 -----------------
 
 ## JavaScript Objects
+- Object: Unordered list of primitive and reference data types stored as name-value pairs
+- Object can contain function aka methods, numbers, arrays and even other objects
 
+### Accessing Properties
+1. Dot notation
+- Note: Number cannot be accessed using dot notation
+```
+var myFirstObject = {firstName: "Andrew", 100: "JavaScript"};
+myFirstObject.firstName;
+```
+
+2. Bracket notation
+```
+var myFirstObject = {firstName: "Andrew", 100: "JavaScript"};
+myFirstObject['firstName'];
+myFirstObject[100];
+```
+
+### Reference Data Type and Primitive Data Types
+- Reference data type may have side effects compared to Primitive data types
+Primitive Data Types:
+```
+// The primitive data type String is stored as a value​
+​var person = "Kobe";  
+​var anotherPerson = person;
+person = "Bryant";
+​
+console.log(anotherPerson); // Kobe​
+console.log(person); // Bryant
+```
+
+Reference Data Type:
+```
+var person = {name: "Kobe"};
+​var anotherPerson = person;
+person.name = "Bryant";
+​
+console.log(anotherPerson.name); // Bryant​
+console.log(person.name); // Bryant
+```
+
+### Creating Objects
+1. Object Literal
+- Easiest way to create Objects
+```
+var myBooks = {}; // Empty Object
+var mango = {
+  color: 'yellow',
+  sweetness: 9,
+  measureSweetness: function() {
+    console.log("Good");
+  }
+}
+```
+
+2. Object Constructor
+```
+var mango = new Object();
+mango.color = 'yellow;
+mango.sweetness = 9;
+mango.measureSweetness = function() {
+  console.log("Good");
+}
+```
+
+### Practical Patterns for Creating Objects
+More efficient way of creating objects:
+1. Constructor Pattern for Creating Objects
+```
+function Fruit(theColor, theFruitName) {
+  this.color = theColor;
+  this.fruitName = theFruitName;
+  this.showName = function () {
+    console.log("This is a " + this.fruitName);
+  }
+}
+
+var mangoFruit = new Fruit("Yellow", "Mango");
+mangoFruit.showName(); // This is a Mango
+// Own property
+mangoFruit.mangoSpice = "Citrus";
+console.log(mangoFruit.mangoSpice); // Citrus
+
+var pineappleFruit = new Fruit("Brown", "Pineapple");
+pineappleFruit.showName(); // This is a Pineapple
+```
+- An inherited property is defined in the object's prototype property. Eg: mangoFruit.prototype.color
+- Own property can be accessed directly. Eg: mangoFruit.mangoSpice
+- Methods can be invoked. Eg: mangoFruit.showName();
+
+2. Prototype Pattern for Creating Objects
+```
+function Fruit () {
+​}
+​
+Fruit.prototype.color = "Yellow";
+Fruit.prototype.fruitName = "Generic Fruit";
+Fruit.prototype.showName = function () {
+  console.log("This is a " + this.fruitName);
+}
+
+var mangoFruit = new Fruit ();
+mangoFruit.showName(); //​ This is a Generic Fruit
+```
+
+### Own and Inherited Properties
+- `in`: Check if a property exists on an object either inherited or an own property
+```
+var school = {schoolName:"MIT"};
+console.log("schoolName" in school);  // true​ [own]
+console.log("toString" in school);  // true [inherited]
+```
+
+### hasOwnProperty
+- `.hasOwnProperty`: Check if property is own property
+```
+var school = {schoolName:"MIT"};
+console.log("schoolName" in school);  // true​ [own]
+console.log("toString" in school);  // false [inherited]
+```
+
+### Accessing and Enumerating Properties on Objects
+- Use for/in loop
+- Only returns an object's own properties
+```
+​var school = {schoolName:"MIT", schoolAccredited: true, schoolLocation:"Massachusetts"};
+​for (var eachItem in school) {
+  console.log(eachItem); // Prints schoolName, schoolAccredited, schoolLocation​
+}
+```
+
+### Deleting Properties of an Object 
+- Syntax: `delete` keyword
+- Inherited properties cannot be deleted
+- delete operator returns true if successful or property was nonexistent
+```
+var christmasList = {mike:"Book", jason:"sweater" }
+​delete christmasList.mike; // deletes the mike property​
+​delete christmasList.toString; // returns true, but toString not deleted because it is an inherited method​
+```
+
+### Serialize and Deserialize Objects
+- Serialize: Convert it to a string. `JSON.stringify(..)`
+- Deserialize: Convert it to object from a string. `JSON.parse(..)`
+```
+// Serialize
+var christmasList = {mike:"Book", jason:"sweater", chelsea:"iPad" }
+var christmasListString = JSON.stringify(christmasList); // String output: {"mike":"Book","jason":"sweater","chelsea":"iPad"}
+
+// Deserialize
+var christmasListStr = '{"mike":"Book","jason":"sweater","chelsea":"iPad"}';
+var christmasList = JSON.parse(christmasListStr);
+console.log(christmasList.mike); // Book
+```
 -----------------
 
 ## Attach keyboard event listeners
