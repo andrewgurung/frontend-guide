@@ -566,3 +566,59 @@ JS has several top-level, built-in functions
 -----------------
 
 ## Decoupling Your HTML, CSS, and JavaScript
+A back-end developer should be able to change the markup in an HTML template without worrying about accidentally breaking a CSS rule or some JavaScript functionality
+
+### Anti-Patterns
+1. Avoid Overly Complex Selectors
+- Overly complex selector has its CSS extremely coupled with HTML
+- Any changes to HTML structure might break CSS style
+- Solution: Use specific classes which requires more classes in HTML but decouples it with CSS
+```
+/* Bad */
+#sidebar section:first-child h3 + p { }
+#sidebar ul > li > ul { }
+
+/* Good */
+.submenu { }
+```
+
+2. Classes With More Than One Responsibility
+- Do not reuse CSS classes for JavaScript hooks or listeners
+- Solution: Add `js-` prefix for all JavaScript hooks
+- `js-` prefix makes it clear that changing the CSS class name will affect JavaScript
+```
+/* Bad */
+<button class="add-item">Add to Cart</button>
+
+/* Good */
+<button class="js-add-to-cart add-item">Add to Cart</button>
+```
+
+3. State classes
+- Use the prefix `is-*` to define class selectors that alter the state of a visual component
+```
+.pop-up.is-visible { }
+```
+
+Note:
+- The state class `.is-visible` is chained to the component class `pop-up`
+- State class styles describe the state of a component, they should not appear on their own
+
+4. JavaScript “Selectors”
+- jQuery and JS document query selectors are extremely easy to use
+- Significantly slower
+- Tightly coupled with HTML structure. Any change in HTML would break the JS selector
+
+```
+/* Bad */
+var saveBtn = document.querySelector("#modal div:last-child > button:last-child")
+
+/* Good */
+var saveBtn = document.querySelector(".js-save-btn")
+```
+
+### Conclusion
+- At first glance it may seem like using a lot of classes in the markup is a sign of tight coupling
+- But classes should be the glue that connects your HTML, CSS, and JavaScript together
+- Adding classes gains in predictability and maintainability
+- Easier for new developer to write and debug codes as it is easier to find matching class name instead of understanding complex selector chain
