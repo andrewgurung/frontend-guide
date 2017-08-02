@@ -14,8 +14,8 @@ Table of Contents
 -----------------
 
 - [x] [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-- [ ] [What is the DOM](https://css-tricks.com/dom/)
-- [ ] [The Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+- [x] [What is the DOM](https://css-tricks.com/dom/)
+- [x] [The Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [ ] [JavaScript Objects](http://javascriptissexy.com/javascript-objects-in-detail/)
 - [ ] [Attach keyboard event listeners](https://plainjs.com/javascript/events/getting-the-keycode-from-keyboard-events-17/)
 - [ ] [Chrome developer tool](https://developer.chrome.com/devtools)
@@ -72,11 +72,24 @@ table.summary = "note: increased border";
 -----------------
 
 ## What is the DOM
+- The HTML that we write is not the DOM
+- The view source is not the DOM. View Source shows the HTML that makes up that page
+- The code in DevTools is kind of the DOM even though it may seem similar to the HTML that we wrote in most cases
 
+### When is the DOM different than the HTML?
+1. Missing required tag, that was fixed by the browser
+2. JavaScript can manipulate the DOM
+3. Ajax and Templating: When using templating or getting content from somewhere using Ajax, the source code HTML and DOM will look different
+
+### JavaScript vs. the DOM
+- JavaScript is a language that the browser reads and does stuff with
+- DOM is where stuffs happen
+- A lot of 'JavaScript thing' is more accurately a 'DOM API'
+![DOM](https://cdn.css-tricks.com/wp-content/uploads/2013/12/dom-dom-dom-dom.jpg)
 -----------------
 
 ## The Document Object Model
-
+[List of DOM APIs](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 -----------------
 
 ## JavaScript Objects
