@@ -14,7 +14,7 @@ Table of Contents
 -----------------
 
 - [x] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [ ] [Scoping](https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/)
+- [x] [Scoping](https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/)
 - [ ] [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [ ] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [ ] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
