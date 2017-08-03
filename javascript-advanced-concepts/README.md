@@ -208,6 +208,25 @@ var cat = {
 
 cat.printInfo(); // "Name: window , Color:undefined, Age:undefined"
 ```
+
+### Controlling Context
+- Lexical scope cannot be altered but we can control the `context` in which we call our functions
+- Context is decided at runtime, and is always bound to the `object` the function was called within
+- Controlling context = Changing `this`
+
+```
+var obj1 = {
+   printThis: function() {
+      console.log(this);
+   }
+};
+
+var func1 = obj1.printThis;
+obj1.printThis(); // Prints `obj1` object
+func1(); // Prints `window` object
+```
+- obj1.printThis(): The context here is the obj1 object itself
+- func1(): References to printThis() function, then called in context to global object
 ----------------------------
 
 ## Closures
