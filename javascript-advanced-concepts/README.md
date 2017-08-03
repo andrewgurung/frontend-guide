@@ -18,7 +18,7 @@ Table of Contents
 - [ ] [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [ ] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [ ] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
-- [ ] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+- [ ] [Apply, call, and bind](Apply, call, and bind)
 - [ ] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
 - [ ] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [ ] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
@@ -32,3 +32,66 @@ Table of Contents
 
 -----------------
 
+## Prototypal inheritance
+
+----------------------------
+
+## Scoping
+
+----------------------------
+
+## Closures
+
+----------------------------
+
+## The event loop
+
+----------------------------
+
+## Event bubbling
+
+----------------------------
+
+## Apply, call, and bind
+
+----------------------------
+
+## Callbacks and promises
+
+----------------------------
+
+## Variable and function hoisting
+
+----------------------------
+
+## Currying
+
+----------------------------
+
+## A Shift From Imperative To Declarative
+
+----------------------------
+
+## Declarative vs. Imperative
+
+----------------------------
+
+## What is Ajax
+
+----------------------------
+
+## Fetch
+
+----------------------------
+
+## jQuery Effects
+
+----------------------------
+
+## jQuery Handling Events
+
+----------------------------
+
+## JavaScript functions equivalent to jQuery
+
+----------------------------
