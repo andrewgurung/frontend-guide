@@ -131,6 +131,7 @@ d.speak(); // Mitzie barks.
 ### prototype and Object.getPrototypeOf
 1. prototype: Used with types. Eg: `A.prototype`
 2. Object.getPrototypeOf: Used with instances. Eg: `Object.getPrototypeOf(a1)`
+
 Conclusion: `Object.getPrototypeOf(a1) == A.prototype`
 ```
 function A() {
@@ -150,6 +151,10 @@ Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething
 ----------------------------
 
 ## Scoping
+- JavaScript has `lexical` scoping instead of `block` scoping
+- A new scope is created when you create a new `function`
+
+### Closures
 
 ----------------------------
 
