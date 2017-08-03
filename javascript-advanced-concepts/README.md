@@ -227,6 +227,50 @@ func1(); // Prints `window` object
 ```
 - obj1.printThis(): The context here is the obj1 object itself
 - func1(): References to printThis() function, then called in context to global object
+
+### That, Call, Bind, and Apply
+There are multiple ways to control the value of `this`
+
+1. storing a reference to this in another variable `that`: Useful in nested functions
+2. .call(): Borrow a method from one object and use it in a completely separate object. Can take multiple arguments
+3. .apply(): Similar to call() method. Only difference is that it can only take one array argument [Mnem: `a`pply = `a`rray]
+4. .bind(): Can take extra arguments. Doesn't invoke the function immediately. Useful in asynchronous callbacks and events
+
+Example: Using `that`
+```
+var cat = {
+  name: 'Gus',
+  color: 'gray',
+  age: 15,
+  printInfo: function() {
+    var that = this;
+    nestedFunction = function() {
+      console.log("Name: " + that.name + ", Color:" + that.color + ", Age:" + that.age);  
+    }
+    nestedFunction();
+  }
+}
+cat.printInfo();
+```
+
+Example: Using `call`, `apply`, `bind`
+```
+var cat = {
+  name: 'Gus',
+  color: 'gray',
+  age: 15,
+  printInfo: function() {
+    nestedFunction = function() {
+      console.log("Name: " + this.name + ", Color:" + this.color + ", Age:" + this.age);  
+    }
+    nestedFunction.call(this); // "Name: Gus, Color:gray, Age:15"
+    nestedFunction.apply(this); // "Name: Gus, Color:gray, Age:15"
+    var storedFunction = nestedFunction.bind(this);
+    storedFunction(); // "Name: Gus, Color:gray, Age:15"
+  }
+}
+cat.printInfo();
+```
 ----------------------------
 
 ## Closures
