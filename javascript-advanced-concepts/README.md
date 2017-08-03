@@ -155,7 +155,59 @@ Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething
 - A new scope is created when you create a new `function`
 
 ### Closures
+- A special kind of object that combines two things: a `function` and `environment` in which that function was created
+- In the following example, since `x` is a member of the environment that created nestedFunction(),  nestedFunction() will have access to it
+```
+function outerFunction() {
+  var x = 10;
+  function nestedFunction() {
+    var y = 5;
+    console.log('x: ' + x);
+    console.log('y: ' + y);
+  }
+  return nestedFunction;
+}
 
+var myFunction = outerFunction();
+myFunction();
+// "x: 10"
+// "y: 5"
+```
+
+### Things get tricker when using `this` in closures
+-  `this` will stop working with nested methods. i.e Only works with top level methods
+
+1. Top-level `this` will work fine
+```
+var cat = {
+  name: 'Gus',
+  color: 'gray',
+  age: 15,
+  printInfo: function() {
+    console.log("Name: " + this.name + ", Color:" + this.color + ", Age:" + this.age);  
+  }
+}
+cat.printInfo(); // Name: Gus, Color:gray, Age:15
+```
+
+2. `this` inside a nested function will not work
+- `this` loses it's scope and fallback to the default global `window` object
+- Coincidently, `window` object happens to have a `name` property
+```
+var cat = {
+  name: 'Gus',
+  color: 'gray',
+  age: 15,
+  printInfo: function() {
+    nestedFunction = function() {
+      console.log("Name: " + this.name + ", Color:" + this.color + ", Age:" + this.age);  
+    }
+    nestedFunction();
+  }
+}
+
+cat.printInfo(); // "Name: window , Color:undefined, Age:undefined"
+```
 ----------------------------
 
 ## Closures
