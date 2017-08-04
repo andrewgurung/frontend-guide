@@ -290,6 +290,67 @@ function makeAdder(x) {
 var add10 = makeAdder(5);
 console.log(add10(40)); //45
 ```
+
+### Practical closures
+- Similar to object oriented programming, where we can set data/properties through one or more methods
+- Can be used anywhere where we normally use an object with only a single method
+- Commonly used to define some behavior, then attach it to an event. Eg. Attached as a callback: a single function is executed when event is triggered
+
+#### Change text size with button click
+```
+function makeSizer(size) {
+  return function() {
+    document.body.style.fontSize = size + 'px';
+  };
+}
+var size12 = makeSizer(12);
+
+document.getElementById('size-12').onclick = size12;
+```
+
+### Emulating private methods with closures
+- Private in Java: Methods can only be called by other methods in the same class
+- JavaScript doesn't have a native way of creating private methods
+- Private methods helps to restrict access to code and managing global namespace
+
+1. Any variable or method defined inside an anonymous function is not accessible from outside i.e `counter`
+- `(function(){ /* code */ })()` is an immediately invoked anonymous function expression
+- Variables and methods defined inside IIFE are private
+```
+var counter = (function(){ /* code */ })();
+```
+
+2. Accessing private methods through a public interface/function
+- privateCounter: private variable
+- changeBy(): private method
+- { increment.., decrement..,value..} is returned with three public functions
+- These 3 public functions are using to access private variables and methods
+- This pattern is known as `Module Pattern`
+```
+var counter = (function() {
+  var privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment: function() {
+      changeBy(1);
+    },
+    decrement: function() {
+      changeBy(-1);
+    },
+    value: function() {
+      return privateCounter;
+    }
+  };   
+})();
+
+console.log(counter.value()); // logs 0
+counter.increment();
+console.log(counter.value()); // logs 1
+counter.decrement();
+console.log(counter.value()); // logs 0
+```
 ----------------------------
 
 ## The event loop
