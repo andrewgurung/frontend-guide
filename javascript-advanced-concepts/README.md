@@ -15,7 +15,7 @@ Table of Contents
 
 - [x] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [x] [Scoping](https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/)
-- [ ] [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [x] [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [ ] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [ ] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
 - [ ] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
@@ -274,7 +274,7 @@ cat.printInfo();
 ----------------------------
 
 ## Closures
-- Closure = Function + lexical environment 
+- Closure = Function + lexical environment
 - Lexical = the location where a variable is declared. Determines if a variable is accessible
 - Nested functions can access variables declared in their outer space
 
@@ -350,6 +350,158 @@ counter.increment();
 console.log(counter.value()); // logs 1
 counter.decrement();
 console.log(counter.value()); // logs 0
+```
+
+### Creating closures in loops: A common mistake
+- Prior to the `let` keyword, a common mistake occurred with closures when they were created inside loops
+
+1. Problem with loops
+- The problem below is that all three callbacks / closures share the same lexical environment.
+- When the loop completes, since all the three closures refer to the same `item` variable, the `item` variable object is left pointing to the last entry in the `helpText`
+```
+function showHelp(help) {
+  document.getElementById('help').innerHTML = help;
+}
+
+function setupHelp() {
+  var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+  for (var i = 0; i < helpText.length; i++) {
+    var item = helpText[i];
+    document.getElementById(item.id).onfocus = function() {
+      showHelp(item.help); // Callback
+    }
+  }
+}
+setupHelp();
+```
+
+2. Solution One: Function factory
+- Rather than the callbacks all sharing a single lexical environment, the `makeHelpCallback` function creates a new lexical environment for each callback
+```
+function showHelp(help) {
+  document.getElementById('help').innerHTML = help;
+}
+
+function makeHelpCallback(help) {
+	return function() {
+    showHelp(help);
+  };
+}
+
+function setupHelp() {
+  var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+  for (var i = 0; i < helpText.length; i++) {
+    var item = helpText[i];
+    document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+    }
+  }
+}
+setupHelp();
+```
+
+3. Solution 2: Anonymous function
+```
+function showHelp(help) {
+  document.getElementById('help').innerHTML = help;
+}
+
+function setupHelp() {
+  var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+  for (var i = 0; i < helpText.length; i++) {
+    (function() {
+       var item = helpText[i];
+       document.getElementById(item.id).onfocus = function() {
+         showHelp(item.help);
+       }
+    })(); // Immediate event listener attachment with the current value of item (preserved until iteration)
+  }
+}
+
+setupHelp();
+```
+
+4. Solution 3: `let` keyword for block scoping
+```
+function showHelp(help) {
+  document.getElementById('help').innerHTML = help;
+}
+
+function setupHelp() {
+  var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+  for (var i = 0; i < helpText.length; i++) {
+    let item = helpText[i];
+    document.getElementById(item.id).onfocus = function() {
+      showHelp(item.help);
+    }
+  }
+}
+setupHelp();
+```
+
+### Performance considerations
+- Considered bad to have nested functions if no closure is required
+
+1. Bad practice: Having functions inside Object constructor
+```
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+  this.getName = function() {
+    return this.name;
+  };
+
+  this.getMessage = function() {
+    return this.message;
+  };
+}
+```
+
+2. Solution 1: Appending to existing prototype
+```
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+MyObject.prototype.getName = function() {
+  return this.name;
+};
+MyObject.prototype.getMessage = function() {
+  return this.message;
+};
+```
+
+3. Solution 2: Cleaner alternative
+```
+function MyObject(name, message) {
+    this.name = name.toString();
+    this.message = message.toString();
+}
+(function() {
+    this.getName = function() {
+        return this.name;
+    };
+    this.getMessage = function() {
+        return this.message;
+    };
+}).call(MyObject.prototype);
 ```
 ----------------------------
 
