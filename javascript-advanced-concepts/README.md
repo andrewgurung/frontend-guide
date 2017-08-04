@@ -278,8 +278,18 @@ cat.printInfo();
 - Lexical = the location where a variable is declared. Determines if a variable is accessible
 - Nested functions can access variables declared in their outer space
 
-### Lexical Scoping
-
+### Function factory using closure
+- `makeAdder(x)` takes a single argument and returns a new function
+- The new function `add10` will then return the sum of x and y
+```
+function makeAdder(x) {
+  return function(y) {
+     return x + y;
+  }
+}
+var add10 = makeAdder(5);
+console.log(add10(40)); //45
+```
 ----------------------------
 
 ## The event loop
