@@ -274,6 +274,11 @@ cat.printInfo();
 ----------------------------
 
 ## Closures
+- Closure = Function + lexical environment 
+- Lexical = the location where a variable is declared. Determines if a variable is accessible
+- Nested functions can access variables declared in their outer space
+
+### Lexical Scoping
 
 ----------------------------
 
