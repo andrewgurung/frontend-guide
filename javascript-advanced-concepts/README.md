@@ -507,6 +507,28 @@ function MyObject(name, message) {
 
 ## The event loop
 - JavaScript has a concurrency model based on an "event loop"
+- The event loop model in JavaScript never blocks other processes. Eg: while waiting for an IndexedDB query to return, it can process user input
+- It got its name because of the way it is implemented
+```
+// queue.waitForMessage waits synchronously for a message to arrive if there is none currently
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+
+![Visual representation](https://developer.mozilla.org/files/4617/default.svg)
+
+- Stack: Function calls form a stack of frames
+- Heap: Objects are allocated to heap to denote a large mostly unstructured region of memory
+- Queue: JavaScript runtime contains a message queue where each message has an associated function which is executed when `stack` is free
+
+- Run-to-completion: Each message is processed completely before moving to the next. Better to cut down message into several messages
+- Messages are added any time an event occurs and there is an event listener attached to it
+- Calling `setTimeout` will add a message after a set period has passed if there is no other in-process message. Hence the time set on `setTimeout` indicates a **minimum time and not a guaranteed time**
+
+### Several runtimes communicating together
+- A web worker or a cross-origin iframe has its own stack, heap, and message queue
+- Two distinct runtimes can only communicate through sending messages via the `postMessage` method
 
 ----------------------------
 
