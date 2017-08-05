@@ -566,6 +566,25 @@ If you click on <p>, then the sequence is:
 ----------------------------
 
 ## Apply, call, and bind
+- Functions are objects in JavaScript. As objects, functions have methods including `apply`, `call` and `bind`
+
+### bind() method
+-
+
+1. Usage 1: Set the `this` value on Methods
+
+2. Usage 2: Allow us to `Borrow` Methods
+
+3. Usage 3: Allows Us to `Curry` a Function 
+
+### apply() and call() methods
+-
+
+1. Usage 1: `apply()` and `call()` allow us to Set the `this` value on methods
+
+2. Usage 2: `apply()` and `call()` allow us to `Borrow` Methods
+
+3. Usage 3: `apply()` allows us to Execute Variable
 
 ----------------------------
 
