@@ -506,6 +506,7 @@ function MyObject(name, message) {
 ----------------------------
 
 ## The event loop
+- JavaScript has a concurrency model based on an "event loop"
 
 ----------------------------
 
