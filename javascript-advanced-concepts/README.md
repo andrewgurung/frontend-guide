@@ -16,8 +16,8 @@ Table of Contents
 - [x] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [x] [Scoping](https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/)
 - [x] [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-- [ ] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
-- [ ] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
+- [x] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [x] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
 - [ ] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
 - [ ] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
 - [ ] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
@@ -533,6 +533,35 @@ while (queue.waitForMessage()) {
 ----------------------------
 
 ## Event bubbling
+
+The event handling process:
+1. Capturing phase – the event goes down to the element. Rarely used
+2. Target phase – the event reached the target element
+3. Bubbling phase – the event bubbles up from the element
+
+![Event Flow](http://javascript.info/article/bubbling-and-capturing/eventflow@2x.png)
+
+- `event.target`: When an event happens – the most nested element where it happens gets labeled as the "target element"
+- Capturing phase: Then the event first moves from the document `root` down the `event.target`, calling handlers assigned with addEventListener(...., true) on the way. The capturing phase is used very rarely, usually we handle events on bubbling. And there’s a logic behind that
+- Bubbling phase: Then the event moves from `event.target` up to the `root`, calling handlers assigned using `on<event>` and `addEventListener` without the 3rd argument or with the 3rd argument `false`.
+
+- Each handler can access event object properties:
+1. event.target – the deepest element that originated the event.
+2. event.currentTarget (=this) – the current element that handles the event (the one that has the handler on it)
+3. event.eventPhase – the current phase (capturing=1, bubbling=3).
+4. event.stopPropagation() - Any event handler can stop the event by calling event.stopPropagation(), but that’s not recommended, because we can’t really be sure we won’t need it above, maybe for completely different things.
+
+Eg: Clicking on `p` will trigger all three alerts due to bubbling
+```
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P</p>
+  </div>
+</form>
+```
+If you click on <p>, then the sequence is:
+1. HTML → BODY → FORM → DIV → P (capturing phase, the first listener), and then:
+2. P → DIV → FORM → BODY → HTML (bubbling phase, the second listener).
 
 ----------------------------
 
