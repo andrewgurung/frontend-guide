@@ -18,7 +18,7 @@ Table of Contents
 - [x] [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [x] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [x] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
-- [ ] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
+- [x] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
 - [ ] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
 - [ ] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [ ] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
