@@ -710,10 +710,81 @@ console.log(gameController.avgScore); // 46.4
 ```
 
 ### Usage 2: `apply()` and `call()` allow us to `Borrow` Methods
+- `apply` and `call` functions can borrow methods like `.bind()` but in more versatile way
 
+#### A. Borrowing Array Methods
+- Arrays have more inbuilt methods for iterating and modifying
+- Objects do not have such native methods
+- Construct an object with integer as keys to mimic array aka array-like object
+- Use apply or call to borrow Array methods
+- [JSBin Practice](http://jsbin.com/xiyukebake/2/edit?js,console)
+```
+var anArrayLikeObj = {
+  0:"Martin",
+  1: 78,
+  2: 67,
+  3: ["Letta", "Marieta", "Pauline"],
+  length: 4
+};
+
+// Borrow Array method to convert arrayLikeObj to an array
+var newArray = Array.prototype.slice.call(anArrayLikeObj, 0);
+console.log(newArray); // ["Martin", 78, 67, ["Letta", "Marieta", "Pauline"]]
+
+// Perform Array indexOf method
+console.log(Array.prototype.indexOf.call(anArrayLikeObj, "Martin") === -1 ? false : true); // true
+```
+
+Utility: Extract arguments as an array
+```
+function doSomething () {
+	 var args = Array.prototype.slice.call(arguments);
+	 console.log(args);
+}
+​
+doSomething("Water", "Salt", "Glue"); // ["Water", "Salt", "Glue"]​
+```
+
+#### B. Borrowing String Methods
+- String methods can be borrowed as Arrays in the above example
+
+#### C. Borrow Other Methods and Functions
+- Custom methods can also be borrowed
+- [JSBin Practice](http://jsbin.com/mojujabozu/1/edit?js,console)
+```
+var user = {
+  data: {name:'T. Local', age:37},
+  description: null,
+  showData: function(e) {
+    this.description = this.data.name + ' ' + this.data.age;
+  }
+}
+
+var car = {
+  data: {name: 'Toyota Rav 4', age: 2015}
+}
+
+user.showData.apply(car); // borrow method and execute automatically
+console.log(car.description); // "Toyota Rav 4 2015"
+console.log(user.description); // null
+```
 
 ### Usage 3: `apply()` allows us to Execute Variable
+- Variable-arity/Variadic: Functions that accept any number of arguments instead of a fixed number of arguments
+```
+var students = ["Peter Alexander", "Michael Woodruff", "Judy Archer", "Malcolm Khan"];
 
+// No specific parameters defined
+function welcomeStudents() {
+  var args = Array.prototype.slice.call(arguments);
+
+  var lastItem = args.pop(); // remove last item
+  console.log("Welcome " + args.join (", ") + ", and " + lastItem + ".");
+}
+
+welcomeStudents.apply(null, students);
+// Welcome Peter Alexander, Michael Woodruff, Judy Archer, and Malcolm Khan.
+```
 ----------------------------
 
 ## Callbacks and promises
