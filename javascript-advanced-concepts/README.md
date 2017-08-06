@@ -633,8 +633,26 @@ var fixedDataVar = user.showData.bind(user); // Set 'this' to user
 fixedDataVar(); // T. Local 37
 ```
 
-
 ### Usage 2: Allow us to `Borrow` Methods
+- We can borrow methods using `bind()`
+- Note: It will copy the method from source to destination which may cause overriding the existing method.
+- Better use apply or call to borrow methods
+- [JSBin Practice](http://jsbin.com/yasotoxava/2/edit?js,console)
+```
+var user = {
+  data: {name:'T. Local', age:37},
+  showData: function(e) {
+    console.log(this.data.name + ' ' + this.data.age);
+  }
+}
+
+var car = {
+  data: {name: 'Toyota Rav 4', age: 2015}
+}
+
+car.showData = user.showData.bind(car); // borrow method
+car.showData(); // Toyota Rav 4 2015
+```
 
 ### Usage 3: Allows Us to `Curry` a Function 
 
