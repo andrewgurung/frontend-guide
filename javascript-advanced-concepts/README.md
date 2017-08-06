@@ -679,7 +679,8 @@ console.log(greetAYoungster("Alex")); // "Hey, Alex"
 
 ### apply() and call() methods
 - Both `apply` and `call` functions allow us to borrow functions and set the `this` value
-- In addition `apply` function takes array as argument
+- apply: Takes array as argument
+- call: Each argument has to be passed individually
 
 ### Usage 1: `apply()` and `call()` allow us to Set the `this` value on methods
 - `call(this_object, argument)`: Used to set `this`
@@ -702,9 +703,14 @@ console.log(window.avgScore); // 46.4
 // Fix using call(this_Object, arguments)
 avg.call(gameController, gameController.scores);
 console.log(gameController.avgScore); // 46.4
+
+// Fix using apply(this_Object, [arguments_as_array])
+avg.apply(gameController, [gameController.scores]);
+console.log(gameController.avgScore); // 46.4
 ```
 
 ### Usage 2: `apply()` and `call()` allow us to `Borrow` Methods
+
 
 ### Usage 3: `apply()` allows us to Execute Variable
 
