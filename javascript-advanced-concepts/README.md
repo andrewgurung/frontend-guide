@@ -569,13 +569,52 @@ If you click on <p>, then the sequence is:
 - Functions are objects in JavaScript. As objects, functions have methods including `apply`, `call` and `bind`
 
 ### bind() method
--
+- Mainly used to set which specific object will be bound to `this` when a function is invoked
 
-1. Usage 1: Set the `this` value on Methods
+### Usage 1: Set the `this` value on Methods
+- In ECMAScript 6, the equivalent of `|0` is `Math.trunc` which removes any fractional digits after the dot
 
-2. Usage 2: Allow us to `Borrow` Methods
+#### Simple JavaScript click event
+- [JSBin Practice](http://jsbin.com/yobugiyufe/8/edit?js,output)
+```
+function clickHandler(e) {
+  alert('Clicked!');
+}
 
-3. Usage 3: Allows Us to `Curry` a Function 
+document.querySelector('button').addEventListener('click', clickHandler);
+```
+
+#### Common JS problem
+- `this` is not bound properly in most cases. jQuery and Backbone automatically binds `this` for us
+- A method is bound to the object calling it
+- In the `buttonElement.addEventListener(..)` the `clickHandler` is bound to the `buttonElement`. So `this` points to `buttonElement` which doesn't have the `data` property
+- The `data` property is inside of `user` object. Hence only `user.clickHandler()` will work
+- [JSBin Practice](http://jsbin.com/yobugiyufe/14/edit?js,output)
+```
+var user = {
+  data: {name:"T. Woods", age:37},
+  clickHandler: function(e) {
+    document.querySelector('input').value = this.data.name + " " + this.data.age;
+  }
+}
+
+var buttonElement = document.querySelector('button');
+buttonElement.addEventListener('click', user.clickHandler); // Error
+user.clickHandler(); // T.Woods 37
+```
+
+#### Fix `this` bound problem
+- Explicitly set `this` using `bind()` method
+- Set `this` -> `user` which has the `data` property that we want
+- [JSBin Practice](http://jsbin.com/yobugiyufe/15/edit?js,output)
+```
+buttonElement.addEventListener('click', user.clickHandler.bind(user));
+```
+
+
+### Usage 2: Allow us to `Borrow` Methods
+
+### Usage 3: Allows Us to `Curry` a Function 
 
 ### apply() and call() methods
 -
