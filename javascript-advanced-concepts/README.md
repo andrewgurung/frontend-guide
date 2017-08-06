@@ -606,9 +606,31 @@ user.clickHandler(); // T.Woods 37
 #### Fix `this` bound problem
 - Explicitly set `this` using `bind()` method
 - Set `this` -> `user` which has the `data` property that we want
+- Note: `.bind()` is unavailable in IE < 9. Need to add custom bind
 - [JSBin Practice](http://jsbin.com/yobugiyufe/15/edit?js,output)
 ```
 buttonElement.addEventListener('click', user.clickHandler.bind(user));
+```
+
+#### Global context overriding
+- showDataVar() is bound to the global scope. i.e Window object
+- Fix: Use `.bind()` to set `this` to `user`
+```
+var data = {name:"J. Global", age: 35};
+
+var user = {
+  data: {name:"T. Local", age:37},
+  showData: function(e) {
+    console.log(this.data.name + ' ' + this.data.age);
+  }
+}
+
+var showDataVar = user.showData;
+showDataVar(); // J. Global 35. Gets from global because context is global
+user.showData(); // T. Local 37
+
+var fixedDataVar = user.showData.bind(user); // Set 'this' to user
+fixedDataVar(); // T. Local 37
 ```
 
 
