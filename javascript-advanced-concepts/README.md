@@ -655,6 +655,27 @@ car.showData(); // Toyota Rav 4 2015
 ```
 
 ### Usage 3: Allows Us to `Curry` a Function 
+- Curry: The use of a function (that accept one or more arguments) that returns a new function with some of the arguments already set
+- The curried function that is returned has access to stored arguments
+- Curried functions: `greetAnAdultMale` and `greetAYoungster` has the first 2 of the 3 variables preset
+- [JSBin Practice](http://jsbin.com/jihiqolato/edit?js,console)
+```
+function greet(gender, age, name) {
+  var salutation = gender === 'male' ? 'Mr. ' : 'Ms. ';
+  if(age > 25) {
+    return 'Hello, ' + salutation + name;
+  } else {
+    return 'Hey, ' + salutation + name;
+  }
+}
+
+// So we are passing null because we are not using the "this" keyword in our greet function.
+var greetAnAdultMale = greet.bind(null, "male", 45);
+console.log(greetAnAdultMale("John Hartlove")); // "Hello, Mr. John Hartlove"
+
+var greetAYoungster = greet.bind(null, "", 16);
+console.log(greetAYoungster("Alex")); // "Hey, Alex"
+```
 
 ### apply() and call() methods
 -
