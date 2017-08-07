@@ -24,7 +24,7 @@ Table of Contents
 - [x] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
 - [x] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
 - [x] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
-- [ ] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
+- [x] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
 - [ ] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [ ] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
 - [ ] [jQuery Handling Events](http://learn.jquery.com/events/handling-events/)
@@ -1027,7 +1027,13 @@ $.each(result, function() {
 ----------------------------
 
 ## What is Ajax
-
+- Ajax: Asynchronous JavaScript And XML
+- Method of transferring HTTP data in a web browser without refreshing the page
+- Earliest method on Ajax API object was XMLHttpRequest(). In short called XHR
+- Ajax syntax is verbose, so most developers nowadays prefer libraries like jQuery which has its own `.ajax()` method
+- Mostly used to connects to a script on your server which then pulls data from a database
+- Frequent Ajax calls can have limit page speed
+- Best use of Ajax: Infinite scrolling for pagination which converts page refresh to Ajax calls
 ----------------------------
 
 ## Fetch
