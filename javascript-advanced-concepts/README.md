@@ -872,7 +872,37 @@ var varName = function funcName() {
 ----------------------------
 
 ## Currying
+- Currying: Pass a subset of arguments and get a function back that's waiting for the rest of the arguments
 
+### First Curry
+#### Regular JavaScript
+- Have to pass two arguments everytime
+```
+var greet = function(greeting, name) {
+  console.log(greeting + ', ' + name);
+}
+
+greet('Hello','Andrew');
+```
+
+#### Curried solution
+- Have a curry of greeting variations beforehand
+- Just pass a single argument to execute curried function
+```
+var greetCurry = function(greeting) {
+  return function(name) {
+    console.log(greeting + ', ' + name);
+  }
+}
+
+// Curried functions
+var greetHelloCurry = greetCurry('Hello');
+var greetHiCurry = greetCurry('Hi there');
+
+// Invoking curried greetings
+greetHelloCurry('Andrew'); // Hello, Andrew
+greetHiCurry('Jon'); // Hi there, Jon
+```
 ----------------------------
 
 ## A Shift From Imperative To Declarative
