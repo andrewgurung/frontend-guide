@@ -998,7 +998,31 @@ $('.my-buttons').click(function (e) {
 ----------------------------
 
 ## Declarative vs. Imperative
+Three fundamental concepts that have truly revolutionized the way web apps are developed:
+1. Declarative
+2. Data binding
+3. Dependency Injection
 
+### Imperative Example
+- Using JavaScript and jQuery, the Imperative approach
+```
+var options = $("#options");
+$.each(result, function() {
+    options.append($("<option />").val(this.id).text(this.name));
+});
+```
+
+### Declarative Example
+- Using Angular, the Declarative approach
+```
+<div ng-repeat="item in items" ng-click="select(item)">{{item.name}}
+</div>
+```
+
+### The Designer-Developer Workflow
+1. The **data** is ultimately what drives most business applications, but
+2. The **user interface** is what makes it meaningful, and
+3. Certain **behaviors** are applied to enhance the experience
 ----------------------------
 
 ## What is Ajax
