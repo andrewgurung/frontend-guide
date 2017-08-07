@@ -21,7 +21,7 @@ Table of Contents
 - [x] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
 - [x] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
 - [x] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
-- [ ] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
+- [x] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
 - [ ] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
 - [ ] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
 - [ ] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
@@ -902,6 +902,39 @@ var greetHiCurry = greetCurry('Hi there');
 // Invoking curried greetings
 greetHelloCurry('Andrew'); // Hello, Andrew
 greetHiCurry('Jon'); // Hi there, Jon
+```
+
+### Nested Curry
+- Nested curry can be more flexible as we can send different parameters to create different curried functions
+- Each argument is passed as separate call using (arg1)(arg2)(arg3) instead of (arg1,arg2,arg3)
+
+#### Variation of a 4 argument function
+A. 3 args curried, 1 args pending
+B. 2 args curried, 2 args pending
+C. From `B`, take existing 2args curried, 2args pending curried function -> Pass 1 additional arg --> New curry -> 3 args curried 1 pending
+
+```
+var greetNestedCurry = function(greeting){
+  return function(separator) {
+    return function(emphasis) {
+      return function(name) {
+        console.log(greeting + separator + name + emphasis);
+      }
+    }
+  }
+}
+
+// A. 3 args curried, 1 args pending
+var greetAwkwardly = greetNestedCurry("Hi")("...")("?");
+greetAwkwardly('Andrew'); // Hi...Andrew?
+
+// B. 2 args curried, 2 args pending
+var sayHello = greetNestedCurry("Hello")(", ");
+sayHello('!')('Jon'); // Hello, Jon!
+
+// C. Take sayHello and Pass 1 additional arg
+var askHello = sayHello("?");
+askHello('Arya'); // Hello, Arya?
 ```
 ----------------------------
 
