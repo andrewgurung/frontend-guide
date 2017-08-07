@@ -19,7 +19,7 @@ Table of Contents
 - [x] [The event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 - [x] [Event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
 - [x] [Apply, call, and bind](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/)
-- [ ] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
+- [x] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
 - [ ] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [ ] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
 - [ ] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
@@ -789,6 +789,37 @@ welcomeStudents.apply(null, students);
 
 ## Callbacks and promises
 
+### Callbacks
+- Nested callbacks are hard to follow
+- I/O activities such as file reads, database reads and writes, and memcache access, is asynchronous, and most code needs a more than a single i/o call
+```
+function isUserTooYoung(id, callback) {
+    openDatabase(function(db) {
+        getCollection(db, 'users', function(col) {
+            find(col, {'id': id},function(result) {
+                result.filter(function(user) {
+                    callback(user.age < cutoffAge)
+                })
+            })
+        })
+    })
+}
+```
+
+### Promises
+- Promise: Proxy for a value not necessarily known at its creation time
+- Replaces asynchronous call accepting a callback
+- `then`: The calling code can wait until that promise is fulfilled before executing the next step
+```
+function isUserTooYoung(id) {
+    return openDatabase(db)
+        .then(getCollection)
+        .then(find.bind(null, {'id': id}))
+        .then(function(user) {
+            return user.age < cutoffAge;
+        });
+}
+```
 ----------------------------
 
 ## Variable and function hoisting
