@@ -23,7 +23,7 @@ Table of Contents
 - [x] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [x] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
 - [x] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
-- [ ] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
+- [x] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
 - [ ] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
 - [ ] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [ ] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
@@ -1023,6 +1023,7 @@ $.each(result, function() {
 1. The **data** is ultimately what drives most business applications, but
 2. The **user interface** is what makes it meaningful, and
 3. Certain **behaviors** are applied to enhance the experience
+
 ----------------------------
 
 ## What is Ajax
