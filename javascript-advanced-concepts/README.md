@@ -873,6 +873,7 @@ var varName = function funcName() {
 
 ## Currying
 - Currying: Pass a subset of arguments and get a function back that's waiting for the rest of the arguments
+- Argument Order: Order is important. So try to place the variable argument towards the end
 
 ### First Curry
 #### Regular JavaScript
@@ -935,6 +936,35 @@ sayHello('!')('Jon'); // Hello, Jon!
 // C. Take sayHello and Pass 1 additional arg
 var askHello = sayHello("?");
 askHello('Arya'); // Hello, Arya?
+```
+
+### Currying Traditional Function
+- Remove multiple `(arg1)(arg2)(arg3)` calls for nested curry with traditional function call `(arg1, arg2, arg3)`
+
+#### Utility curry function
+- Pull out the list of arguments, use those to return curried function
+- Use `apply()` to pass an array of arguments
+```
+var curryIt = function(uncurried) {
+  var parameters = Array.prototype.slice.call(arguments, 1);
+  return function() {
+    return uncurried.apply(this, parameters.concat(
+      Array.prototype.slice.call(arguments, 0)
+    ));
+  };
+};
+```
+
+#### Executing curry
+```
+var greeter = function(greeting, separator, emphasis, name) {
+  console.log(greeting + separator + name + emphasis);
+};
+var greetHello = curryIt(greeter, "Hello", ", ", ".");
+greetHello("Heidi"); //"Hello, Heidi."
+
+var greetGoodbye = curryIt(greeter, "Goodbye", ", ");
+greetGoodbye(".", "Joe"); //"Goodbye, Joe."
 ```
 ----------------------------
 
