@@ -22,7 +22,7 @@ Table of Contents
 - [x] [Callbacks and promises](https://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript)
 - [x] [Variable and function hoisting](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [x] [Currying](http://www.sitepoint.com/currying-in-functional-javascript/)
-- [ ] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
+- [x] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
 - [ ] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
 - [ ] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
 - [ ] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
@@ -969,7 +969,32 @@ greetGoodbye(".", "Joe"); //"Goodbye, Joe."
 ----------------------------
 
 ## A Shift From Imperative To Declarative
+- Imperative programming: Specify not only what you want to happen, but how you want it to happen
+- Declarative programming: Specify only what you want to happen
 
+### Imperative Programming
+- No persistent model layer. Hence data is managed in DOM
+- Hard to keep state of DOM in sync with server
+- JS code is not testable without testing elements in DOM
+```
+$('.my-buttons').click(function (e) {
+    $.ajax({
+        url: 'some/url',
+        data: {
+            id: $(e.target).id()
+        },
+        success: function (data) {
+            $('#my-list').append('<li id="' + data.id + '">' + data.name + '</li>');
+        }
+    })
+});
+```
+
+### Declarative Programming
+- Achieved with Angular, React etc with the concept of one/two way binding
+- You just need to update the data in a model layer and the UI will automatically update
+- The binding of the data to the DOM is done directly in the template
+- Everything is totally testable
 ----------------------------
 
 ## Declarative vs. Imperative
