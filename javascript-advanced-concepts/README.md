@@ -823,7 +823,52 @@ function isUserTooYoung(id) {
 ----------------------------
 
 ## Variable and function hoisting
+### Variable hoisting
+- Variable declaration is hoisted
+- Variable value is not hoisted
+- ReferenceError: If variable is not declared anywhere
+- undefined: If variable is used before it is declared. Variable declaration is hoisted so it will return `undefined` instead of `ReferenceError`
+```
+// ReferenceError: noSuchVariable is not defined
+console.log(noSuchVariable);
 
+// Outputs: undefined
+console.log(declaredLater);
+
+var declaredLater = "Now it's defined!";
+
+// Outputs: "Now it's defined!"
+console.log(declaredLater);
+```
+
+### Function hoisting
+- Function declaration: Both function name and function definition are hoisted
+- Function expression: Only the declaration part is hoisted, not the definition. Function's name isn't hoisted for a function expression
+- Function expression's declaration is hoisted thus it is `undefined`. When tried to execute an `undefined` function, it throws `TypeError`
+```
+// Function declaration
+// Outputs: "Yes!"
+isItHoisted();
+
+function isItHoisted() {
+    console.log("Yes!");
+}
+
+// Function expression
+// TypeError: undefined is not a function
+definitionNotHoisted();
+
+var definitionNotHoisted = function () {
+    console.log("Definition not hoisted!");
+};
+
+// Function's name isn't hoisted in function expression --> ReferenceError instead of TypeError
+// ReferenceError: funcName is not defined
+funcName();
+var varName = function funcName() {
+    console.log("Definition not hoisted!");
+};
+```
 ----------------------------
 
 ## Currying
