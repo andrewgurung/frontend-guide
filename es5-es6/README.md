@@ -16,7 +16,7 @@ Table of Contents
 - [x] [Constants](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - [x] [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [x] [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-- [ ] [Syntactical sugar ](https://en.wikipedia.org/wiki/Syntactic_sugar)
+- [x] [Syntactical sugar ](https://en.wikipedia.org/wiki/Syntactic_sugar)
 - [ ] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [ ] [ES5, ES6, ES2016, ES.Next](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
 - [ ] [Getting Started with ES6](http://weblogs.asp.net/dwahlin/getting-started-with-es6-%E2%80%93-the-next-version-of-javascript)
@@ -292,7 +292,10 @@ tag`string text line 1 \n string text line 2`;
 ----------------------------
 
 ## Syntactical sugar
-
+- Syntactic sugar: Syntax designed to make things easier to read or to express
+- If removed from language, doesn't effect the language at all
+- Syntactic sugar for `a = a + b` is `a += b`
+- Desugaring: Compilers and static analyzers often expand sugared constructs into more fundamental constructs before processing
 ----------------------------
 
 ## Prototypal inheritance
