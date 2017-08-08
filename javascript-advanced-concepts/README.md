@@ -26,7 +26,7 @@ Table of Contents
 - [x] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
 - [x] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
 - [x] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [ ] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
+- [x] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
 - [ ] [jQuery Handling Events](http://learn.jquery.com/events/handling-events/)
 - [ ] [JavaScript functions equivalent to jQuery](http://youmightnotneedjquery.com/)
 
@@ -1050,6 +1050,54 @@ $.each(result, function() {
 
 ## jQuery Effects
 
+### Showing and Hiding Content
+- .show()
+- .hide(): `display` property -> none. i.e Content will have zero width and height
+- Can add animation effect to `show()` and `hide()`
+	- slow, normal, fast. Eg: `.show('fast')`
+	- millisecond: `.show(500)` // half a second
+
+### Fade and Slide Animations
+- .slideDown()
+- .slideUp(). Eg: `$( "p" ).slideUp( 800 )`
+- Accomplished by rapidly making changes to an element's CSS `height` property
+
+- .fadeIn()  
+- .fadeOut(). Eg: `$( "p" ).fadeOut( 1500 )`
+- Accomplished by making changes to an element's CSS opacity property
+
+### Changing Display Based on Current Visibility State
+- .toggle(): Show content if hidden, hide if visible
+- It can also take `slow`, `normal`, `fast` or `millisecond` as argument
+- Can be combined with fade or slide. `slideToggle()`, `fadeToggle()`
+```
+$( "p" ).toggle();
+$( "p" ).toggle(200);
+$( "ol" ).slideToggle( 1000 );
+```
+
+### Doing Something After an Animation Completes
+- A common mistake when implementing jQuery effects is assuming that the execution of the next method in your chain will wait until the animation runs to completion
+
+Wrong way of doing:
+```
+$( "p.hidden" ).fadeIn( 750 ).addClass( "lookAtMe" );
+```
+
+Correct way of doing: It will wait until the fadeIn animation completes
+```
+$( "p.hidden" ).fadeIn( 750, function() {
+    $( this ).addClass( "lookAtMe" );
+});
+```
+
+### Managing Animation Effects
+- .stop(): Immediately terminate all animations running on the elements in your selection. `$( "body *" ).filter( ":animated" ).stop();`
+- .delay(): Used to introduce a delay between successive animations. `$( "h1" ).hide( 500 ).delay( 1500 ).show( 300 );`
+- jQuery.fx: Has a number of properties that control how effects are implemented
+	- Custom speed: `jQuery.fx.speeds.blazing = 300;`
+	- Custom frame: `jQuery.fx.interval=20`. Default = 13
+	- Disable animations: `jQuery.fx.off = true`
 ----------------------------
 
 ## jQuery Handling Events
