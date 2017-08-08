@@ -27,7 +27,7 @@ Table of Contents
 - [x] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
 - [x] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [x] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
-- [ ] [jQuery Handling Events](http://learn.jquery.com/events/handling-events/)
+- [x] [jQuery Handling Events](http://learn.jquery.com/events/handling-events/)
 - [ ] [JavaScript functions equivalent to jQuery](http://youmightnotneedjquery.com/)
 
 -----------------
@@ -1101,6 +1101,65 @@ $( "p.hidden" ).fadeIn( 750, function() {
 ----------------------------
 
 ## jQuery Handling Events
+- .on(): Used to respond to any event on the selected elements
+
+### Simple event binding
+```
+$( "p" ).on( "click", function() {
+    console.log( "<p> was clicked" );
+});
+```
+
+### Many events, but only one event handler
+```
+$( "div" ).on( "mouseenter mouseleave", function() {
+    console.log( "mouse hovered over or left a div" );
+});
+```
+
+### Many events and handlers
+```
+$( "div" ).on({
+    mouseenter: function() {
+        console.log( "hovered over a div" );
+    },
+    mouseleave: function() {
+        console.log( "mouse left a div" );
+    }
+});
+```
+
+### The event object
+- event: Object that contains extra information available to the event handler for more control
+```
+$( "div" ).on( "click", function( event ) {
+    console.log( "event object:" );
+    console.dir( event );
+});
+```
+
+### Passing data to the event handler
+```
+$( "p" ).on( "click", {
+    foo: "bar"
+}, function( event ) {
+    console.log( "event data: " + event.data.foo + " (should be 'bar')" );
+});
+```
+
+### Binding events to elements that don't exist yet
+- Event delegation
+```
+$( "ul" ).on( "click", "li", function() {
+    console.log( "Something in a <ul> was clicked, and we detected that it was an <li> element." );
+});
+```
+
+### Connecting Events to Run Only Once
+- .one() method
+
+### Disconnecting Events
+- .off() cleans up that event binding when you don't need it anymore
 
 ----------------------------
 
