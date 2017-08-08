@@ -14,7 +14,7 @@ Table of Contents
 -----------------
 
 - [x] [Constants](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [ ] [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [x] [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [ ] [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [ ] [Syntactical sugar ](https://en.wikipedia.org/wiki/Syntactic_sugar)
 - [ ] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
@@ -121,6 +121,96 @@ class Rectangle {
 var r1 = new Rectangle(2,3); // 6
 console.log(r1.area);
 console.log(Rectangle.calPerimeter(2, 3)); // 10
+```
+
+### Calling static or prototype method without an object
+- Returns undefined since there isn't any autoboxing
+```
+class Animal { 
+  speak() {
+    return this;
+  }
+  static eat() {
+    return this;
+  }
+}
+
+let obj = new Animal();
+obj.speak(); // Animal {}
+let speak = obj.speak;
+speak(); // undefined
+
+Animal.eat() // class Animal
+let eat = Animal.eat;
+eat(); // undefined
+```
+
+### Sub classing with extends
+- If there is a constructor present in sub-class, it needs to first call super() before using `this`
+```
+class Animal { 
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak() {
+    console.log(this.name + ' makes a noise.');
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log(this.name + ' barks.');
+  }
+}
+
+var d = new Dog('Mitzie');
+d.speak(); // Mitzie barks.
+```
+
+### Extend regular class without constructor method defined in parent
+- Object.setPrototypeOf(child, parent)
+```
+var Animal = {
+  speak() {
+    console.log(this.name + ' makes a noise.');
+  }
+};
+
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+Object.setPrototypeOf(Dog.prototype, Animal);// If you do not do this you will get a TypeError when you invoke speak
+var d = new Dog('Mitzie');
+d.speak(); // Mitzie makes a noise.
+```
+
+### Use of super()
+```
+class Cat { 
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak() {
+    console.log(this.name + ' makes a noise.');
+  }
+}
+
+class Lion extends Cat {
+  speak() {
+    super.speak();
+    console.log(this.name + ' roars.');
+  }
+}
+
+var l = new Lion('Fuzzy');
+l.speak(); 
+// Fuzzy makes a noise.
+// Fuzzy roars.
 ```
 ----------------------------
 
