@@ -25,7 +25,7 @@ Table of Contents
 - [x] [A Shift From Imperative To Declarative](http://www.tysoncadenhead.com/blog/the-state-of-javascript-a-shift-from-imperative-to-declarative#.Vz0WEZMrIUE)
 - [x] [Declarative vs. Imperative](http://developer.telerik.com/featured/three-ds-of-web-development-1-declarative-vs-imperative/)
 - [x] [What is Ajax](http://www.vandelaydesign.com/what-is-ajax-webdev/)
-- [ ] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [x] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [ ] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
 - [ ] [jQuery Handling Events](http://learn.jquery.com/events/handling-events/)
 - [ ] [JavaScript functions equivalent to jQuery](http://youmightnotneedjquery.com/)
@@ -1037,7 +1037,15 @@ $.each(result, function() {
 ----------------------------
 
 ## Fetch
+- Fetch API provides an interface for fetching resources (including across the network)
+- Fetch provides a generic definition of `Request` and `Response` objects
+- `fetch()` method takes one mandatory path to the resource you want to fetch. Returns a promise that resolves to `Response` object
 
+### Fetch Interfaces
+- GlobalFetch: Contains the fetch() method used to fetch a resource
+- Headers: Represents response/request headers, allowing you to query them and take different actions depending on the results
+- Request: Represents a resource request
+- Response: Represents the response to a request
 ----------------------------
 
 ## jQuery Effects
