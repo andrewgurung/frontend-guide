@@ -35,7 +35,7 @@ Table of Contents
 - [ ] [Practice Session](javascript-experiment/README.md)
   - [x] [Experiment 1: Manipulate AirBnB live page]
   - [ ] [Experiment 2: Heavy DOM manipulation]
-- [ ] [Advanced JS Concepts](javascript-advanced-concepts/README.md)
+- [x] [Advanced JS Concepts](javascript-advanced-concepts/README.md)
 - [ ] [ES5 vs ES6](es5-es6/README.md)
 - [ ] [Practice Session](javascript-experiment/README.md)
   - [ ] [Experiment 3: Clone Flipboard Homepage]

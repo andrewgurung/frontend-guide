@@ -28,7 +28,7 @@ Table of Contents
 - [x] [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [x] [jQuery Effects](http://learn.jquery.com/effects/intro-to-effects/)
 - [x] [jQuery Handling Events](http://learn.jquery.com/events/handling-events/)
-- [ ] [JavaScript functions equivalent to jQuery](http://youmightnotneedjquery.com/)
+- [x] [JavaScript functions equivalent to jQuery](http://youmightnotneedjquery.com/)
 
 -----------------
 
@@ -1160,9 +1160,5 @@ $( "ul" ).on( "click", "li", function() {
 
 ### Disconnecting Events
 - .off() cleans up that event binding when you don't need it anymore
-
-----------------------------
-
-## JavaScript functions equivalent to jQuery
 
 ----------------------------
