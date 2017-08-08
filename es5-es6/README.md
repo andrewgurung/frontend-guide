@@ -15,7 +15,7 @@ Table of Contents
 
 - [x] [Constants](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - [x] [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-- [ ] [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [x] [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [ ] [Syntactical sugar ](https://en.wikipedia.org/wiki/Syntactic_sugar)
 - [ ] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [ ] [ES5, ES6, ES2016, ES.Next](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
@@ -44,7 +44,7 @@ const MY_FAV = 20;
 let MY_FAV = 20;
 
 // throws an error, missing initializer in const declaration
-const FOO; 
+const FOO;
 
 // const also works on objects
 const MY_OBJECT = {'key': 'value'};
@@ -101,17 +101,17 @@ class Rectangle {
     this.height = height;
     this.width = width;
   }
-  
+
   // Prototype method
   get area() {
     return this.calArea();
   }
-  
+
   // Prototype method
   calArea() {
     return this.height * this.width;
   }
-  
+
   // Static method
   static calPerimeter(height, width) {
     return 2 * height + 2 * width;
@@ -126,7 +126,7 @@ console.log(Rectangle.calPerimeter(2, 3)); // 10
 ### Calling static or prototype method without an object
 - Returns undefined since there isn't any autoboxing
 ```
-class Animal { 
+class Animal {
   speak() {
     return this;
   }
@@ -148,11 +148,11 @@ eat(); // undefined
 ### Sub classing with extends
 - If there is a constructor present in sub-class, it needs to first call super() before using `this`
 ```
-class Animal { 
+class Animal {
   constructor(name) {
     this.name = name;
   }
-  
+
   speak() {
     console.log(this.name + ' makes a noise.');
   }
@@ -190,11 +190,11 @@ d.speak(); // Mitzie makes a noise.
 
 ### Use of super()
 ```
-class Cat { 
+class Cat {
   constructor(name) {
     this.name = name;
   }
-  
+
   speak() {
     console.log(this.name + ' makes a noise.');
   }
@@ -208,14 +208,87 @@ class Lion extends Cat {
 }
 
 var l = new Lion('Fuzzy');
-l.speak(); 
+l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
 ```
 ----------------------------
 
 ## Template literals
+- String literals allowing embedded expressions enclosed in \` \` back ticks
 
+### Multi-line strings
+```
+console.log(`string text line 1
+string text line 2`);
+// "string text line 1
+// string text line 2"
+```
+
+### Expression interpolation
+```
+var a = 5;
+var b = 10;
+console.log(`Fifteen is ${a + b} and
+not ${2 * a + b}.`);
+// "Fifteen is 15 and
+// not 20."
+```
+
+### Nesting templates
+In ES5:
+```
+var classes = 'header'
+classes += (isLargeScreen() ?
+   '' : item.isCollapsed ?
+     ' icon-expander' : ' icon-collapser');
+```
+
+In ES2015 with template literals and without nesting:
+```
+const classes = `header ${ isLargeScreen() && item.isCollapsed ?
+    'icon-expander' : 'icon-collapser' }`;
+```
+
+In ES2015 with nested template literals:
+```
+const classes = `header ${( isLargeScreen() &&
+ `icon-${item.isCollapsed ? 'expander' : 'collapser'}` )}`;
+```
+
+### Tagged template literals
+- Tags allow you to parse template literals with a function
+- First argument: String values in array format
+- Rest of the arguments: Expressions i.e ${..}
+- Returns a composed string
+- Called by invoking tag_function_name\`str1 ${exp1} str2 ${exp2} str3\`
+
+```
+function myTag(strings, personExp, ageExp) {
+  // Value passed into arguments
+  // strings = ['that ', ' is a ', ' human']
+  // personExp = Mike
+  // ageExp = 28
+
+  return ...
+}
+
+var person = 'Mike';
+var age = 28;
+var output = myTag`that ${ person } is a ${ age } human`;
+```
+
+### Raw strings
+- Additional feature of template literal, where the first argument of tagged template, can be accessed as it was entered without processing escape sequences
+```
+function tag(strings, ...values) {
+  console.log(strings.raw[0]);
+}
+
+tag`string text line 1 \n string text line 2`;
+// logs "string text line 1 \n string text line 2" ,
+// including the two characters '\' and 'n'
+```
 ----------------------------
 
 ## Syntactical sugar
