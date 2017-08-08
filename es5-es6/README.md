@@ -65,7 +65,63 @@ MY_ARRAY = ['B'];
 ----------------------------
 
 ## Classes
+- `class`: Syntactical sugar over JavaScript's existing prototype-based inheritance
+- Class members like methods or constructor are defined within `{}`
+- Constructor: Special method for creating and initializing an object created with a class
+  - A constructor can use the `super` keyword to call the constructor of a parent class
 
+### Class declarations
+- Unlike function declaration, class declaration is **NOT** hoisted
+```
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+```
+
+### Class Expressions
+- Class Expressions is **NOT** hoisted
+```
+var Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+```
+
+### Prototype and Static methods
+- Prototype: Called through object instance
+- Static: Cannot be called through object instance. Instead must be called directly using classname
+```
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  
+  // Prototype method
+  get area() {
+    return this.calArea();
+  }
+  
+  // Prototype method
+  calArea() {
+    return this.height * this.width;
+  }
+  
+  // Static method
+  static calPerimeter(height, width) {
+    return 2 * height + 2 * width;
+  }
+}
+
+var r1 = new Rectangle(2,3); // 6
+console.log(r1.area);
+console.log(Rectangle.calPerimeter(2, 3)); // 10
+```
 ----------------------------
 
 ## Template literals
