@@ -17,8 +17,7 @@ Table of Contents
 - [x] [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [x] [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [x] [Syntactical sugar ](https://en.wikipedia.org/wiki/Syntactic_sugar)
-- [ ] [Prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [ ] [ES5, ES6, ES2016, ES.Next](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
+- [x] [ES5, ES6, ES2016, ES.Next](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
 - [ ] [Getting Started with ES6](http://weblogs.asp.net/dwahlin/getting-started-with-es6-%E2%80%93-the-next-version-of-javascript)
 
 -----------------
@@ -298,11 +297,13 @@ tag`string text line 1 \n string text line 2`;
 - Desugaring: Compilers and static analyzers often expand sugared constructs into more fundamental constructs before processing
 ----------------------------
 
-## Prototypal inheritance
-
-----------------------------
-
 ## ES5, ES6, ES2016, ES.Next
+- ECMAScript: A language standardized by ECMA International and overseen by the TC39 committee. This term is usually used to refer to the standard itself
+- JavaScript: Implementations of the ECMAScript standard
+- ECMAScript 5 (ES5): The 5th edition of ECMAScript, standardized in 2009. This standard has been implemented fairly completely in all modern browsers
+- ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015): The 6th edition of ECMAScript, standardized in 2015
+- ECMAScript YYYY: Naming convention of ECMAScript
+ECMAScript Proposals: Proposed features move through a process of five stages: Strawman, Proposal, Draft, Candidate and Finished
 
 ----------------------------
 
