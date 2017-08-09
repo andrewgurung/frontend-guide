@@ -18,8 +18,6 @@ Table of Contents
 - [x] [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [x] [Syntactical sugar ](https://en.wikipedia.org/wiki/Syntactic_sugar)
 - [x] [ES5, ES6, ES2016, ES.Next](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
-- [ ] [Getting Started with ES6](http://weblogs.asp.net/dwahlin/getting-started-with-es6-%E2%80%93-the-next-version-of-javascript)
-
 -----------------
 
 ## Constants
@@ -304,9 +302,5 @@ tag`string text line 1 \n string text line 2`;
 - ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015): The 6th edition of ECMAScript, standardized in 2015
 - ECMAScript YYYY: Naming convention of ECMAScript
 ECMAScript Proposals: Proposed features move through a process of five stages: Strawman, Proposal, Draft, Candidate and Finished
-
-----------------------------
-
-## Getting Started with ES6
 
 ----------------------------
