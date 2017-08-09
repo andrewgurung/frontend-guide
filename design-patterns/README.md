@@ -14,7 +14,6 @@ Table of Contents
 -----------------
 
 - [x] [MVC Architecture](https://developer.chrome.com/apps/app_frameworks)
-- [ ] [model-view-controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 - [ ] [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 - [ ] [model–view–presenter](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
 - [ ] [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
@@ -34,7 +33,7 @@ Table of Contents
 
 ## MVC Architecture
 ### Model
-- Model is where the application’s data objects are stored. 
+- Model is where the application’s data objects are stored.
 - When a model changes, typically it will notify its observers that a change has occurred
 
 ### View
@@ -58,7 +57,7 @@ Table of Contents
 - Different approach: Have separate concept of Store and Adapter API
   - Store: Holds the loaded models, and it also provides functions such as creating, querying and filtering the model
   - Adapter API: Adapter, or a proxy that takes requests from a store and connects to persistent data layer (such as JSON API)
-  
+
 2. Controller does persistence
 - Holds a reference to both the model and a datastore and is responsible for keeping the model persisted
 
@@ -66,10 +65,9 @@ Table of Contents
 - In some patterns, there is a supervising controller responsible for navigating between one MVC and another
 - The AppController decides, for example, that a 'Back' button moves the client from an editing screen (which contains MVC widgets/formats), to a settings screen
 
------------------
-
-## model-view-controller
-
+### Notes
+- Although built for desktop application, MVC has been widely adopted as an architecture for World Wide Web
+- Thin-client MVC is a variation of MVC where almost the entire model, view and controller logic on the server. Client sends a hyperlink request that returns a complete and updated webpage
 -----------------
 
 ## model-view-viewmodel
@@ -125,5 +123,5 @@ Table of Contents
 -----------------
 
 ## Observer
- 
+
 -----------------
