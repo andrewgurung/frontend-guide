@@ -14,7 +14,7 @@ Table of Contents
 -----------------
 
 - [x] [MVC Architecture](https://developer.chrome.com/apps/app_frameworks)
-- [ ] [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+- [x] [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 - [ ] [model–view–presenter](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
 - [ ] [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 - [ ] [Understanding MVC And MVP](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/)
@@ -68,13 +68,6 @@ Table of Contents
 ### Notes
 - Although built for desktop application, MVC has been widely adopted as an architecture for World Wide Web
 - Thin-client MVC is a variation of MVC where almost the entire model, view and controller logic on the server. Client sends a hyperlink request that returns a complete and updated webpage
------------------
-
-## model-view-viewmodel
-
------------------
-
-## model–view–presenter
 
 -----------------
 
