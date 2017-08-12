@@ -17,7 +17,7 @@ Table of Contents
 - [x] [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 - [x] [model–view–presenter](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
 - [x] [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
-- [ ] [Understanding MVC And MVP](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/)
+- [x] [Understanding MVC And MVP](https://addyosmani.com/blog/understanding-mvc-and-mvp-for-javascript-and-backbone-developers/)
 - [ ] [Understanding MVVM](https://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/)
 - [ ] [GUI Architectures](http://martinfowler.com/eaaDev/uiArchs.html)
 - [ ] [JavaScript MV* Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
